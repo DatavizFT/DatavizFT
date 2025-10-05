@@ -1,13 +1,12 @@
 {
   "metadata": {
-    "nb_offres_total": 663,
-    "timestamp_collecte": "2025-10-05T08:20:46.984291",
+    "date_collecte": "2025-10-05T09:31:54.201000",
+    "nb_offres": 662,
     "code_rome": "M1805",
-    "scope": "FRANCE_ENTIERE",
-    "nb_villes_uniques": 339,
-    "nb_entreprises_uniques": 210
+    "source": "France Travail API v2",
+    "version_collector": "DatavizFT v1.0"
   },
-  "resultats": [
+  "offres": [
     {
       "id": "198RMRD",
       "intitule": "Ingénieur en développement Java (h/f)",
@@ -9304,6 +9303,55 @@
       "employeurHandiEngage": false
     },
     {
+      "id": "3358538",
+      "intitule": "Développeur électronique embarqué (H/F/D)",
+      "description": "Notre partenaire conçoit et fabrique des solutions de mesure innovantes (appareils portatifs et logiciels) pour des domaines techniques de pointe et du contrôle non destructif depuis plus de 30 ans.\nNous recherchons pour eux un développeur électronique, en charge de compléter l'équipe et intervenir sur ces sujets.\nVos différentes missions seront de :\nAnalyse du besoin électronique et conception des produits (spécifications - caractéristiques - veille technologique.)\nDéveloppement électronique numérique et analogique (du schéma aux cartes prototypes)\nTester, intégrer les nouveaux produits (banc d'essais, documentation de production...)\nCoordonner la sous-traitance électronique\nEgalement, vous serez amenul>\n- Savoir détecter et répondre aux besoins des clients.\nDéveloppement micrologiciel (test interne de chaque fonction)\nRéaliser des essais normatifs (CEM, CE...)\nIndustrialisation (SAV de 2ème niveau, modifications mineures, obsolescence...)\nAssurer un soutien technique sur les produits\nSAMSIC, société socialement responsable, s'engage au quotidien pour l'emploi des personnes en situation de handicap.",
+      "dateCreation": "2025-10-05T08:44:44.000Z",
+      "dateActualisation": "2025-10-05T08:44:44.000Z",
+      "lieuTravail": {
+        "libelle": "66 - Perpignan",
+        "latitude": 42.695181,
+        "longitude": 2.874248,
+        "codePostal": "66000",
+        "commune": "66136"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse systèmes embarqués",
+      "entreprise": {
+        "description": "Brainfield accompagne les entreprises dans la recherche et la valorisation de leurs ressources humaines. Des PME aux Grands Groupes, Brainfield met au service de ses clients les expertises de ses consultants en recrutement : Executive Search, RPO, Assessment, Sourcing. \nAu-del&agrave; des comp&eacute;tences techniques, Brainfield accorde une importance toute particuli&egrave;re aux savoir-&ecirc;tre des candidats et &agrave; l&rsquo;interpr&eacute;tation de leurs comp&eacute;tences comp...",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "D",
+      "experienceLibelle": "Débutant accepté",
+      "salaire": {},
+      "dureeTravailLibelle": "00H/semaine",
+      "alternance": false,
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "origineOffre": {
+        "origine": "2",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/3358538",
+        "partenaires": [
+          {
+            "nom": "DIRECTEMPLOI",
+            "url": "https://www.directemploi.com/candidatOffre/52581801?utm_source=pole-emploi&utm_medium=referral&utm_campaign=Pôle-Emploi",
+            "logo": "https://www.francetravail.fr/logos/img/partenaires/directemploi80.png"
+          }
+        ]
+      },
+      "contexteTravail": {
+        "horaires": [
+          "00H/semaine"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
       "id": "3356559",
       "intitule": "Manager des solutions ERP et applications IT H/F",
       "description": "Notre client est une organisation internationale, Artemyn évolue dans le secteur de l'exploitation des minéraux. L'entreprise est reconnue pour son engagement envers l'innovation technologique et la spécialité de ses produits.En tant que Manager des solutions ERP et applications IT, vous aurez les responsabilités suivantes :\nSuperviser et optimiser les systèmes ERP, avec un accent particulier sur SAP ;\nGérer les applications IT clés, telles que HiBob et Kyriba, pour assurer leur efficacité opérationnelle ;\nIdentifier et résoudre les problèmes techniques liés aux applications et aux systèmes ERP ;\nCollaborer avec les équipes internes pour aligner les solutions technologiques sur les besoins métier ;\nDévelopper et mettre en œuvre des stratégies pour améliorer les processus informatiques ;\nFormer et accompagner le personnel sur l'utilisation des outils IT et ERP ;\nTravailler avec des partenaires externes pour garantir le bon fonctionnement des systèmes informatiques.\nLa rémunération et les avantages pour ce poste sont :\nUn salaire annuel brut dont nous pourrons discuter durant nos échanges ;\nUne prime variable de 10 à 15 % en supplément du salaire ;\nUn environnement de travail basé à Paris, au sein d'une grande organisation ;\nDes opportunités de développement professionnel dans le secteur industriel.\nSi vous êtes intéressé(e) par ce poste de Manager des solutions ERP et applications IT, nous vous invitons à postuler dès maintenant.",
@@ -13044,57 +13092,6 @@
       "contexteTravail": {
         "horaires": [
           "00H/semaine\nTravail en journée"
-        ]
-      },
-      "entrepriseAdaptee": false,
-      "employeurHandiEngage": false
-    },
-    {
-      "id": "3224687",
-      "intitule": "Développeur / Développeuse informatique (H/F)",
-      "description": "Apportez votre expertise pour créer des solutions de paiement innovantes et sécurisées !\nContexte de la mission : Dans un environnement de travail agréable, rejoignez une équipe expérimentée et participez à la conception et au développement d'applications web et mobile innovantes. L'objectif étant d'améliorer l'expérience utilisateur en modernisant les applications grâce à des technologies de pointe.\nExemple de projets :\n - Applications mobiles permettant de payer sans contact, créer des cagnottes, réaliser simplement des virements entre amis, etc.\n - Application mobile destinée à payer son parking\n - Gestion de la sécurité sur les applications mobiles (Touch ID, Face ID...)\nResponsabilités :\n - Analyser le besoin des clients ;\n - Définir l'architecture technique ;\n - Concevoir les solutions ;\n - Développer les applications ;\n - Organiser la recette des solutions applicatives ;\n - Contrôler et maintenir le bon fonctionnement des applications.",
-      "dateCreation": "2025-10-03T07:28:17.000Z",
-      "dateActualisation": "2025-10-04T13:47:10.000Z",
-      "lieuTravail": {
-        "libelle": "67 - Strasbourg",
-        "latitude": 48.584283,
-        "longitude": 7.77867,
-        "codePostal": "67000",
-        "commune": "67482"
-      },
-      "romeCode": "M1805",
-      "romeLibelle": "Développeur / Développeuse informatique",
-      "appellationlibelle": "Développeur / Développeuse informatique",
-      "entreprise": {
-        "nom": "VIVERIS",
-        "entrepriseAdaptee": false
-      },
-      "typeContrat": "CDI",
-      "typeContratLibelle": "CDI",
-      "natureContrat": "Contrat travail",
-      "experienceExige": "E",
-      "experienceLibelle": "0 An(s)",
-      "salaire": {
-        "libelle": "Annuel de 30000.0 Euros à 45000.0 Euros"
-      },
-      "dureeTravailLibelle": "00H/semaine",
-      "alternance": false,
-      "nombrePostes": 1,
-      "accessibleTH": false,
-      "origineOffre": {
-        "origine": "2",
-        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/3224687",
-        "partenaires": [
-          {
-            "nom": "DIRECTEMPLOI",
-            "url": "https://www.directemploi.com/candidatOffre/51340897?utm_source=pole-emploi&utm_medium=referral&utm_campaign=Pôle-Emploi",
-            "logo": "https://www.francetravail.fr/logos/img/partenaires/directemploi80.png"
-          }
-        ]
-      },
-      "contexteTravail": {
-        "horaires": [
-          "00H/semaine"
         ]
       },
       "entrepriseAdaptee": false,
@@ -17075,57 +17072,6 @@
       "employeurHandiEngage": false
     },
     {
-      "id": "3030596",
-      "intitule": "Développeur / Développeuse informatique (H/F)",
-      "description": "Contexte de la mission :\nViveris pilote les projets de transformation IT des entreprises du secteur Bancassurance en mettant le client au centre.\nDans un environnement de travail agréable, participez à la conception et au développement d'applications bancaires afin d'améliorer et sécuriser l'expérience utilisateur.\nResponsabilités :\n - Analyser le besoin des clients ;\n - Définir l'architecture technique des solutions Mainframe/Cobol ;\n - Concevoir les solutions ;\n - Développer les applications ;\n - Organiser la recette des solutions applicatives ;\n - Contrôler et maintenir le bon fonctionnement des applications.",
-      "dateCreation": "2025-09-29T18:49:31.000Z",
-      "dateActualisation": "2025-10-04T13:52:20.000Z",
-      "lieuTravail": {
-        "libelle": "67 - Strasbourg",
-        "latitude": 48.584283,
-        "longitude": 7.77867,
-        "codePostal": "67000",
-        "commune": "67482"
-      },
-      "romeCode": "M1805",
-      "romeLibelle": "Développeur / Développeuse informatique",
-      "appellationlibelle": "Développeur / Développeuse informatique",
-      "entreprise": {
-        "nom": "VIVERIS",
-        "entrepriseAdaptee": false
-      },
-      "typeContrat": "CDI",
-      "typeContratLibelle": "CDI",
-      "natureContrat": "Contrat travail",
-      "experienceExige": "E",
-      "experienceLibelle": "0 An(s)",
-      "salaire": {
-        "libelle": "Annuel de 30000.0 Euros à 45000.0 Euros"
-      },
-      "dureeTravailLibelle": "00H/semaine",
-      "alternance": false,
-      "nombrePostes": 1,
-      "accessibleTH": false,
-      "origineOffre": {
-        "origine": "2",
-        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/3030596",
-        "partenaires": [
-          {
-            "nom": "DIRECTEMPLOI",
-            "url": "https://www.directemploi.com/candidatOffre/51340898?utm_source=pole-emploi&utm_medium=referral&utm_campaign=Pôle-Emploi",
-            "logo": "https://www.francetravail.fr/logos/img/partenaires/directemploi80.png"
-          }
-        ]
-      },
-      "contexteTravail": {
-        "horaires": [
-          "00H/semaine"
-        ]
-      },
-      "entrepriseAdaptee": false,
-      "employeurHandiEngage": false
-    },
-    {
       "id": "3011112",
       "intitule": "CONCEPTEUR(TRICE) / DÉVELOPPEUR(EUSE) SI (H/F)",
       "description": "Votre mission:\n Motivé(e) à l’idée de relever un nouveau challenge, vous intégrerez une équipe composée d’une dizaine de personnes (scrum master, développeurs, product owner, testeurs) évoluant dans un train SAFE (agilité à l’échelle). Vous assurerez un rôle de développeur(euse) en participant à la conception et la réalisation de nos produits.\nLes challenges qui vous attendent :\nConcevoir et développer des composants métiers ou prototypes avec back JAVA, spring / API Rest, interfaces Angular…, dans un contexte de Pair-programming\nOptimiser le code développé pour en assurer la qualité et faciliter sa maintenance, à travers des « code review »\nConstruire les pipelines de livraison dans une approche CI/CD, DEVOPS et Cloud Native, avec les outils Docker et Kubernetes\nMettre en place des tests automatisés avec une approche TDD / BDD\nValider le respect du cadre méthodologique et normatif en matière de sécurité du SI, d’exploitabilité et d’ergonomie des IHM\nAutomatiser la documentation technique associée aux réalisations grâce à des outils tels que AsciiDoc\nParticiper et être acteur(trice) des pratiques agiles de l’équipe au quotidien : Mêlées, Démos, Retro, Grooming\nPour relever ces challenges, vous pourrez vous appuyer sur vos pairs et partager vos pratiques au sein de la communauté des développeurs et fabricants de France Travail.\n \n\n Votre environnement de travail:\n Rejoignez les fonctions support de France Travail et évoluez dans un environnement qui privilégie la collaboration et l’inclusion.<br>Un équilibre vie pro/vie perso préservé : 15 jours de RTT + jours supplémentaires conventionnels, télétravail flexible, horaires modulables, engagement pour le respect du droit à la déconnexion.<br>Une rémunération et des avantages attractifs : 13? mois et allocation vacances (au prorata du temps de présence), prime d’ancienneté significative à partir d’un an d’exercice, titres-restaurant et/ou restauration d’entreprise, prestations avantageuses du comité d’entreprise (CSE)<br>Un soutien pour des déplacements responsables : en plus de la participation aux abonnements de transport public, versement d’un forfait mobilité durable attractif.<br>Un accompagnement pour réussir et progresser : vous bénéficierez d'un parcours d’intégration avec formations, tutorat, immersion... selon vos besoins, votre rythme et votre mode d'apprentissage.<br> \n\n Compétences recherchées:\n Vous êtes diplômé(e) d'une formation de niveau Bac+2 à Bac+5 dans le domaine informatique\nVous justifiez d'une première expérience réussie sur des fonctions similaires\nVous êtes reconnu(e) pour vos connaissances techniques des langages et framework Java, Javascript, Python ou Angular\nVous êtes habitué(e) à un environnement agile et vous savez évoluer en autonomie\nVous appréciez le travail en équipe et faites preuve d'une bonne aisance relationnelle\nVous êtes animé(e) par l'amélioration continue et l'innovation\nVous souhaitez nous rejoindre mais n’avez pas encore développé toutes ces compétences ? Votre envie de contribuer à notre projet et de progresser peut faire la différence. Contactez-nous !\n ",
@@ -17629,7 +17575,7 @@
       "intitule": "Ingénieur Système et Test embarqué F/H (H/F)",
       "description": "Dans le cadre du développement des activités d'un de nos clients dans le secteur de l'aéronautique et de la défense, nous recherchons un ingénieur système et test. \nVous interviendrez sur la définition du besoin, de l'architecture qui en découle et des tests permettant sa validation.\nVous aurez en charge de :",
       "dateCreation": "2025-09-28T05:00:26.000Z",
-      "dateActualisation": "2025-10-03T05:34:22.000Z",
+      "dateActualisation": "2025-10-05T08:36:59.000Z",
       "lieuTravail": {
         "libelle": "56 - Lorient",
         "latitude": 47.748138,
@@ -17678,11 +17624,11 @@
       "intitule": "Tech Lead .Net / Angular (H/F)",
       "description": "Lieu : Aix-en-Provence (2 jours de télétravail par semaine)\n Démarrage : octobre \n Type de contrat : CDI avec pré-embauche de 6 mois\n\nContexte de la mission : Nous recherchons un Tech Lead .NET expérimenté pour intervenir chez l'un de nos clients, une structure en pleine transformation numérique. La mission consiste à poser les fondations techniques du projet, encadrer une petite équipe de développeurs (juniors), et garantir la qualité technique globale des livrables.\n\nVous jouerez un rôle clé de mentorat, de coordination technique et de conception logicielle, dans un environnement agile, orienté microservices.\n\nVos responsabilités :",
       "dateCreation": "2025-09-28T04:37:57.000Z",
-      "dateActualisation": "2025-10-03T05:34:00.000Z",
+      "dateActualisation": "2025-10-05T08:43:52.000Z",
       "lieuTravail": {
         "libelle": "13 - Aix-en-Provence",
-        "latitude": 43.529549,
-        "longitude": 5.413967,
+        "latitude": 43.509286,
+        "longitude": 5.438653,
         "codePostal": "13080",
         "commune": "13001"
       },
@@ -22303,11 +22249,11 @@
       "intitule": "Développeur Électronique Embarqué H/F",
       "description": "POSTE : Développeur Électronique Embarqué H/F\nDESCRIPTION : Notre partenaire conçoit et fabrique des solutions de mesure innovantes (appareils portatifs et logiciels) pour des domaines techniques de pointe et du contrôle non destructif depuis plus de 30 ans.  \n Nous recherchons pour eux un développeur électronique, en charge de compléter l'équipe et intervenir sur ces sujets.  \n   \n Vos différentes missions seront de : \n- Analyse du besoin électronique et conception des produits (spécifications - caractéristiques - veille technologique)\n- Développement électronique numérique et analogique (du schéma aux cartes prototypes)\n- Tester, intégrer les nouveaux produits (banc d'essais, documentation de production)\n- Coordonner la sous-traitance électronique\nEgalement, vous serez amené à\n- - Savoir détecter et répondre aux besoins des clients.\n- Développement micrologiciel (test interne de chaque fonction)\n- Réaliser des essais normatifs (CEM, CE)\n- Industrialisation (SAV de 2ème niveau, modifications mineures, obsolescence)\n- Assurer un soutien technique sur les produits\nSAMSIC, société socialement responsable, s'engage au quotidien pour l'emploi des personnes en situation de handicap.\n35000 € - 40000 € / année\nPROFIL : Diplômé d'un Bac +5, vous avez une expérience de 5 ans sur un poste similaire  \n   \n Bon communicant, vous avez un esprit créatif et ouvert, le goût pour l'innovation et un intérêt pour la veille technologique.  \n Ayant une une grande capacité d'écoute, vous savez travailler en équipe et partager des connaissances.  \n Ce poste demande polyvalence et autonomie, rigueur, réactivité, curiosité, envie d'apprendre et prise d'initiatives.",
       "dateCreation": "2025-09-23T10:49:46.000Z",
-      "dateActualisation": "2025-10-03T21:46:16.000Z",
+      "dateActualisation": "2025-10-05T08:44:44.000Z",
       "lieuTravail": {
         "libelle": "66 - Perpignan",
-        "latitude": 42.666508,
-        "longitude": 2.887136,
+        "latitude": 42.695181,
+        "longitude": 2.874248,
         "codePostal": "66000",
         "commune": "66136"
       },
@@ -22344,11 +22290,6 @@
             "nom": "METEOJOB",
             "url": "https://www.meteojob.com/jobads/48597461?utm_source=pole-emploi&utm_medium=aggregator-free",
             "logo": "https://www.francetravail.fr/logos/img/partenaires/meteojob80.png"
-          },
-          {
-            "nom": "DIRECTEMPLOI",
-            "url": "https://www.directemploi.com/candidatOffre/52581801?utm_source=pole-emploi&utm_medium=referral&utm_campaign=Pôle-Emploi",
-            "logo": "https://www.francetravail.fr/logos/img/partenaires/directemploi80.png"
           }
         ]
       },
@@ -24721,7 +24662,7 @@
       "romeLibelle": "Développeur / Développeuse informatique",
       "appellationlibelle": "Informaticien / Informaticienne",
       "entreprise": {
-        "description": "Engag&eacute;es pour la d&eacute;fense du pouvoir d&rsquo;achat, les entreprises du Mouvement E.Leclerc militent &eacute;galement pour la diversit&eacute; au sein des &eacute;quipes et l&rsquo;&eacute;galit&eacute; d&rsquo;acc&egrave;s aux emplois pour tous.&nbsp;Ces convictions sont au c&oelig;ur de la promesse employeur des&nbsp;plus de 700 entreprises qui agissent quotidiennement sous notre enseigne.",
+        "description": "Engag&eacute;es pour la d&eacute;fense du pouvoir d&rsquo;achat, les entreprises du Mouvement E.Leclerc militent &eacute;galement pour la diversit&eacute; au sein des &eacute;quipes et l&rsquo;&eacute;galit&eacute; d&rsquo;acc&egrave;s aux emplois pour tous. &nbsp;Ces convictions sont au c&oelig;ur de la promesse employeur des&nbsp;plus de 700 entreprises qui agissent quotidiennement sous notre enseigne.",
         "entrepriseAdaptee": false
       },
       "typeContrat": "CDI",
@@ -32531,7 +32472,7 @@
       "intitule": "Développeur Python Senior - Spécialiste LLM H/F",
       "description": "Nous recherchons notre futur.e expert.e Python / LLM en plein cœur de Lyon !Allez, on vous en dit plus...Pour notre client, acteur innovant dans le domaine industriel et de transformation digitale, nous recherchons un·e Développeur Python Senior - Spécialiste LLM pour accélérer le développement et l'industrialisation de sa plateforme d'agents LLM. Vous interviendrez en tant que référent·e technique sur des sujets à fort enjeu, en lien avec les équipes internes.Vos principales responsabilités :Concevoir et développer des micro-services Python/FastAPIIntégrer des outils externes (vector DB, moteurs de recherche, services métiers) via le Model Context ProtocolMettre en place et optimiser les pipelines CI/CD (GitLab), la conteneurisation Docker et les déploiements KubernetesDéfinir et appliquer les bonnes pratiques d'observabilité (Grafana, OpenTelemetry)Assurer le mentorat technique, réaliser des revues de code et formaliser les best practicesPrototyper des solutions RAG, quantization ou fine-tuning léger si pertinent",
       "dateCreation": "2025-08-09T20:32:31.000Z",
-      "dateActualisation": "2025-10-03T07:38:32.000Z",
+      "dateActualisation": "2025-10-05T08:39:01.000Z",
       "lieuTravail": {
         "libelle": "69 - Lyon",
         "commune": "69123"
