@@ -7,7 +7,8 @@ import os
 import glob
 from datetime import datetime, timedelta
 from typing import Dict, Any, Optional
-from ..tools.data_loader import charger_competences_referentiel, charger_config_pipeline
+from ..models import COMPETENCES_REFERENTIEL
+from ..tools.data_loader import charger_config_pipeline
 from ..tools.api_client import FranceTravailAPIClient
 from ..tools.competence_analyzer import CompetenceAnalyzer
 from ..tools.file_manager import FileManager
@@ -19,7 +20,7 @@ class PipelineM1805:
     def __init__(self):
         """Initialise le pipeline avec ses composants"""
         self.config = charger_config_pipeline("france_travail_m1805")
-        self.competences_referentiel = charger_competences_referentiel()
+        self.competences_referentiel = COMPETENCES_REFERENTIEL
         
         # Initialisation des composants
         self.api_client = FranceTravailAPIClient(

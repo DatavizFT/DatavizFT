@@ -1,0 +1,220 @@
+{
+  "metadata": {
+    "date_collecte": "2025-10-05T10:01:43.940526",
+    "nb_offres": 3,
+    "code_rome": "M1805",
+    "source": "France Travail API v2",
+    "version_collector": "DatavizFT v1.0"
+  },
+  "offres": [
+    {
+      "id": "198RMRD",
+      "intitule": "Ingénieur en développement Java (h/f)",
+      "description": " A la recherche d'une nouvelle opportunité professionnelle ?\n \nLHH- Recruitment solution, cabinet de conseil en recrutement intérim spécialisé, management de transition, et évaluation d'expert.e.s, cadres et dirigeant.e.s, recherche pour son client, un Ingénieur en développement Java confirmé ( H/F) en CDI, à proximité de Strasbourg.\n \nNotre client (Final) est une filiale à taille humaine, d'un grand groupe international bien connu du grand public, et se place parmi les 3 leaders dans son domaine en France et dont le siège est à Strasbourg. \n \nAu sein d'une équipe, vous contribuez au développement des applications internes pour les collaborateurs, ainsi qu'aux utilisateurs externes et à des projets très stimulants. \n \nMissions : \n \n\n - Identifier les besoins utilisateurs métiers et être force de proposition sur les projets, \n - Concevoir et développer les solutions, réaliser les tests (unitaire, d'intégration et de charge) , puis contribuer à leur mise en production, \n - Contrôler la qualité du code et réaliser la documentation associée, \n - Participer à la maintenance corrective et évolutive des applications de l'entreprise, \n - Réaliser le support utilisateurs internes, \n - Apporter vos connaissances et votre expertise au sein de l'équipe. \n\n \nProfil recherché :\n \nDe formation en informatique de type Bac + 5, vous possédez une première expérience de trois années en développement Java.\n \nCompétences obligatoires : Java, et les Framework associés (Spring Boot, Vue JS). Ainsi que des compétences en bases de données (sql/ mongo). \n\nVous êtes rigoureux dans votre travail, vous possédez des bonnes qualités d'écoute et êtes force de proposition ? \n \nUne fourchette de salaire est donnée à titre indicative et sera déterminée selon l'expérience/profil  : 40-50k€ bruts annuel + l'intéressement et participation très attractifs, avec des avantages d'entreprise (cantine, CSE),.\n \nC'est un poste de statut cadre avec des horaires flexibles, ainsi qu'un accord de télétravail jusqu'à 2 jours/semaine. \n \nPour faire la différence : www.lhh.com\n",
+      "dateCreation": "2025-10-03T17:11:04.076Z",
+      "dateActualisation": "2025-10-03T17:11:04.286Z",
+      "lieuTravail": {
+        "libelle": "67 - Strasbourg",
+        "latitude": 48.56653,
+        "longitude": 7.725705,
+        "codePostal": "67000",
+        "commune": "67482"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "ADECCO FRANCE",
+        "description": "LHH Recruitment Solutions, cabinet spécialisé en recrutement et évaluation d'experts, cadres et dirigeants, vous accompagne tout au long de votre parcours professionnel pour bâtir un  Beautiful Working World.  À l'écoute de vos ambitions, nos spécialistes en recrutement vous conseillent et vous guident afin de vous épanouir et d'atteindre la prochaine étape de votre carrière dans un environnement de travail inspirant et harmonieux.",
+        "logo": "https://api.francetravail.fr/exp-rechercheoffre/v1/logo-entreprise/u1JLvB2kAG4G9vCToRTJTXTju4kX44oI",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "D",
+      "experienceLibelle": "Débutant accepté",
+      "salaire": {
+        "libelle": "Annuel de 40000.0 Euros à 50000.0 Euros sur 12.0 mois"
+      },
+      "dureeTravailLibelle": "35H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "ADECCO FRANCE - M. MATTHIEU FONTAINE ",
+        "coordonnees1": "https://tnl2.jometer.com/v2/job?jz=5slp6ca30b0e62a942f45f0bfaef60ff2ccd3AEADECAAAADAAAAAAAAAAAAAAAAIIB7JAM&utm_source=FranceTravail&utm_medium=jobboard&utm_campaign=LHH_Organic&Source=30",
+        "urlPostulation": "https://tnl2.jometer.com/v2/job?jz=5slp6ca30b0e62a942f45f0bfaef60ff2ccd3AEADECAAAADAAAAAAAAAAAAAAAAIIB7JAM&utm_source=FranceTravail&utm_medium=jobboard&utm_campaign=LHH_Organic&Source=30"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "9",
+      "qualificationLibelle": "Cadre",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198RMRD"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "35H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198RKWM",
+      "intitule": "Technicien fao (H/F)",
+      "description": "Nous recrutons un Technicien FAO h/f (fabrication assistée par ordinateur) pour rejoindre une équipe dynamique à Briec (29510).\n\n\n\n\nSous la direction du chef d'atelier, votre mission principale sera la programmation de pièces mécaniques en 3/4/5 axes à l'aide des logiciels TOPCAM-MASTERCAM (TOP SOLID).\n\nLes compétences du poste sont:\n\n-Contrôler la qualité et la conformité d'un livrable\n\n-Montrer et régler ne installation, une machine\n\n-Piloter la gestion de la production de l'exploitation\n\n-Réaliser un diagnostic technique\n\n-Techniques d'usinage\n\n\n\nHoraires : Travail du lundi au vendredi de 8h à 16h30.\n\n\n\n\nAvantages : Profitez de primes trimestrielles, d'une mutuelle, de la participation aux bénéfices, et d'une participation aux frais de route.\n\n\n\n\nLe contrat débute le dès que possible. Ce poste est à temps plein avec 39 heures par semaine.\n\n\n\n\nSalaire : 18 EUR par heure.\n\n\n\n\n\n\n Nous recherchons un candidat pour le poste de Technicien FAO h/f (fabrication assistée par ordinateur). Le profil idéal doit posséder un niveau d'étude de Titre de niveau III - Bac +2 - BTS, DUT ou équivalent. Une expérience professionnelle de 3 ans en industrie est requise pour ce poste.\n\n\n",
+      "dateCreation": "2025-10-03T16:33:05.675Z",
+      "dateActualisation": "2025-10-03T16:33:05.884Z",
+      "lieuTravail": {
+        "libelle": "29 - Briec",
+        "latitude": 48.101731,
+        "longitude": -4.001676,
+        "codePostal": "29510",
+        "commune": "29020"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Technicien / Technicienne programmation",
+      "entreprise": {
+        "nom": "ACTUAL QUIMPER 1089",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "2 An(s)",
+      "salaire": {
+        "libelle": "Horaire de 18.0 Euros à 18.0 Euros sur 12.0 mois"
+      },
+      "dureeTravailLibelle": "39H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "coordonnees1": "https://app.mytalentplug.com/description-offre.aspx?ojid=+9OeddyU4+NIAjrvmgSoTA==",
+        "urlPostulation": "https://app.mytalentplug.com/description-offre.aspx?ojid=+9OeddyU4+NIAjrvmgSoTA=="
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "7",
+      "qualificationLibelle": "Technicien",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198RKWM"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "39H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198RHDV",
+      "intitule": "Analyste Programmeur (SAP ABAP) (H/F)",
+      "description": "HORIBA ABX SAS est une filiale du groupe japonais HORIBA. Rayonnant dans plus de 110 pays sur les 5 continents, notre siège social se situe à Montpellier.\n\nNotre Société propose une gamme étendue et complète de solutions d'hématologie, d'hémostase et de chimie clinique comprenant des analyseurs, des réactifs et des consommables pour le domaine du Diagnostic In Vitro (DIV).\n\nNotre organisation comprend une importante diversité de métiers qui nous amène à recruter aujourd'hui un(e) Analyste Programmeur (SAP ABAP) (H/F).\n\nIntégré(e) au Département Systèmes d'Information (DSI), vous participez au support et aux évolutions des solutions SAP ECC6 au sein d'un centre de compétences de la DSI de l'Entreprise.\n\nMissions :\n\nVous effectuez les développements décrits par les spécifications reçues et rédigez la partie technique.\nVous effectuez et documentez les tests unitaires avant livraison du développement à l'équipe fonctionnelle.\nVous créez ou effectuez la maintenance et l'évolution des programmes existants demandés par l'équipe fonctionnelle.\nVous êtes un support au choix des solutions techniques pour répondre aux besoins métiers.\nVous prenez en charge l'organisation des activités liées aux rôles et autorisations, notamment la maintenance corrective et évolutive, vous êtes un partenaire du métier sur l'implémentation des autorisations pour leurs fonctions.\nVous pouvez assister les utilisateurs finaux aux tests.\n\nProfil :\n\nDoté(e) d'une formation supérieure en informatique de gestion (bac+3/5), vous justifiez d'une première expérience professionnelle de minimum 3 ans. Vous maîtrisez le module développement SAP ABAP.\nVous avez de bonnes connaissances d'autres outils de développement SAP : SAP Script, Smart Forms, WF, Gestion étiquettes Cab, Avery, EDI (gencode, edifact), LSMW et BC général.\nDes connaissances des concepts et techniques de paramétrages d'un des modules de gestion seront un plus.\nMéthodique, proactif/ve, vous avez un excellent relationnel et sens du service.\nUn anglais professionnel est requis (écrit, lu, parlé).\n\nAvantages :\n\nRémunération fixe selon profil X 13 mois + Prime variable sur objectifs annuels + Titres restaurant + Jours de RTT",
+      "dateCreation": "2025-10-03T15:38:55.379Z",
+      "dateActualisation": "2025-10-03T15:38:55.890Z",
+      "lieuTravail": {
+        "libelle": "34 - MONTPELLIER",
+        "latitude": 43.626378,
+        "longitude": 3.882533,
+        "codePostal": "34000",
+        "commune": "34172"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Analyste-programmeur / Analyste-programmeuse informatique",
+      "entreprise": {
+        "nom": "ABXWEB - ABXDIAGNOSTICS",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "1 An(s)",
+      "formations": [
+        {
+          "niveauLibelle": "Bac+5 et plus ou équivalents",
+          "exigence": "S"
+        },
+        {
+          "niveauLibelle": "Bac+3, Bac+4 ou équivalents",
+          "exigence": "E"
+        }
+      ],
+      "langues": [
+        {
+          "libelle": "Anglais",
+          "exigence": "E"
+        }
+      ],
+      "salaire": {
+        "commentaire": "Selon profil et compétences",
+        "complement1": "Titres restaurant / Prime de panier",
+        "listeComplements": [
+          {
+            "code": "6",
+            "libelle": "Titres restaurant / Prime de panier"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "35H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "ABXWEB - ABXDIAGNOSTICS - Mme Nathalie Torschen",
+        "coordonnees1": "https://carrieres-healthcare.horiba.com/jobs/5670968-analyste-programmeur-sap-abap-h-f?promotion=1379940-trackable-share-link-france-travail",
+        "urlPostulation": "https://carrieres-healthcare.horiba.com/jobs/5670968-analyste-programmeur-sap-abap-h-f?promotion=1379940-trackable-share-link-france-travail"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "8",
+      "qualificationLibelle": "Agent de maîtrise",
+      "codeNAF": "26.51B",
+      "secteurActivite": "26",
+      "secteurActiviteLibelle": "Fabrication d'instrumentation scientifique et technique",
+      "qualitesProfessionnelles": [
+        {
+          "libelle": "Avoir l'esprit d'équipe",
+          "description": "Capacité à travailler et à se coordonner avec les autres au sein de l'entreprise pour réaliser les objectifs fixés."
+        },
+        {
+          "libelle": "Faire preuve d'autonomie",
+          "description": "Capacité à prendre en charge son activité sans devoir être encadré de façon continue (le cas échéant, à solliciter les autres acteurs de l'entreprise)."
+        },
+        {
+          "libelle": "Faire preuve de rigueur et de précision",
+          "description": "Capacité à réaliser des tâches en suivant avec exactitude les règles, les procédures, les instructions qui ont été fournies, sans réaliser d'erreur et à transmettre clairement des informations. Se montrer ponctuel et respectueux des règles de savoir-vivre usuelles."
+        }
+      ],
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198RHDV"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "35H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    }
+  ]
+}

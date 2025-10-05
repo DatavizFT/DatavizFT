@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "date_analyse": "2025-10-05T09:27:03.080150",
+    "date_analyse": "2025-10-05T10:01:43.942552",
     "code_rome": "M1805",
-    "nb_offres_analysees": 5,
+    "nb_offres_analysees": 3,
     "version_analyzer": "DatavizFT v1.0"
   },
   "analyse": {
@@ -10,43 +10,33 @@
       "langages": {
         "competences": [
           {
-            "competence": "Java",
-            "occurrences": 2,
-            "pourcentage": 40.0,
+            "competence": "JavaScript",
+            "occurrences": 1,
+            "pourcentage": 33.3,
             "offres": [
               {
                 "id": "198RMRD",
                 "intitule": "Ingénieur en développement Java (h/f)",
                 "entreprise": "ADECCO FRANCE"
-              },
+              }
+            ]
+          },
+          {
+            "competence": "Java",
+            "occurrences": 1,
+            "pourcentage": 33.3,
+            "offres": [
               {
-                "id": "198RBQP",
-                "intitule": "Développeur informatique (H/F)",
-                "entreprise": "MANPOWER FRANCE"
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
               }
             ]
           },
           {
             "competence": "SQL",
-            "occurrences": 2,
-            "pourcentage": 40.0,
-            "offres": [
-              {
-                "id": "198RMRD",
-                "intitule": "Ingénieur en développement Java (h/f)",
-                "entreprise": "ADECCO FRANCE"
-              },
-              {
-                "id": "198RBQP",
-                "intitule": "Développeur informatique (H/F)",
-                "entreprise": "MANPOWER FRANCE"
-              }
-            ]
-          },
-          {
-            "competence": "JavaScript",
             "occurrences": 1,
-            "pourcentage": 20.0,
+            "pourcentage": 33.3,
             "offres": [
               {
                 "id": "198RMRD",
@@ -64,7 +54,7 @@
           {
             "competence": "Vue.js",
             "occurrences": 1,
-            "pourcentage": 20.0,
+            "pourcentage": 33.3,
             "offres": [
               {
                 "id": "198RMRD",
@@ -82,7 +72,7 @@
           {
             "competence": "Spring Boot",
             "occurrences": 1,
-            "pourcentage": 20.0,
+            "pourcentage": 33.3,
             "offres": [
               {
                 "id": "198RMRD",
@@ -105,7 +95,7 @@
           {
             "competence": "Chef",
             "occurrences": 1,
-            "pourcentage": 20.0,
+            "pourcentage": 33.3,
             "offres": [
               {
                 "id": "198RKWM",
@@ -123,7 +113,7 @@
           {
             "competence": "MongoDB",
             "occurrences": 1,
-            "pourcentage": 20.0,
+            "pourcentage": 33.3,
             "offres": [
               {
                 "id": "198RMRD",
@@ -131,21 +121,9 @@
                 "entreprise": "ADECCO FRANCE"
               }
             ]
-          },
-          {
-            "competence": "Oracle",
-            "occurrences": 1,
-            "pourcentage": 20.0,
-            "offres": [
-              {
-                "id": "198RBQP",
-                "intitule": "Développeur informatique (H/F)",
-                "entreprise": "MANPOWER FRANCE"
-              }
-            ]
           }
         ],
-        "nb_competences_detectees": 2,
+        "nb_competences_detectees": 1,
         "nb_competences_total": 22
       },
       "data_ia": {
@@ -189,21 +167,8 @@
         "nb_competences_total": 17
       },
       "systemes_exploitation": {
-        "competences": [
-          {
-            "competence": "Android",
-            "occurrences": 1,
-            "pourcentage": 20.0,
-            "offres": [
-              {
-                "id": "198QVZY",
-                "intitule": "Développeur(euse) Informatique Industrielle (H/F)",
-                "entreprise": "PROVENCALE SA"
-              }
-            ]
-          }
-        ],
-        "nb_competences_detectees": 1,
+        "competences": [],
+        "nb_competences_detectees": 0,
         "nb_competences_total": 19
       },
       "methodologies_architecture": {
@@ -227,6 +192,6 @@
         "nb_competences_total": 8
       }
     },
-    "nb_offres_analysees": 5
+    "nb_offres_analysees": 3
   }
 }

@@ -4,7 +4,46 @@ Extraction, nettoyage et préparation de texte pour l'analyse
 """
 
 import re
+import unicodedata
 from typing import Dict, List, Any, Optional
+
+
+def normaliser_unicode(texte: str) -> str:
+    """
+    Normalise les caractères Unicode problématiques
+    
+    Args:
+        texte: Texte contenant potentiellement des caractères Unicode problématiques
+    
+    Returns:
+        Texte avec caractères Unicode normalisés
+    """
+    if not texte:
+        return ""
+    
+    # Remplacements des caractères problématiques courants
+    remplacements = {
+        '\u00a0': ' ',      # Espace insécable → espace normal
+        '\u2013': '-',      # Tiret moyen → tiret normal
+        '\u2014': '-',      # Tiret long → tiret normal
+        '\u2018': "'",      # Apostrophe courbe gauche → apostrophe simple
+        '\u2019': "'",      # Apostrophe courbe droite → apostrophe simple
+        '\u201c': '"',      # Guillemet double gauche → guillemet double
+        '\u201d': '"',      # Guillemet double droite → guillemet double
+        '\u2026': '...',    # Points de suspension → trois points
+        '\u00ab': '"',      # Guillemet français gauche
+        '\u00bb': '"',      # Guillemet français droite
+    }
+    
+    # Appliquer les remplacements
+    texte_normalise = texte
+    for unicode_char, remplacement in remplacements.items():
+        texte_normalise = texte_normalise.replace(unicode_char, remplacement)
+    
+    # Normalisation Unicode (décomposition puis recomposition)
+    texte_normalise = unicodedata.normalize('NFKC', texte_normalise)
+    
+    return texte_normalise
 
 
 def nettoyer_texte(texte: str) -> str:
@@ -20,10 +59,15 @@ def nettoyer_texte(texte: str) -> str:
     if not texte:
         return ""
     
-    # Conversion en minuscules et suppression des caractères spéciaux
-    texte_clean = re.sub(r'[^\w\s\.\-\+#]', ' ', texte.lower())
-    # Normalisation des espaces
+    # 1. Normaliser les caractères Unicode problématiques
+    texte_normalise = normaliser_unicode(texte)
+    
+    # 2. Conversion en minuscules et suppression des caractères spéciaux
+    texte_clean = re.sub(r'[^\w\s\.\-\+#]', ' ', texte_normalise.lower())
+    
+    # 3. Normalisation des espaces
     texte_clean = re.sub(r'\s+', ' ', texte_clean)
+    
     return texte_clean.strip()
 
 
@@ -210,3 +254,54 @@ def normaliser_competence(competence: str) -> str:
     
     competence_lower = competence_norm.lower()
     return normalisations.get(competence_lower, competence_norm)
+
+
+def nettoyer_offre_pour_json(offre: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Nettoie une offre d'emploi pour éliminer les caractères Unicode problématiques
+    avant la sauvegarde JSON
+    
+    Args:
+        offre: Dictionnaire d'offre d'emploi
+        
+    Returns:
+        Offre nettoyée avec caractères Unicode normalisés
+    """
+    if not isinstance(offre, dict):
+        return offre
+        
+    offre_nettoyee = {}
+    
+    for cle, valeur in offre.items():
+        if isinstance(valeur, str):
+            # Nettoyer les chaînes de caractères
+            offre_nettoyee[cle] = normaliser_unicode(valeur)
+        elif isinstance(valeur, dict):
+            # Récursion pour les dictionnaires imbriqués
+            offre_nettoyee[cle] = nettoyer_offre_pour_json(valeur)
+        elif isinstance(valeur, list):
+            # Traiter les listes
+            offre_nettoyee[cle] = [
+                normaliser_unicode(item) if isinstance(item, str) 
+                else nettoyer_offre_pour_json(item) if isinstance(item, dict)
+                else item
+                for item in valeur
+            ]
+        else:
+            # Garder les autres types tels quels
+            offre_nettoyee[cle] = valeur
+            
+    return offre_nettoyee
+
+
+def nettoyer_offres_pour_json(offres: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Nettoie une liste d'offres pour éliminer les caractères Unicode problématiques
+    
+    Args:
+        offres: Liste des offres d'emploi
+        
+    Returns:
+        Liste des offres nettoyées
+    """
+    return [nettoyer_offre_pour_json(offre) for offre in offres]

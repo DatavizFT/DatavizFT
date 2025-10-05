@@ -6,25 +6,7 @@ Gestion centralisée des référentiels de compétences, configurations, etc.
 import json
 from pathlib import Path
 from typing import Dict, Any, Optional
-
-
-def charger_competences_referentiel() -> Dict[str, Any]:
-    """
-    Charge le référentiel de compétences depuis le fichier JSON
-    
-    Returns:
-        Dict contenant les compétences organisées par catégories
-    """
-    try:
-        chemin_competences = Path(__file__).parent.parent.parent / "data" / "json_results" / "competences.json"
-        with open(chemin_competences, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        print("❌ Fichier competences.json non trouvé")
-        return {}
-    except json.JSONDecodeError as e:
-        print(f"❌ Erreur de parsing JSON: {e}")
-        return {}
+from ..models import COMPETENCES_REFERENTIEL
 
 
 def charger_config_pipeline(nom_pipeline: str) -> Dict[str, Any]:
