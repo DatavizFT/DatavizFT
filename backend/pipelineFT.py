@@ -19,7 +19,7 @@ CODE_ROME = "M1805"
 def charger_competences_referentiel():
     """Charge le référentiel de compétences depuis le fichier JSON"""
     try:
-        chemin_competences = Path(__file__).parent.parent / "data" / "json_results" / "competences.json"
+        chemin_competences = Path(__file__).parent / "models" / "competences.json"
         with open(chemin_competences, 'r', encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:

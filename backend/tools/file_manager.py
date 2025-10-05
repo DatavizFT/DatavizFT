@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Any, Optional
+from .text_processor import nettoyer_offres_pour_json
 
 
 class FileManager:
@@ -52,24 +53,33 @@ class FileManager:
         nom_fichier = f"offres_{code_rome}_FRANCE_{timestamp}.json"
         chemin_fichier = self.data_dir / nom_fichier
         
+        # Nettoyage des offres pour éliminer les caractères Unicode problématiques
+        print(f"🧹 Nettoyage des caractères Unicode...")
+        offres_nettoyees = nettoyer_offres_pour_json(offres)
+        
         # Préparation des métadonnées
         donnees_complete = {
             "metadata": {
                 "date_collecte": datetime.now().isoformat(),
-                "nb_offres": len(offres),
+                "nb_offres": len(offres_nettoyees),
                 "code_rome": code_rome,
                 "source": "France Travail API v2",
                 "version_collector": "DatavizFT v1.0"
             },
-            "offres": offres
+            "offres": offres_nettoyees
         }
         
         try:
-            with open(chemin_fichier, 'w', encoding='utf-8') as f:
-                json.dump(donnees_complete, f, ensure_ascii=False, indent=2)
+            with open(chemin_fichier, 'w', encoding='utf-8', newline='\n') as f:
+                json.dump(donnees_complete, f, 
+                         ensure_ascii=False, 
+                         indent=2,
+                         sort_keys=False,
+                         separators=(',', ': '))
             
             print(f"💾 Offres sauvegardées: {chemin_fichier}")
-            print(f"📊 {len(offres)} offres - {chemin_fichier.stat().st_size // 1024} Ko")
+            print(f"📊 {len(offres_nettoyees)} offres - {chemin_fichier.stat().st_size // 1024} Ko")
+            print(f"🧹 Caractères Unicode normalisés")
             
             return str(chemin_fichier)
             
