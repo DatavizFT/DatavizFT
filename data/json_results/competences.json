@@ -1,0 +1,87 @@
+{
+    "langages": [
+        "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "PHP", "Go", "Rust",
+        "Ruby", "Kotlin", "Swift", "R", "Scala", "Perl", "Bash", "SQL", "HTML", "CSS",
+        "SASS", "SCSS", "PowerShell", "VBA", "COBOL", "Delphi", "Lua", "Dart", "Groovy",
+        "WinDev", "WebDev", "WinDev Mobile"
+    ],
+    "frameworks_frontend": [
+        "React", "Angular", "Vue.js", "Svelte", "Next.js", "Nuxt.js"
+    ],
+    "frameworks_backend": [
+        "Django", "Flask", "FastAPI", "Spring Boot", "Express.js", "NestJS",
+        "Symfony", "Laravel", "Ruby on Rails", "ASP.NET", "Spring Framework",
+        "Quarkus", "Micronaut", "Struts", "Play Framework", "Phoenix", "Gin", "Echo"
+    ],
+    "frameworks_mobile": [
+        "React Native", "Flutter", "Ionic", "Xamarin"
+    ],
+    "outils_devops": [
+        "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions",
+        "Travis CI", "CircleCI", "Terraform", "Ansible", "Vagrant", "Helm",
+        "Prometheus", "Grafana", "ELK Stack", "Nagios", "Zabbix", "SonarQube",
+        "Artifactory", "Nexus", "Chef", "Puppet", "Consul", "Vault"
+    ],
+    "bases_de_donnees": [
+        "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis", "Cassandra",
+        "Oracle", "MariaDB", "Firebase", "Elasticsearch", "InfluxDB", "Neo4j",
+        "CouchDB", "DynamoDB", "SQL Server", "DB2", "Snowflake", "BigQuery",
+        "ClickHouse", "TimescaleDB", "CockroachDB", "HFSQL"
+    ],
+    "data_ia": [
+        "TensorFlow", "PyTorch", "Scikit-learn", "Keras", "OpenCV", "Hugging Face",
+        "Pandas", "NumPy", "Matplotlib", "Seaborn", "Spark", "Dask"
+    ],
+    "securite": [
+        "OWASP", "Kali Linux", "Metasploit", "Wireshark", "Burp Suite",
+        "Nessus", "Nmap", "Snort", "Hashcat"
+    ],
+    "cloud": [
+        "AWS", "Azure", "Google Cloud Platform", "OVH", "Heroku",
+        "Netlify", "Vercel", "DigitalOcean", "IBM Cloud", "Oracle Cloud",
+        "Scaleway", "Linode", "Vultr", "CloudFlare", "Firebase", "Supabase"
+    ],
+    "tests_qualite": [
+        "Jest", "Mocha", "Cypress", "Selenium", "Playwright",
+        "JUnit", "Pytest", "Postman", "Newman"
+    ],
+    "environnements_ide": [
+        "VS Code", "IntelliJ IDEA", "PyCharm", "Eclipse", "NetBeans",
+        "Android Studio", "Xcode"
+    ],
+    "api_integration": [
+        "REST", "GraphQL", "gRPC", "WebSockets", "OpenAPI", "Swagger",
+        "OAuth2", "JWT", "SOAP"
+    ],
+    "ux_ui_design": [
+        "Figma", "Adobe XD", "Sketch", "InVision", "Zeplin",
+        "Tailwind CSS", "Bootstrap", "Material UI"
+    ],
+    "collaboration_gestion": [
+        "Jira", "Trello", "Notion", "Confluence", "Git", "GitHub",
+        "GitLab", "Bitbucket", "Slack", "Microsoft Teams", "Azure DevOps",
+        "Monday", "Asana", "Linear", "Clickup", "Miro", "Figma"
+    ],
+    "systemes_exploitation": [
+        "Linux", "Windows", "macOS", "Ubuntu", "CentOS", "Red Hat", "RHEL", "Debian",
+        "Alpine", "FreeBSD", "Windows Server", "Unix", "AIX", "Solaris", "SUSE", 
+        "Android", "iOS", "Windows 10", "Windows 11"
+    ],
+    "methodologies_architecture": [
+        "Agile", "Scrum", "Kanban", "DevOps", "Microservices", "SOA",
+        "Clean Architecture", "DDD", "CQRS", "Event Sourcing", "TDD", "BDD",
+        "CI/CD", "GitFlow", "Lean", "SAFe"
+    ],
+    "formats_protocoles": [
+        "JSON", "XML", "YAML", "CSV", "Protobuf", "Avro", "Parquet",
+        "HTTP", "HTTPS", "TCP/IP", "UDP", "FTP", "SFTP", "SSH"
+    ],
+    "outils_monitoring": [
+        "Datadog", "New Relic", "AppDynamics", "Splunk", "Elastic APM",
+        "Sentry", "Rollbar", "Bugsnag", "LogRocket", "Hotjar"
+    ],
+    "certifications": [
+        "AWS Certified", "Azure Certified", "Google Cloud Certified",
+        "Kubernetes Certified", "Scrum Master", "PMP", "CISSP", "CISA"
+    ]
+}

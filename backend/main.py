@@ -1,30 +1,29 @@
-from fastapi import FastAPI, HTTPException, Query
-from backend.api_client import fetch_offres
+"""
+DatavizFT - Point d'entrée principal
+Exécute le pipeline de collecte et d'analyse des offres M1805
+"""
 
-app = FastAPI()
-print("api started")
+from backend.pipelineFT import run_pipeline
 
-@app.get("/offres")
-def get_offres(code_rome: str = "M1805", commune: str = "Nancy", range_param: str = "0-149"):
-    print("\n" + "🌟" * 30)
-    print("🚀 ENDPOINT /offres APPELÉ !")
-    print(f"📋 Paramètres reçus:")
-    print(f"   - code_rome: {code_rome}")
-    print(f"   - commune: {commune}")
-    print(f"   - range_param: {range_param}")
-    print("🌟" * 30)
+def main():
+    """Point d'entrée principal - Lance le pipeline complet"""
+    print("🚀 DATAVIZFT - LANCEMENT DU PIPELINE")
+    
     try:
-        print("🔄 Appel de fetch_offres()...")
-        result = fetch_offres(code_rome, range_param, commune)
-        print("✅ fetch_offres() a retourné un résultat : nombre d'offres =", len(result.get('resultats', [])))
-        # Si fetch_offres retourne une erreur, la gérer
-        if isinstance(result, dict) and "error" in result:
-            raise HTTPException(status_code=500, detail=f"API Error: {result['error']}")
-        return result
+        # Exécuter le pipeline complet
+        resultat = run_pipeline()
+        
+        if resultat["success"]:
+            print("\n🎉 PIPELINE EXÉCUTÉ AVEC SUCCÈS !")
+            print(f"📊 {resultat['nb_offres']} offres M1805 collectées et analysées")
+            print(f"📁 Fichiers générés dans le dossier data/")
+        else:
+            print(f"\n❌ ERREUR PIPELINE: {resultat['error']}")
+            
     except Exception as e:
-        print(f"Error in get_offres endpoint: {e}")
-        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+        print(f"❌ Erreur fatale: {e}")
+        import traceback
+        traceback.print_exc()
 
-@app.get("/")
-def read_root():
-    return {"message": "DatavizFT API is running", "status": "ok"}
+if __name__ == "__main__":
+    main()

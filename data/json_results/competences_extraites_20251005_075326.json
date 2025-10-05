@@ -1,0 +1,1102 @@
+{
+  "metadata": {
+    "extraction_timestamp": "2025-10-05T07:53:26.336116",
+    "extraction_date": "2025-10-05 07:53:26",
+    "source_analysis": "analyse_competences_M1805_20251005_073925.json",
+    "nb_offres_analysees": 665,
+    "code_rome": "M1805",
+    "scope": "FRANCE_ENTIERE",
+    "champs_analyses": [
+      "intitule",
+      "description"
+    ],
+    "format": "competences_par_categorie_avec_pourcentages"
+  },
+  "competences_par_categorie": {
+    "Langages": {
+      "SQL": {
+        "pourcentage": 25.1,
+        "nb_offres": 167
+      },
+      "Java": {
+        "pourcentage": 22.3,
+        "nb_offres": 148
+      },
+      "JavaScript": {
+        "pourcentage": 17.7,
+        "nb_offres": 118
+      },
+      "Python": {
+        "pourcentage": 14.4,
+        "nb_offres": 96
+      },
+      "C#": {
+        "pourcentage": 11.9,
+        "nb_offres": 79
+      },
+      "CSS": {
+        "pourcentage": 8.6,
+        "nb_offres": 57
+      },
+      "R": {
+        "pourcentage": 8.4,
+        "nb_offres": 56
+      },
+      "HTML": {
+        "pourcentage": 8.4,
+        "nb_offres": 56
+      },
+      "PHP": {
+        "pourcentage": 8.3,
+        "nb_offres": 55
+      },
+      "TypeScript": {
+        "pourcentage": 5.7,
+        "nb_offres": 38
+      },
+      "COBOL": {
+        "pourcentage": 1.8,
+        "nb_offres": 12
+      },
+      "Ruby": {
+        "pourcentage": 1.5,
+        "nb_offres": 10
+      },
+      "VBA": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "Go": {
+        "pourcentage": 0.9,
+        "nb_offres": 6
+      },
+      "PowerShell": {
+        "pourcentage": 0.9,
+        "nb_offres": 6
+      },
+      "Scala": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Bash": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Kotlin": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Swift": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "SCSS": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "Delphi": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "C++": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Rust": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Perl": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "SASS": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Lua": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Dart": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Groovy": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Frameworks Frontend": {
+      "Angular": {
+        "pourcentage": 12.0,
+        "nb_offres": 80
+      },
+      "React": {
+        "pourcentage": 8.0,
+        "nb_offres": 53
+      },
+      "Vue.js": {
+        "pourcentage": 5.3,
+        "nb_offres": 35
+      },
+      "Next.js": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "Svelte": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Nuxt.js": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      }
+    },
+    "Frameworks Backend": {
+      "Spring Boot": {
+        "pourcentage": 7.4,
+        "nb_offres": 49
+      },
+      "Symfony": {
+        "pourcentage": 3.5,
+        "nb_offres": 23
+      },
+      "Django": {
+        "pourcentage": 2.3,
+        "nb_offres": 15
+      },
+      "ASP.NET": {
+        "pourcentage": 2.1,
+        "nb_offres": 14
+      },
+      "Laravel": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "FastAPI": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Flask": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Express.js": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "NestJS": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Ruby on Rails": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Spring Framework": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Quarkus": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Micronaut": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Struts": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Play Framework": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Phoenix": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Gin": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Echo": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Frameworks Mobile": {
+      "Flutter": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Ionic": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "React Native": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Xamarin": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      }
+    },
+    "Outils Devops": {
+      "Docker": {
+        "pourcentage": 12.5,
+        "nb_offres": 83
+      },
+      "Kubernetes": {
+        "pourcentage": 8.0,
+        "nb_offres": 53
+      },
+      "Jenkins": {
+        "pourcentage": 6.5,
+        "nb_offres": 43
+      },
+      "Chef": {
+        "pourcentage": 6.5,
+        "nb_offres": 43
+      },
+      "GitLab CI": {
+        "pourcentage": 4.2,
+        "nb_offres": 28
+      },
+      "Terraform": {
+        "pourcentage": 2.7,
+        "nb_offres": 18
+      },
+      "SonarQube": {
+        "pourcentage": 2.1,
+        "nb_offres": 14
+      },
+      "Ansible": {
+        "pourcentage": 1.5,
+        "nb_offres": 10
+      },
+      "Grafana": {
+        "pourcentage": 1.4,
+        "nb_offres": 9
+      },
+      "Helm": {
+        "pourcentage": 0.9,
+        "nb_offres": 6
+      },
+      "Prometheus": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "GitHub Actions": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "Zabbix": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Nexus": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Puppet": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Vault": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Nagios": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Artifactory": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Consul": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Travis CI": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CircleCI": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Vagrant": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "ELK Stack": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Bases De Donnees": {
+      "PostgreSQL": {
+        "pourcentage": 8.7,
+        "nb_offres": 58
+      },
+      "Oracle": {
+        "pourcentage": 7.1,
+        "nb_offres": 47
+      },
+      "MySQL": {
+        "pourcentage": 6.9,
+        "nb_offres": 46
+      },
+      "SQL Server": {
+        "pourcentage": 6.2,
+        "nb_offres": 41
+      },
+      "MongoDB": {
+        "pourcentage": 4.7,
+        "nb_offres": 31
+      },
+      "Redis": {
+        "pourcentage": 2.0,
+        "nb_offres": 13
+      },
+      "MariaDB": {
+        "pourcentage": 2.0,
+        "nb_offres": 13
+      },
+      "SQLite": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "Elasticsearch": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Snowflake": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "DB2": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Cassandra": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "BigQuery": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "DynamoDB": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Firebase": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "InfluxDB": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Neo4j": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CouchDB": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "ClickHouse": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "TimescaleDB": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CockroachDB": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Data Ia": {
+      "Spark": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Pandas": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "TensorFlow": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "PyTorch": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "OpenCV": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Hugging Face": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "NumPy": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Matplotlib": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Scikit-learn": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Keras": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Seaborn": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Dask": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Securite": {
+      "OWASP": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Wireshark": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Kali Linux": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Metasploit": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Burp Suite": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Nessus": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Nmap": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Snort": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Hashcat": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Cloud": {
+      "Azure": {
+        "pourcentage": 8.4,
+        "nb_offres": 56
+      },
+      "AWS": {
+        "pourcentage": 5.3,
+        "nb_offres": 35
+      },
+      "OVH": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "Oracle Cloud": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "Google Cloud Platform": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Scaleway": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Supabase": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Heroku": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Netlify": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Vercel": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "DigitalOcean": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "IBM Cloud": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Linode": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Vultr": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CloudFlare": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Firebase": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Tests Qualite": {
+      "Jest": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Selenium": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "JUnit": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Postman": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "Playwright": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Cypress": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Newman": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Mocha": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Pytest": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Environnements Ide": {
+      "Eclipse": {
+        "pourcentage": 0.9,
+        "nb_offres": 6
+      },
+      "Xcode": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "PyCharm": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Android Studio": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "VS Code": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "IntelliJ IDEA": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "NetBeans": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Api Integration": {
+      "REST": {
+        "pourcentage": 10.4,
+        "nb_offres": 69
+      },
+      "SOAP": {
+        "pourcentage": 1.8,
+        "nb_offres": 12
+      },
+      "Swagger": {
+        "pourcentage": 1.5,
+        "nb_offres": 10
+      },
+      "GraphQL": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "OpenAPI": {
+        "pourcentage": 0.9,
+        "nb_offres": 6
+      },
+      "gRPC": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "OAuth2": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "WebSockets": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "JWT": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Ux Ui Design": {
+      "Bootstrap": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "Figma": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Tailwind CSS": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Material UI": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Adobe XD": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Sketch": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "InVision": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Zeplin": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Collaboration Gestion": {
+      "Git": {
+        "pourcentage": 18.0,
+        "nb_offres": 120
+      },
+      "GitLab": {
+        "pourcentage": 8.1,
+        "nb_offres": 54
+      },
+      "Jira": {
+        "pourcentage": 4.4,
+        "nb_offres": 29
+      },
+      "Azure DevOps": {
+        "pourcentage": 2.9,
+        "nb_offres": 19
+      },
+      "GitHub": {
+        "pourcentage": 2.1,
+        "nb_offres": 14
+      },
+      "Confluence": {
+        "pourcentage": 1.5,
+        "nb_offres": 10
+      },
+      "Bitbucket": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Figma": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Notion": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "Slack": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Microsoft Teams": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Clickup": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Trello": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Monday": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Asana": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Linear": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Miro": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Systemes Exploitation": {
+      "Linux": {
+        "pourcentage": 10.5,
+        "nb_offres": 70
+      },
+      "Windows": {
+        "pourcentage": 5.3,
+        "nb_offres": 35
+      },
+      "Debian": {
+        "pourcentage": 1.1,
+        "nb_offres": 7
+      },
+      "Windows Server": {
+        "pourcentage": 0.8,
+        "nb_offres": 5
+      },
+      "macOS": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "CentOS": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "Ubuntu": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Red Hat": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Alpine": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "FreeBSD": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Methodologies Architecture": {
+      "Agile": {
+        "pourcentage": 22.0,
+        "nb_offres": 146
+      },
+      "DevOps": {
+        "pourcentage": 12.8,
+        "nb_offres": 85
+      },
+      "Scrum": {
+        "pourcentage": 12.0,
+        "nb_offres": 80
+      },
+      "Microservices": {
+        "pourcentage": 6.3,
+        "nb_offres": 42
+      },
+      "TDD": {
+        "pourcentage": 3.0,
+        "nb_offres": 20
+      },
+      "BDD": {
+        "pourcentage": 3.0,
+        "nb_offres": 20
+      },
+      "Kanban": {
+        "pourcentage": 1.8,
+        "nb_offres": 12
+      },
+      "DDD": {
+        "pourcentage": 1.7,
+        "nb_offres": 11
+      },
+      "SAFe": {
+        "pourcentage": 1.5,
+        "nb_offres": 10
+      },
+      "Clean Architecture": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "Lean": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "GitFlow": {
+        "pourcentage": 0.3,
+        "nb_offres": 2
+      },
+      "SOA": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "CQRS": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Event Sourcing": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CI/CD": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Formats Protocoles": {
+      "HTTPS": {
+        "pourcentage": 2.9,
+        "nb_offres": 19
+      },
+      "XML": {
+        "pourcentage": 1.4,
+        "nb_offres": 9
+      },
+      "JSON": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "HTTP": {
+        "pourcentage": 0.5,
+        "nb_offres": 3
+      },
+      "YAML": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "UDP": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "CSV": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Protobuf": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Avro": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Parquet": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "TCP/IP": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "FTP": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "SFTP": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "SSH": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Outils Monitoring": {
+      "Datadog": {
+        "pourcentage": 0.6,
+        "nb_offres": 4
+      },
+      "AppDynamics": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Splunk": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "Sentry": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "New Relic": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Elastic APM": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Rollbar": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Bugsnag": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "LogRocket": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Hotjar": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    },
+    "Certifications": {
+      "Scrum Master": {
+        "pourcentage": 2.3,
+        "nb_offres": 15
+      },
+      "PMP": {
+        "pourcentage": 0.2,
+        "nb_offres": 1
+      },
+      "AWS Certified": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Azure Certified": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Google Cloud Certified": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "Kubernetes Certified": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CISSP": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      },
+      "CISA": {
+        "pourcentage": 0.0,
+        "nb_offres": 0
+      }
+    }
+  },
+  "statistiques_globales": {
+    "nb_categories": 19,
+    "nb_competences_total": 245,
+    "nb_competences_trouvees": 162
+  },
+  "top_10_global": [
+    {
+      "competence": "SQL",
+      "categorie": "Langages",
+      "pourcentage": 25.1,
+      "nb_offres": 167
+    },
+    {
+      "competence": "Java",
+      "categorie": "Langages",
+      "pourcentage": 22.3,
+      "nb_offres": 148
+    },
+    {
+      "competence": "Agile",
+      "categorie": "Methodologies Architecture",
+      "pourcentage": 22.0,
+      "nb_offres": 146
+    },
+    {
+      "competence": "Git",
+      "categorie": "Collaboration Gestion",
+      "pourcentage": 18.0,
+      "nb_offres": 120
+    },
+    {
+      "competence": "JavaScript",
+      "categorie": "Langages",
+      "pourcentage": 17.7,
+      "nb_offres": 118
+    },
+    {
+      "competence": "Python",
+      "categorie": "Langages",
+      "pourcentage": 14.4,
+      "nb_offres": 96
+    },
+    {
+      "competence": "DevOps",
+      "categorie": "Methodologies Architecture",
+      "pourcentage": 12.8,
+      "nb_offres": 85
+    },
+    {
+      "competence": "Docker",
+      "categorie": "Outils Devops",
+      "pourcentage": 12.5,
+      "nb_offres": 83
+    },
+    {
+      "competence": "Angular",
+      "categorie": "Frameworks Frontend",
+      "pourcentage": 12.0,
+      "nb_offres": 80
+    },
+    {
+      "competence": "Scrum",
+      "categorie": "Methodologies Architecture",
+      "pourcentage": 12.0,
+      "nb_offres": 80
+    }
+  ]
+}
