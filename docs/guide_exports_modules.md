@@ -145,6 +145,7 @@ validation_ok = valider_referentiel_competences(COMPETENCES_REFERENTIEL)
 ## 🔍 Comparaison Avant/Après
 
 ### ❌ Avant (imports complexes)
+
 ```python
 from backend.models import COMPETENCES_REFERENTIEL
 from backend.tools.api_client import FranceTravailAPIClient
@@ -154,6 +155,7 @@ from backend.pipelines.france_travail_m1805 import PipelineM1805
 ```
 
 ### ✅ Après (imports simplifiés)
+
 ```python
 from backend import (
     COMPETENCES_REFERENTIEL,
@@ -166,7 +168,7 @@ from backend import (
 
 ## 🏗️ Structure des exports
 
-```
+```text
 backend/
 ├── __init__.py          # 📦 API principale simplifiée
 ├── models/

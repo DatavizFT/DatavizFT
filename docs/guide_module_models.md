@@ -7,6 +7,7 @@ Le module `backend.models` expose le référentiel de compétences de manière p
 ## 📦 Exports disponibles
 
 ### 1. **Référentiel complet**
+
 ```python
 from backend.models import COMPETENCES_REFERENTIEL
 
@@ -15,6 +16,7 @@ langages = COMPETENCES_REFERENTIEL['langages']
 ```
 
 ### 2. **Métadonnées utiles**
+
 ```python
 from backend.models import (
     CATEGORIES_COMPETENCES,    # Liste des noms de catégories
@@ -29,6 +31,7 @@ for categorie in CATEGORIES_COMPETENCES:
 ```
 
 ### 3. **Fonction de rechargement**
+
 ```python
 from backend.models import charger_referentiel_competences
 
@@ -70,12 +73,14 @@ with open("backend/models/competences.json") as f:
 ## 🔄 Migration depuis l'ancien système
 
 ### Avant (ancien)
+
 ```python
 from backend.tools.data_loader import charger_competences_referentiel
 competences = charger_competences_referentiel()
 ```
 
 ### Après (nouveau)
+
 ```python
 from backend.models import COMPETENCES_REFERENTIEL
 competences = COMPETENCES_REFERENTIEL  # Plus rapide, déjà en mémoire
@@ -84,6 +89,7 @@ competences = COMPETENCES_REFERENTIEL  # Plus rapide, déjà en mémoire
 ## 🛡️ Gestion d'erreurs
 
 Le module gère automatiquement les erreurs :
+
 - **FileNotFoundError** : Si `competences.json` est absent
 - **JSONDecodeError** : Si le JSON est malformé
 - **ImportError** : Si le module ne peut pas être importé
@@ -102,6 +108,7 @@ COMPETENCES_REFERENTIEL = {
 ## 🎯 Cas d'usage fréquents
 
 ### Recherche d'une compétence
+
 ```python
 from backend.models import COMPETENCES_REFERENTIEL
 
@@ -113,6 +120,7 @@ def trouver_categorie_competence(competence: str) -> str:
 ```
 
 ### Statistiques globales
+
 ```python
 from backend.models import NB_CATEGORIES, NB_COMPETENCES_TOTAL, CATEGORIES_COMPETENCES
 
@@ -122,6 +130,7 @@ print(f"📝 Catégories: {', '.join(CATEGORIES_COMPETENCES[:3])}...")
 ```
 
 ### Validation de compétences
+
 ```python
 from backend.models import COMPETENCES_REFERENTIEL
 
@@ -132,7 +141,7 @@ def valider_competence(competence: str) -> bool:
 
 ## 🏗️ Architecture
 
-```
+```text
 backend/models/
 ├── __init__.py          # 📦 Exports du module
 └── competences.json     # 📋 Données source (ne pas importer directement)
