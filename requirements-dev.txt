@@ -18,6 +18,7 @@ typing-extensions==4.12.2
 black>=23.0.0          # Code formatter  
 ruff>=0.1.0            # Fast linter (replaces flake8, isort, etc.)
 mypy>=1.5.0            # Type checker
+vulture>=2.7           # Dead code analyzer
 pytest>=7.4.0          # Testing framework
 pytest-cov>=4.1.0      # Coverage reports
 pre-commit>=3.4.0      # Git hooks for quality
