@@ -82,7 +82,10 @@ class CompetenceAnalyzer:
 
             # Tri par nombre d'occurrences décroissant
             from typing import cast
-            resultats_competences.sort(key=lambda x: cast(int, x["occurrences"]), reverse=True)
+
+            resultats_competences.sort(
+                key=lambda x: cast(int, x["occurrences"]), reverse=True
+            )
 
             resultats_par_categorie[categorie] = {
                 "competences": resultats_competences,
