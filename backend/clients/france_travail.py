@@ -25,10 +25,10 @@ class FranceTravailAPIClient:
         self.user_agent = user_agent
         self.rate_limit_ms = rate_limit_ms
         self.base_url = API_BASE_URL
-        self._headers = None
-        self._token = None
+        self._headers: dict[str, str] | None = None
+        self._token: str | None = None
 
-    def _get_token(self):
+    def _get_token(self) -> str:
         """Obtient un token d'authentification OAuth2 pour l'API France Travail"""
         if self._token is not None:
             return self._token
@@ -89,6 +89,8 @@ class FranceTravailAPIClient:
                 "Accept": "application/json",
                 "User-Agent": self.user_agent,
             }
+        # MyPy: _headers est maintenant garanti non-None
+        assert self._headers is not None
         return self._headers
 
     def _parse_content_range(self, content_range: str) -> int:

@@ -19,7 +19,7 @@ class CompetenceAnalyzer:
             competences_referentiel: Dictionnaire des compétences par catégorie
         """
         self.referentiel = competences_referentiel
-        self.cache_resultats = {}
+        self.cache_resultats: dict[str, dict[str, Any]] = {}
 
     def analyser_offres(
         self, offres: list[dict[str, Any]], verbose: bool = True
@@ -81,7 +81,8 @@ class CompetenceAnalyzer:
                     )
 
             # Tri par nombre d'occurrences décroissant
-            resultats_competences.sort(key=lambda x: x["occurrences"], reverse=True)
+            from typing import cast
+            resultats_competences.sort(key=lambda x: cast(int, x["occurrences"]), reverse=True)
 
             resultats_par_categorie[categorie] = {
                 "competences": resultats_competences,
