@@ -305,7 +305,7 @@ def nettoyer_offre_pour_json(offre: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(offre, dict):
         return offre
 
-    offre_nettoyee = {}
+    offre_nettoyee: dict[str, Any] = {}
 
     for cle, valeur in offre.items():
         if isinstance(valeur, str):
@@ -313,21 +313,19 @@ def nettoyer_offre_pour_json(offre: dict[str, Any]) -> dict[str, Any]:
             offre_nettoyee[cle] = normaliser_unicode(valeur)
         elif isinstance(valeur, dict):
             # Récursion pour les dictionnaires imbriqués
-            offre_nettoyee[cle] = nettoyer_offre_pour_json(valeur)
+            result = nettoyer_offre_pour_json(valeur)
+            offre_nettoyee[cle] = result
         elif isinstance(valeur, list):
             # Traiter les listes
-            offre_nettoyee[cle] = [
-                (
-                    normaliser_unicode(item)
-                    if isinstance(item, str)
-                    else (
-                        nettoyer_offre_pour_json(item)
-                        if isinstance(item, dict)
-                        else item
-                    )
-                )
-                for item in valeur
-            ]
+            items_nettoyes: list[Any] = []
+            for item in valeur:
+                if isinstance(item, str):
+                    items_nettoyes.append(normaliser_unicode(item))
+                elif isinstance(item, dict):
+                    items_nettoyes.append(nettoyer_offre_pour_json(item))
+                else:
+                    items_nettoyes.append(item)
+            offre_nettoyee[cle] = items_nettoyes
         else:
             # Garder les autres types tels quels
             offre_nettoyee[cle] = valeur
