@@ -1,12 +1,11 @@
 name: 🚀 Auto Release
 
 on:
-  push:
-    branches: [ "main" ]
-    paths:
-      - "backend/**"
-      - "pyproject.toml"
-      - "requirements*.txt"
+  workflow_run:
+    workflows: ["🚀 CI/CD Pipeline - DatavizFT"]
+    branches: ["main"]
+    types: [completed]
+  workflow_dispatch:  # Permet déclenchement manuel
 
 jobs:
   # ===============================================
@@ -15,7 +14,8 @@ jobs:
   auto-release:
     name: 📦 Auto Release
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[skip release]')"
+    # Ne s'exécute que si le workflow CI/CD a réussi ET pas de [skip release]
+    if: github.event.workflow_run.conclusion == 'success' && !contains(github.event.head_commit.message, '[skip release]')
     
     steps:
     - name: 📥 Checkout code
