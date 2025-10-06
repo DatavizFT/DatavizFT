@@ -4,48 +4,41 @@ Architecture modulaire pour les pipelines de données
 """
 
 # Exports principaux depuis models
+# Exports principaux depuis clients et tools
+from .clients import FranceTravailAPIClient
 from .models import (
-    COMPETENCES_REFERENTIEL,
     CATEGORIES_COMPETENCES,
+    COMPETENCES_REFERENTIEL,
     NB_CATEGORIES,
-    NB_COMPETENCES_TOTAL
+    NB_COMPETENCES_TOTAL,
 )
 
 # Exports principaux depuis pipelines
 from .pipelines import (
     PipelineM1805,
-    run_pipelineFT,
+    lister_pipelines_disponibles,
     run_pipeline_avec_limite,
-    lister_pipelines_disponibles
+    run_pipelineFT,
 )
-
-# Exports principaux depuis tools (classes les plus utilisées)
-from .tools import (
-    FranceTravailAPIClient,
-    CompetenceAnalyzer,
-    FileManager,
-    charger_config_pipeline
-)
+from .tools import CompetenceAnalyzer, FileManager, charger_config_pipeline
 
 # API publique simplifiée
 __all__ = [
     # Référentiel de compétences
-    'COMPETENCES_REFERENTIEL',
-    'CATEGORIES_COMPETENCES', 
-    'NB_CATEGORIES',
-    'NB_COMPETENCES_TOTAL',
-    
+    "COMPETENCES_REFERENTIEL",
+    "CATEGORIES_COMPETENCES",
+    "NB_CATEGORIES",
+    "NB_COMPETENCES_TOTAL",
     # Pipelines
-    'PipelineM1805',
-    'run_pipelineFT',
-    'run_pipeline_avec_limite',
-    'lister_pipelines_disponibles',
-    
+    "PipelineM1805",
+    "run_pipelineFT",
+    "run_pipeline_avec_limite",
+    "lister_pipelines_disponibles",
     # Outils essentiels
-    'FranceTravailAPIClient',
-    'CompetenceAnalyzer',
-    'FileManager',
-    'charger_config_pipeline'
+    "FranceTravailAPIClient",
+    "CompetenceAnalyzer",
+    "FileManager",
+    "charger_config_pipeline",
 ]
 
 # Métadonnées
@@ -53,11 +46,12 @@ __version__ = "1.0.0"
 __author__ = "DatavizFT Team"
 __description__ = "Pipeline de collecte et d'analyse des offres d'emploi France Travail"
 
+
 # Fonction utilitaire pour avoir un aperçu du système
 def info_systeme():
     """
     Affiche les informations principales du système DatavizFT
-    
+
     Returns:
         Dict avec les informations système
     """
@@ -66,8 +60,9 @@ def info_systeme():
         "description": __description__,
         "nb_categories_competences": NB_CATEGORIES,
         "nb_competences_total": NB_COMPETENCES_TOTAL,
-        "pipelines_disponibles": list(lister_pipelines_disponibles().keys())
+        "pipelines_disponibles": list(lister_pipelines_disponibles().keys()),
     }
 
+
 # Ajout à l'API publique
-__all__.append('info_systeme')
+__all__.append("info_systeme")
