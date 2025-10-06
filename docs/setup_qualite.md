@@ -16,6 +16,24 @@ black --check backend/
 
 ## Commandes quotidiennes
 
+### 🪟 **Windows Batch (Recommandé)**
+```cmd
+# Utiliser le script Batch simple et robuste
+.\quality.bat format      # Formater le code
+.\quality.bat lint        # Vérifications
+.\quality.bat quality     # Pipeline complet ⭐
+.\quality.bat dead-code   # Analyser code mort
+```
+
+### 🐧 **Linux/Mac avec Makefile**
+```bash
+make format     # Formater le code
+make lint       # Vérifications  
+make quality    # Pipeline complet ⭐
+make dead-code  # Analyser code mort
+```
+
+### 🔧 **Commandes manuelles (si besoin)**
 ```powershell
 # Formatter automatiquement le code
 black backend/
@@ -24,10 +42,10 @@ black backend/
 ruff check --fix backend/  
 
 # Vérification type
-mypy backend/
+mypy backend/ --ignore-missing-imports
 
-# Pipeline complet qualité
-make quality  # ou sur Windows: python -c "import subprocess; subprocess.run(['black', 'backend/'])"
+# Code mort
+vulture backend/ --config vulture.toml
 ```
 
 ## Workflow recommandé

@@ -4,7 +4,7 @@ Backend models - Structures de données et modèles
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 
 def charger_referentiel_competences() -> dict[str, list[str]]:
@@ -18,12 +18,12 @@ def charger_referentiel_competences() -> dict[str, list[str]]:
         chemin_competences = Path(__file__).parent / "competences.json"
         with open(chemin_competences, encoding="utf-8") as f:
             return json.load(f)
-    except FileNotFoundError:
+    except FileNotFoundError as e:
         raise FileNotFoundError(
             f"Fichier competences.json non trouvé dans {Path(__file__).parent}"
-        )
+        ) from e
     except json.JSONDecodeError as e:
-        raise ValueError(f"Erreur de parsing JSON dans competences.json: {e}")
+        raise ValueError(f"Erreur de parsing JSON dans competences.json: {e}") from e
 
 
 # Export principal du référentiel de compétences

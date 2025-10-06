@@ -246,7 +246,7 @@ def extraire_mots_cles(texte: str, min_longueur: int = 3) -> list[str]:
 
     # Filtrage par longueur et suppression des doublons
     mots_cles = list(
-        set([mot for mot in mots if len(mot) >= min_longueur and mot.isalpha()])
+        {mot for mot in mots if len(mot) >= min_longueur and mot.isalpha()}
     )
 
     return sorted(mots_cles)
