@@ -1,0 +1,39 @@
+# Configuration Vulture - Détection de code mort
+# Fichiers et dossiers à ignorer
+exclude = [
+    "venv/",
+    ".venv/", 
+    "__pycache__/",
+    "*.pyc",
+    "tests/",
+    "docs/",
+]
+
+# Fonctions/classes à ignorer (faux positifs)
+# Format: path/to/file.py:function_name
+ignore_names = [
+    # Fonctions d'entrée principales
+    "*main*",
+    "*__main__*",
+    
+    # Exports dans __init__.py
+    "__all__",
+    "__version__",
+    "__author__",
+    
+    # Méthodes spéciales
+    "__str__",
+    "__repr__",
+    "__enter__",
+    "__exit__",
+]
+
+# Patterns à ignorer
+ignore_decorators = [
+    "@*route*",
+    "@*endpoint*", 
+    "@*command*",
+]
+
+# Seuil de confiance (0-100, plus élevé = moins de faux positifs)
+min_confidence = 80

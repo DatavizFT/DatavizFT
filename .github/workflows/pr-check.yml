@@ -1,0 +1,115 @@
+name: 🔍 PR Quality Check
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    types: [opened, synchronize, reopened]
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  # ===============================================
+  # Vérifications rapides pour PR
+  # ===============================================
+  pr-check:
+    name: 📋 PR Quality Gate
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      with:
+        # Nécessaire pour comparer avec main
+        fetch-depth: 0
+    
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: 'pip'
+    
+    - name: 📦 Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements-dev.txt
+    
+    - name: 📊 Get changed files
+      id: changed-files
+      run: |
+        echo "python_files=$(git diff --name-only origin/main...HEAD | grep '\.py$' | tr '\n' ' ')" >> $GITHUB_OUTPUT
+    
+    - name: 🧹 Check formatting on changed files
+      if: steps.changed-files.outputs.python_files
+      run: |
+        if [ -n "${{ steps.changed-files.outputs.python_files }}" ]; then
+          echo "Checking files: ${{ steps.changed-files.outputs.python_files }}"
+          black --check ${{ steps.changed-files.outputs.python_files }}
+        fi
+    
+    - name: 🔍 Lint changed files
+      if: steps.changed-files.outputs.python_files
+      run: |
+        if [ -n "${{ steps.changed-files.outputs.python_files }}" ]; then
+          ruff check ${{ steps.changed-files.outputs.python_files }}
+        fi
+    
+    - name: 💀 Check for new dead code
+      if: steps.changed-files.outputs.python_files
+      run: |
+        if [ -n "${{ steps.changed-files.outputs.python_files }}" ]; then
+          vulture ${{ steps.changed-files.outputs.python_files }} --min-confidence 95 || true
+        fi
+    
+    - name: 📝 PR Comment with results
+      uses: actions/github-script@v6
+      if: failure()
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '❌ **Quality checks failed!**\n\n' +
+                  '🧹 Run `black backend/` to fix formatting\n' +
+                  '🔍 Run `ruff check --fix backend/` to fix linting\n' +
+                  '💀 Check `vulture backend/` for dead code\n\n' +
+                  '✨ Or run `make quality` to fix everything!'
+          })
+
+  # ===============================================
+  # Vérification de sécurité sur changements
+  # ===============================================
+  security-diff:
+    name: 🔒 Security Diff
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    
+    - name: 📦 Install security tools
+      run: |
+        pip install bandit safety
+    
+    - name: 🔒 Security scan on new code
+      run: |
+        # Scan seulement les fichiers modifiés
+        git diff --name-only origin/main...HEAD | grep '\.py$' | xargs bandit -f json || true
+    
+    - name: 🔍 Check new dependencies
+      run: |
+        # Vérifier si requirements a changé
+        if git diff --name-only origin/main...HEAD | grep -E "(requirements|pyproject\.toml)"; then
+          echo "📦 Dependencies changed, running safety check..."
+          safety check || true
+        else
+          echo "📦 No dependency changes detected"
+        fi

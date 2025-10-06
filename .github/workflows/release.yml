@@ -1,0 +1,80 @@
+name: 🚀 Auto Release
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "backend/**"
+      - "pyproject.toml"
+      - "requirements*.txt"
+
+jobs:
+  # ===============================================
+  # Release automatique basée sur les commits
+  # ===============================================
+  auto-release:
+    name: 📦 Auto Release
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip release]')"
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: 🏷️ Generate version and changelog
+      id: version
+      run: |
+        # Version basée sur la date et le hash court
+        VERSION="v$(date +%Y.%m.%d)-$(git rev-parse --short HEAD)"
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        
+        # Changelog depuis le dernier tag
+        LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+        if [ -n "$LAST_TAG" ]; then
+          CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s" --grep="feat\|fix\|perf\|refactor")
+        else
+          CHANGELOG=$(git log --pretty=format:"- %s" -10)
+        fi
+        
+        # Sauvegarder changelog dans un fichier
+        echo "$CHANGELOG" > changelog.tmp
+        echo "Generated changelog for $VERSION"
+    
+    - name: 🎯 Detect change type
+      id: changes
+      run: |
+        # Analyser les commits pour déterminer le type de release
+        COMMITS=$(git log --pretty=format:"%s" -10)
+        
+        if echo "$COMMITS" | grep -E "^feat(\(.*\))?!:|^BREAKING CHANGE:|breaking change" -i; then
+          echo "type=major" >> $GITHUB_OUTPUT
+          echo "🚨 Breaking changes detected"
+        elif echo "$COMMITS" | grep -E "^feat(\(.*\))?:|^add:|^new:" -i; then
+          echo "type=minor" >> $GITHUB_OUTPUT  
+          echo "✨ New features detected"
+        elif echo "$COMMITS" | grep -E "^fix(\(.*\))?:|^bug:|^patch:" -i; then
+          echo "type=patch" >> $GITHUB_OUTPUT
+          echo "🐛 Bug fixes detected"
+        else
+          echo "type=patch" >> $GITHUB_OUTPUT
+          echo "🔧 General improvements"
+        fi
+    
+    - name: 📋 Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.version.outputs.version }}
+        release_name: "DatavizFT ${{ steps.version.outputs.version }}"
+        body_path: changelog.tmp
+        draft: false
+        prerelease: false
+    
+    - name: 💬 Commit status
+      run: |
+        echo "🎉 Release ${{ steps.version.outputs.version }} créée avec succès!"
+        echo "📋 Type: ${{ steps.changes.outputs.type }}"
