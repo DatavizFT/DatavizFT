@@ -75,10 +75,10 @@ class FranceTravailAPIClient:
             print(f"Response content: {e.response.text}")
             raise ValueError(
                 f"Failed to authenticate with France Travail API: {e.response.status_code}"
-            )
+            ) from e
         except Exception as e:
             print(f"Unexpected error during authentication: {e}")
-            raise ValueError(f"Authentication error: {str(e)}")
+            raise ValueError(f"Authentication error: {str(e)}") from e
 
     def _get_headers(self) -> dict[str, str]:
         """Obtient les headers avec token d'authentification"""
@@ -107,7 +107,9 @@ class FranceTravailAPIClient:
         try:
             return int(content_range.split("/")[-1])
         except (IndexError, ValueError):
-            raise ValueError(f"Format Content-Range invalide: {content_range}")
+            raise ValueError(
+                f"Format Content-Range invalide: {content_range}"
+            ) from None
 
     def obtenir_total_offres(self, params: dict[str, Any]) -> int:
         """
