@@ -1,3 +1,50 @@
+# Configuration du projet DatavizFT
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataviz-ft"
+version = "0.1.0"
+description = "DatavizFT - Visualisation et analyse des données France Travail"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "DatavizFT Team"}
+]
+license = "MIT"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "httpx>=0.25.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.10.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "ruff>=0.1.0", 
+    "mypy>=1.5.0",
+    "vulture>=2.7",
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+mongodb = [
+    "pymongo>=4.5.0",
+    "motor>=3.3.0",
+]
+
+# Configuration des packages à inclure
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["backend*"]
+exclude = ["data*", "docs*", "frontend*", "sandbox*", "tests*", ".github*"]
+
 [tool.ruff]
 # Configuration Ruff - Linter Python moderne et rapide
 target-version = "py311"
