@@ -15,7 +15,9 @@ jobs:
     name: 📦 Auto Release
     runs-on: ubuntu-latest
     # Ne s'exécute que si le workflow CI/CD a réussi ET pas de [skip release]
-    if: github.event.workflow_run.conclusion == 'success' && !contains(github.event.head_commit.message, '[skip release]')
+    if: |
+      github.event.workflow_run.conclusion == 'success' && 
+      !contains(github.event.workflow_run.head_commit.message, '[skip release]')
     
     steps:
     - name: 📥 Checkout code
@@ -30,18 +32,27 @@ jobs:
         # Version basée sur la date et le hash court
         VERSION="v$(date +%Y.%m.%d)-$(git rev-parse --short HEAD)"
         echo "version=$VERSION" >> $GITHUB_OUTPUT
+        echo "Generated version: $VERSION"
         
         # Changelog depuis le dernier tag
         LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+        echo "Last tag found: $LAST_TAG"
+        
         if [ -n "$LAST_TAG" ]; then
-          CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s" --grep="feat\|fix\|perf\|refactor")
+          CHANGELOG=$(git log $LAST_TAG..HEAD --pretty=format:"- %s" --no-merges | head -20)
         else
-          CHANGELOG=$(git log --pretty=format:"- %s" -10)
+          CHANGELOG=$(git log --pretty=format:"- %s" --no-merges -10)
         fi
         
-        # Sauvegarder changelog dans un fichier
+        # Vérifier que le changelog n'est pas vide
+        if [ -z "$CHANGELOG" ]; then
+          CHANGELOG="- Initial release or no notable changes"
+        fi
+        
+        # Sauvegarder changelog dans un fichier (gérer les caractères spéciaux)
         echo "$CHANGELOG" > changelog.tmp
-        echo "Generated changelog for $VERSION"
+        echo "Generated changelog with $(echo "$CHANGELOG" | wc -l) entries"
+        cat changelog.tmp
     
     - name: 🎯 Detect change type
       id: changes
@@ -71,6 +82,8 @@ jobs:
         body_path: changelog.tmp
         draft: false
         prerelease: false
+        generate_release_notes: true
+        make_latest: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
