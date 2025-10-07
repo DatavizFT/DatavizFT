@@ -19,7 +19,8 @@ jobs:
       with:
         fetch-depth: 0
     
-    - name: 🔍 Debug Info
+    - name: 🔍 Debug Info & Generate Variables
+      id: debug_vars
       run: |
         echo "=== Debug Information ==="
         echo "Event name: ${{ github.event_name }}"
@@ -34,29 +35,43 @@ jobs:
         git tag --list || echo "No tags found"
         
         echo "=== Generate Test Version ==="
-        VERSION="v$(date +%Y.%m.%d)-$(git rev-parse --short HEAD)"
+        VERSION="debug-v$(date +%Y.%m.%d.%H%M%S)-$(git rev-parse --short HEAD)"
         echo "Generated version: $VERSION"
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
+        
+        echo "=== Generate Test Release Name ==="
+        RELEASE_NAME="Debug Release $(date +%Y.%m.%d.%H%M%S)"
+        echo "Generated release name: $RELEASE_NAME"
+        echo "release_name=$RELEASE_NAME" >> $GITHUB_OUTPUT
         
         echo "=== Generate Test Changelog ==="
         CHANGELOG=$(git log --pretty=format:"- %s" --no-merges -5)
         echo "Changelog entries:"
         echo "$CHANGELOG"
+        echo "changelog<<EOF" >> $GITHUB_OUTPUT
+        echo "$CHANGELOG" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+        
+        echo "=== Generate Timestamp ==="
+        TIMESTAMP=$(date)
+        echo "Generated at: $TIMESTAMP"
+        echo "timestamp=$TIMESTAMP" >> $GITHUB_OUTPUT
         
     - name: 🎯 Test Release Creation
       uses: softprops/action-gh-release@v2
       with:
-        tag_name: "debug-v$(date +%Y.%m.%d.%H%M%S)"
-        name: "Debug Release $(date +%Y.%m.%d.%H%M%S)"
+        tag_name: ${{ steps.debug_vars.outputs.version }}
+        name: ${{ steps.debug_vars.outputs.release_name }}
         body: |
           🔍 **Debug Release for Testing**
           
           This is a test release to debug the auto-release process.
           
-          Recent changes:
-          $(git log --pretty=format:"- %s" --no-merges -5)
+          **Recent changes:**
+          ${{ steps.debug_vars.outputs.changelog }}
           
-          Generated at: $(date)
+          **Generated at:** ${{ steps.debug_vars.outputs.timestamp }}
         draft: true
         prerelease: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
