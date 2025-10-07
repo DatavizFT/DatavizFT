@@ -1,0 +1,62 @@
+name: 🚀 Auto Release (Debug)
+
+on:
+  workflow_dispatch:  # Permet test manuel
+  workflow_run:
+    workflows: ["🚀 CI/CD Pipeline - DatavizFT"]
+    branches: ["main"]
+    types: [completed]
+
+jobs:
+  debug-release:
+    name: 🔍 Debug Auto Release
+    runs-on: ubuntu-latest
+    if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'
+    
+    steps:
+    - name: 📥 Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: 🔍 Debug Info
+      run: |
+        echo "=== Debug Information ==="
+        echo "Event name: ${{ github.event_name }}"
+        echo "Workflow run conclusion: ${{ github.event.workflow_run.conclusion }}"
+        echo "Repository: ${{ github.repository }}"
+        echo "Ref: ${{ github.ref }}"
+        echo "SHA: ${{ github.sha }}"
+        
+        echo "=== Git Information ==="
+        git log --oneline -5
+        echo "Existing tags:"
+        git tag --list || echo "No tags found"
+        
+        echo "=== Generate Test Version ==="
+        VERSION="v$(date +%Y.%m.%d)-$(git rev-parse --short HEAD)"
+        echo "Generated version: $VERSION"
+        
+        echo "=== Generate Test Changelog ==="
+        CHANGELOG=$(git log --pretty=format:"- %s" --no-merges -5)
+        echo "Changelog entries:"
+        echo "$CHANGELOG"
+        
+    - name: 🎯 Test Release Creation
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: "debug-v$(date +%Y.%m.%d.%H%M%S)"
+        name: "Debug Release $(date +%Y.%m.%d.%H%M%S)"
+        body: |
+          🔍 **Debug Release for Testing**
+          
+          This is a test release to debug the auto-release process.
+          
+          Recent changes:
+          $(git log --pretty=format:"- %s" --no-merges -5)
+          
+          Generated at: $(date)
+        draft: true
+        prerelease: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
