@@ -2,10 +2,10 @@ name: 🚀 Auto Release (Debug)
 
 on:
   workflow_dispatch:  # Permet test manuel
-  workflow_run:
-    workflows: ["🚀 CI/CD Pipeline - DatavizFT"]
-    branches: ["main"]
-    types: [completed]
+  #workflow_run:
+    #workflows: ["🚀 CI/CD Pipeline - DatavizFT"]
+    #branches: ["main"]
+    #types: [completed]
 
 jobs:
   debug-release:
