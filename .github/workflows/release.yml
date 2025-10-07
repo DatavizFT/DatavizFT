@@ -7,6 +7,11 @@ on:
     types: [completed]
   workflow_dispatch:  # Permet déclenchement manuel
 
+permissions:
+  contents: write
+  packages: write
+  actions: read
+
 jobs:
   # ===============================================
   # Release automatique basée sur les commits
@@ -24,7 +29,8 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # Utiliser PAT si disponible, sinon GITHUB_TOKEN
+        token: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
     
     - name: 🏷️ Generate version and changelog
       id: version
@@ -85,7 +91,7 @@ jobs:
         generate_release_notes: true
         make_latest: true
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
     
     - name: 💬 Commit status
       run: |
