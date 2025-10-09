@@ -7,9 +7,12 @@ ENV/
 
 # Python
 __pycache__/
+*.py[cod]
+*$py.class
 *.pyc
 *.pyo
 *.pyd
+*.so
 .Python
 build/
 develop-eggs/
