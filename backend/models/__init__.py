@@ -1,46 +1,31 @@
 """
-Backend models - Structures de données et modèles
+Backend Models - Modèles de données avec Pydantic
+Définit les structures de données pour validation et sérialisation
 """
 
-import json
-from pathlib import Path
-from typing import Any
-
-
-def charger_referentiel_competences() -> dict[str, list[str]]:
-    """
-    Charge le référentiel de compétences depuis competences.json
-
-    Returns:
-        Dict contenant les compétences organisées par catégories
-    """
-    try:
-        chemin_competences = Path(__file__).parent / "competences.json"
-        with open(chemin_competences, encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError as e:
-        raise FileNotFoundError(
-            f"Fichier competences.json non trouvé dans {Path(__file__).parent}"
-        ) from e
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Erreur de parsing JSON dans competences.json: {e}") from e
-
-
-# Export principal du référentiel de compétences
-COMPETENCES_REFERENTIEL = charger_referentiel_competences()
-
-# Export des métadonnées utiles
-CATEGORIES_COMPETENCES = list(COMPETENCES_REFERENTIEL.keys())
-NB_CATEGORIES = len(CATEGORIES_COMPETENCES)
-NB_COMPETENCES_TOTAL = sum(
-    len(competences) for competences in COMPETENCES_REFERENTIEL.values()
+from .competence import (
+    CompetenceModel,
+    CompetenceStats,
+    CategorieCompetence,
+)
+from .offre import (
+    EntrepriseModel,
+    LocalisationModel,
+    OffreEmploiModel,
+    OffreFranceTravail,
+    SalaireModel,
 )
 
-# Exports pour faciliter les imports
+# API publique du module models
 __all__ = [
-    "COMPETENCES_REFERENTIEL",
-    "CATEGORIES_COMPETENCES",
-    "NB_CATEGORIES",
-    "NB_COMPETENCES_TOTAL",
-    "charger_referentiel_competences",
+    # Modèles offres d'emploi
+    "OffreFranceTravail",
+    "OffreEmploiModel", 
+    "EntrepriseModel",
+    "LocalisationModel",
+    "SalaireModel",
+    # Modèles compétences
+    "CompetenceModel",
+    "CompetenceStats", 
+    "CategorieCompetence",
 ]

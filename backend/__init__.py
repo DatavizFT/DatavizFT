@@ -3,10 +3,9 @@ Backend DatavizFT - Module principal
 Architecture modulaire pour les pipelines de données
 """
 
-# Exports principaux depuis models
-# Exports principaux depuis clients et tools
+# Exports principaux depuis les nouveaux modules
 from .clients import FranceTravailAPIClient
-from .models import (
+from .data import (
     CATEGORIES_COMPETENCES,
     COMPETENCES_REFERENTIEL,
     NB_CATEGORIES,

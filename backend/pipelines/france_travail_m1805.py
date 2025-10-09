@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 from typing import Any
 
 from ..clients.france_travail import FranceTravailAPIClient
-from ..models import COMPETENCES_REFERENTIEL
+from ..data import COMPETENCES_REFERENTIEL
 from ..tools.competence_analyzer import CompetenceAnalyzer
 from ..tools.data_loader import charger_config_pipeline
 from ..tools.file_manager import FileManager
