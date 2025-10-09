@@ -1,0 +1,654 @@
+{
+  "metadata": {
+    "date_analyse": "2025-10-09T06:43:35.296509",
+    "code_rome": "M1805",
+    "nb_offres_analysees": 10,
+    "version_analyzer": "DatavizFT v1.0"
+  },
+  "analyse": {
+    "resultats_par_categorie": {
+      "langages": {
+        "competences": [
+          {
+            "competence": "JavaScript",
+            "occurrences": 3,
+            "pourcentage": 30.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WPLD",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "I-INTERIM"
+              },
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Python",
+            "occurrences": 2,
+            "pourcentage": 20.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WDXM",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA"
+              }
+            ]
+          },
+          {
+            "competence": "SQL",
+            "occurrences": 2,
+            "pourcentage": 20.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "TypeScript",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WPLD",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "I-INTERIM"
+              }
+            ]
+          },
+          {
+            "competence": "Java",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "C#",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "PHP",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              }
+            ]
+          },
+          {
+            "competence": "R",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WGKC",
+                "intitule": "Ingénieur Développement Cobol (H/F)",
+                "entreprise": "ALTECA"
+              }
+            ]
+          },
+          {
+            "competence": "HTML",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "CSS",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "COBOL",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WGKC",
+                "intitule": "Ingénieur Développement Cobol (H/F)",
+                "entreprise": "ALTECA"
+              }
+            ]
+          },
+          {
+            "competence": "Groovy",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WDXM",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 12,
+        "nb_competences_total": 31
+      },
+      "frameworks_frontend": {
+        "competences": [
+          {
+            "competence": "Angular",
+            "occurrences": 2,
+            "pourcentage": 20.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              }
+            ]
+          },
+          {
+            "competence": "React",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Vue.js",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 3,
+        "nb_competences_total": 6
+      },
+      "frameworks_backend": {
+        "competences": [
+          {
+            "competence": "Django",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Spring Boot",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Symfony",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              }
+            ]
+          },
+          {
+            "competence": "ASP.NET",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 18
+      },
+      "frameworks_mobile": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 4
+      },
+      "outils_devops": {
+        "competences": [
+          {
+            "competence": "Docker",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Kubernetes",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Jenkins",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "GitLab CI",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "SonarQube",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 5,
+        "nb_competences_total": 23
+      },
+      "bases_de_donnees": {
+        "competences": [
+          {
+            "competence": "MySQL",
+            "occurrences": 2,
+            "pourcentage": 20.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              }
+            ]
+          },
+          {
+            "competence": "PostgreSQL",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Elasticsearch",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              }
+            ]
+          },
+          {
+            "competence": "SQL Server",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 22
+      },
+      "data_ia": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 12
+      },
+      "securite": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 9
+      },
+      "cloud": {
+        "competences": [
+          {
+            "competence": "Azure",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 1,
+        "nb_competences_total": 16
+      },
+      "tests_qualite": {
+        "competences": [
+          {
+            "competence": "JUnit",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 1,
+        "nb_competences_total": 9
+      },
+      "environnements_ide": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 7
+      },
+      "api_integration": {
+        "competences": [
+          {
+            "competence": "REST",
+            "occurrences": 2,
+            "pourcentage": 20.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "GraphQL",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 2,
+        "nb_competences_total": 9
+      },
+      "ux_ui_design": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 8
+      },
+      "collaboration_gestion": {
+        "competences": [
+          {
+            "competence": "Git",
+            "occurrences": 3,
+            "pourcentage": 30.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "GitLab",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "Azure DevOps",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 3,
+        "nb_competences_total": 17
+      },
+      "systemes_exploitation": {
+        "competences": [
+          {
+            "competence": "Linux",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 1,
+        "nb_competences_total": 19
+      },
+      "methodologies_architecture": {
+        "competences": [
+          {
+            "competence": "Agile",
+            "occurrences": 3,
+            "pourcentage": 30.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              }
+            ]
+          },
+          {
+            "competence": "Scrum",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "DevOps",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          },
+          {
+            "competence": "DDD",
+            "occurrences": 1,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 16
+      },
+      "formats_protocoles": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 14
+      },
+      "outils_monitoring": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 10
+      },
+      "certifications": {
+        "competences": [],
+        "nb_competences_detectees": 0,
+        "nb_competences_total": 9
+      }
+    },
+    "nb_offres_analysees": 10
+  }
+}

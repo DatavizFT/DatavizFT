@@ -1,0 +1,4409 @@
+{
+  "metadata": {
+    "date_analyse": "2025-10-09T06:37:00.944101",
+    "code_rome": "M1805",
+    "nb_offres_analysees": 672,
+    "version_analyzer": "DatavizFT v1.0"
+  },
+  "analyse": {
+    "resultats_par_categorie": {
+      "langages": {
+        "competences": [
+          {
+            "competence": "SQL",
+            "occurrences": 163,
+            "pourcentage": 24.3,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SZWW",
+                "intitule": "Développeur informatique C# et SQL  (H/F)",
+                "entreprise": "TRANSICIA"
+              },
+              {
+                "id": "198SFFF",
+                "intitule": "Réfèrent ERP Sage X3 H/F (H/F)",
+                "entreprise": "DANEM PEOPLE FRANCE"
+              },
+              {
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
+              }
+            ]
+          },
+          {
+            "competence": "Java",
+            "occurrences": 152,
+            "pourcentage": 22.6,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SXML",
+                "intitule": "Développeur / Développeuse informatique STRUTS (H/F)",
+                "entreprise": "SERV'IT"
+              },
+              {
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
+              },
+              {
+                "id": "198RBQP",
+                "intitule": "Développeur informatique (H/F)",
+                "entreprise": "MANPOWER FRANCE"
+              },
+              {
+                "id": "198QRBN",
+                "intitule": "Développeur Java Axelor (H/F)",
+                "entreprise": "POK"
+              }
+            ]
+          },
+          {
+            "competence": "JavaScript",
+            "occurrences": 119,
+            "pourcentage": 17.7,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WPLD",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "I-INTERIM"
+              },
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              }
+            ]
+          },
+          {
+            "competence": "Python",
+            "occurrences": 93,
+            "pourcentage": 13.8,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WDXM",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA"
+              },
+              {
+                "id": "198SFFF",
+                "intitule": "Réfèrent ERP Sage X3 H/F (H/F)",
+                "entreprise": "DANEM PEOPLE FRANCE"
+              },
+              {
+                "id": "198QRBN",
+                "intitule": "Développeur Java Axelor (H/F)",
+                "entreprise": "POK"
+              },
+              {
+                "id": "198QBTV",
+                "intitule": "Ingénieur des Procédés (h/f)",
+                "entreprise": "ADECCO"
+              }
+            ]
+          },
+          {
+            "competence": "C#",
+            "occurrences": 85,
+            "pourcentage": 12.6,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SFFF",
+                "intitule": "Réfèrent ERP Sage X3 H/F (H/F)",
+                "entreprise": "DANEM PEOPLE FRANCE"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198MNQQ",
+                "intitule": "Développeur C#/Angular, Unity 3D Industriel (H/F)",
+                "entreprise": "VERTECH'"
+              }
+            ]
+          },
+          {
+            "competence": "PHP",
+            "occurrences": 55,
+            "pourcentage": 8.2,
+            "offres": [
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198PZTM",
+                "intitule": "Développeur PHP/ My SQL & Power Platform (H/F)",
+                "entreprise": "ACAF"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "198KGHF",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "LAGARDE AUTOCLAVES"
+              }
+            ]
+          },
+          {
+            "competence": "R",
+            "occurrences": 54,
+            "pourcentage": 8.0,
+            "offres": [
+              {
+                "id": "198WGKC",
+                "intitule": "Ingénieur Développement Cobol (H/F)",
+                "entreprise": "ALTECA"
+              },
+              {
+                "id": "198TTZW",
+                "intitule": "Technicien tests et programmation (H/F)",
+                "entreprise": "MANPOWER"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              },
+              {
+                "id": "198MNQQ",
+                "intitule": "Développeur C#/Angular, Unity 3D Industriel (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              }
+            ]
+          },
+          {
+            "competence": "HTML",
+            "occurrences": 52,
+            "pourcentage": 7.7,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              },
+              {
+                "id": "198KHFM",
+                "intitule": "Développeur / Développeuse Java Angular (H/F)",
+                "entreprise": "IT CONSULTING SERVICES"
+              },
+              {
+                "id": "198JNLX",
+                "intitule": "Développeur Full Stack - PHP/Symfony. (H/F)",
+                "entreprise": "LYNX RH"
+              },
+              {
+                "id": "198CSSF",
+                "intitule": "Lead Full Stack Developeur (h/f)",
+                "entreprise": "ADECCO"
+              }
+            ]
+          },
+          {
+            "competence": "CSS",
+            "occurrences": 51,
+            "pourcentage": 7.6,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              },
+              {
+                "id": "198KHFM",
+                "intitule": "Développeur / Développeuse Java Angular (H/F)",
+                "entreprise": "IT CONSULTING SERVICES"
+              },
+              {
+                "id": "198JNLX",
+                "intitule": "Développeur Full Stack - PHP/Symfony. (H/F)",
+                "entreprise": "LYNX RH"
+              },
+              {
+                "id": "198HTLB",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse PHP (H/F)",
+                "entreprise": "IMAGINE DEVELOPPEMENT"
+              }
+            ]
+          },
+          {
+            "competence": "TypeScript",
+            "occurrences": 34,
+            "pourcentage": 5.1,
+            "offres": [
+              {
+                "id": "198WPLD",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "I-INTERIM"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              }
+            ]
+          },
+          {
+            "competence": "WinDev",
+            "occurrences": 19,
+            "pourcentage": 2.8,
+            "offres": [
+              {
+                "id": "198SWWD",
+                "intitule": "Ingénieur Paramétrage Paie - Logiciel Spécifique Propreté (H/F)",
+                "entreprise": "ACE SOFTWARE"
+              },
+              {
+                "id": "198HTLB",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse PHP (H/F)",
+                "entreprise": "IMAGINE DEVELOPPEMENT"
+              },
+              {
+                "id": "197QZKS",
+                "intitule": "Développeur WINDEV (H/F)",
+                "entreprise": "TEAMNET"
+              },
+              {
+                "id": "197NSCB",
+                "intitule": "Analyste Sénior (H/F)",
+                "entreprise": "SILICO"
+              },
+              {
+                "id": "197HCWG",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "COBOL",
+            "occurrences": 16,
+            "pourcentage": 2.4,
+            "offres": [
+              {
+                "id": "198WGKC",
+                "intitule": "Ingénieur Développement Cobol (H/F)",
+                "entreprise": "ALTECA"
+              },
+              {
+                "id": "198TBGK",
+                "intitule": "Analyste Programmeur Cobol F/H (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "197QXBZ",
+                "intitule": "Analyste Développeur COBOL Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              },
+              {
+                "id": "3470271",
+                "intitule": "Développeur Mainframe H/F",
+                "entreprise": "Step Up"
+              },
+              {
+                "id": "3457346",
+                "intitule": "Développeur Mainframe COBOL H/F",
+                "entreprise": "SYNANTO"
+              }
+            ]
+          },
+          {
+            "competence": "Ruby",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "3382862",
+                "intitule": "Développeur Ruby (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3239713",
+                "intitule": "Développeur Ruby/Python F/H - Informatique de gestion (H/F)",
+                "entreprise": "MICHAEL PAGE INTERNATIONAL FRANCE"
+              },
+              {
+                "id": "2345937",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "0208678",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "PowerShell",
+            "occurrences": 8,
+            "pourcentage": 1.2,
+            "offres": [
+              {
+                "id": "198GNRZ",
+                "intitule": "Informaticien (H/F) CDD (H/F)",
+                "entreprise": "UGECAM DE NORMANDIE"
+              },
+              {
+                "id": "197WSRP",
+                "intitule": "Développeur Infra Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              },
+              {
+                "id": "3427679",
+                "intitule": "Développeur système (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3382862",
+                "intitule": "Développeur Ruby (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3239713",
+                "intitule": "Développeur Ruby/Python F/H - Informatique de gestion (H/F)",
+                "entreprise": "MICHAEL PAGE INTERNATIONAL FRANCE"
+              }
+            ]
+          },
+          {
+            "competence": "VBA",
+            "occurrences": 7,
+            "pourcentage": 1.0,
+            "offres": [
+              {
+                "id": "197PGFZ",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "MEHITS AIRCALO FRANCE"
+              },
+              {
+                "id": "197NWRZ",
+                "intitule": "Développeur ERP (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "2952236",
+                "intitule": "Développeur (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2897482",
+                "intitule": "Developpeur.se ERP (H/F)",
+                "entreprise": "Qualis"
+              },
+              {
+                "id": "2349641",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "WebDev",
+            "occurrences": 7,
+            "pourcentage": 1.0,
+            "offres": [
+              {
+                "id": "197QZKS",
+                "intitule": "Développeur WINDEV (H/F)",
+                "entreprise": "TEAMNET"
+              },
+              {
+                "id": "3454205",
+                "intitule": "Tech lead confirmé (H/F)",
+                "entreprise": "Up Skills Paris Recrutement IT"
+              },
+              {
+                "id": "2948800",
+                "intitule": "DÉVELOPPEUR WINDEV/WEBDEV (H/F)",
+                "entreprise": "Expectra"
+              },
+              {
+                "id": "2476225",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "CESI Ecole d'Ingénieurs"
+              },
+              {
+                "id": "1722383",
+                "intitule": "Développeur Informatique Windev F/H - ATELIER DES QUATRE COLLINES (H/F)",
+                "entreprise": "ATELIER DES QUATRE COLLINES"
+              }
+            ]
+          },
+          {
+            "competence": "Bash",
+            "occurrences": 6,
+            "pourcentage": 0.9,
+            "offres": [
+              {
+                "id": "197WSRP",
+                "intitule": "Développeur Infra Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              },
+              {
+                "id": "3382862",
+                "intitule": "Développeur Ruby (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3239713",
+                "intitule": "Développeur Ruby/Python F/H - Informatique de gestion (H/F)",
+                "entreprise": "MICHAEL PAGE INTERNATIONAL FRANCE"
+              },
+              {
+                "id": "2771224",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2489417",
+                "intitule": "Développeur DevOps confirmé H/F",
+                "entreprise": "ISAGRI"
+              }
+            ]
+          },
+          {
+            "competence": "Go",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3365063",
+                "intitule": "Développement JAVA F/H",
+                "entreprise": "HOROQUARTZ"
+              },
+              {
+                "id": "2362402",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "FIGARO CLASSIFIEDS"
+              },
+              {
+                "id": "1272944",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "9703755",
+                "intitule": "Développeur C/C++ Windows - H/F",
+                "entreprise": "Externatic"
+              },
+              {
+                "id": "6300385",
+                "intitule": "INGÉNIEUR DEVOPS - H/F",
+                "entreprise": "WALLIX"
+              }
+            ]
+          },
+          {
+            "competence": "Scala",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3330490",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "3317505",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2878482",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "2878137",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "7926724",
+                "intitule": "Senior Data Engineer - Tech Lead F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Kotlin",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "3110324",
+                "intitule": "Développeur.euse Fullstack F/H - SHOPOPOP (H/F)",
+                "entreprise": "SHOPOPOP"
+              },
+              {
+                "id": "2969182",
+                "intitule": "Développeur mobile H/F",
+                "entreprise": "VIVERIS"
+              },
+              {
+                "id": "9790771",
+                "intitule": "Dev Android confirmé H/F (secteur santé)",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Delphi",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3425915",
+                "intitule": "Développeur C/C++ (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3404092",
+                "intitule": "Développeur Informatique H/F",
+                "entreprise": "Manpower"
+              },
+              {
+                "id": "3308222",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2787552",
+                "intitule": "Développeur Delphi Industrie H/F",
+                "entreprise": "Coris Innovation"
+              }
+            ]
+          },
+          {
+            "competence": "Swift",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "3404383",
+                "intitule": "Développeur Informatique #Java Angular H/F",
+                "entreprise": "Manpower"
+              },
+              {
+                "id": "3110324",
+                "intitule": "Développeur.euse Fullstack F/H - SHOPOPOP (H/F)",
+                "entreprise": "SHOPOPOP"
+              },
+              {
+                "id": "2969182",
+                "intitule": "Développeur mobile H/F",
+                "entreprise": "VIVERIS"
+              }
+            ]
+          },
+          {
+            "competence": "SCSS",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "2888194",
+                "intitule": "Développeur Java - Angular H/F",
+                "entreprise": "Soors"
+              },
+              {
+                "id": "2573561",
+                "intitule": "Développeur Frontend (H/F)",
+                "entreprise": "SUP INTERIM PONTARLIER"
+              },
+              {
+                "id": "2307613",
+                "intitule": "Développeur .NET Angular react senior F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              }
+            ]
+          },
+          {
+            "competence": "Rust",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3308172",
+                "intitule": "Développeur logiciel embarqué (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "1987535",
+                "intitule": "Tech Lead F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Perl",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3189384",
+                "intitule": "Développeur-Concepteur F/H",
+                "entreprise": "Immobilière3F"
+              },
+              {
+                "id": "2794456",
+                "intitule": "Développeur C++ (H/F)",
+                "entreprise": "NEXTGEN RH"
+              }
+            ]
+          },
+          {
+            "competence": "WinDev Mobile",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "1722383",
+                "intitule": "Développeur Informatique Windev F/H - ATELIER DES QUATRE COLLINES (H/F)",
+                "entreprise": "ATELIER DES QUATRE COLLINES"
+              },
+              {
+                "id": "1473336",
+                "intitule": "Développeur Informatique Windev F/H - Informatique de gestion (H/F)",
+                "entreprise": "Etablissement André Renaud"
+              }
+            ]
+          },
+          {
+            "competence": "C++",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2546753",
+                "intitule": "C++ Software Engineer H/F",
+                "entreprise": "AKKODIS"
+              }
+            ]
+          },
+          {
+            "competence": "Groovy",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198WDXM",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 28,
+        "nb_competences_total": 31
+      },
+      "frameworks_frontend": {
+        "competences": [
+          {
+            "competence": "Angular",
+            "occurrences": 80,
+            "pourcentage": 11.9,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198NVSY",
+                "intitule": "Développeur Java/Angular (F/H) (H/F)",
+                "entreprise": "SOCIETE POUR L'INFORMATIQUE INDUSTRIELLE"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              }
+            ]
+          },
+          {
+            "competence": "React",
+            "occurrences": 50,
+            "pourcentage": 7.4,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198PQZG",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              }
+            ]
+          },
+          {
+            "competence": "Vue.js",
+            "occurrences": 37,
+            "pourcentage": 5.5,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
+              },
+              {
+                "id": "198JNLX",
+                "intitule": "Développeur Full Stack - PHP/Symfony. (H/F)",
+                "entreprise": "LYNX RH"
+              },
+              {
+                "id": "3557508",
+                "intitule": "ANALYSTE INTERFACES H/F",
+                "entreprise": "AFD - Agence Française de développement"
+              },
+              {
+                "id": "3445280",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Harry Hope"
+              }
+            ]
+          },
+          {
+            "competence": "Svelte",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2289235",
+                "intitule": "Développeur Fullstack (Node / Svelte) - H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Next.js",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "3063797",
+                "intitule": "Développeur Java - Python H/F",
+                "entreprise": "Experis France"
+              }
+            ]
+          },
+          {
+            "competence": "Nuxt.js",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "8114639",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 6,
+        "nb_competences_total": 6
+      },
+      "frameworks_backend": {
+        "competences": [
+          {
+            "competence": "Spring Boot",
+            "occurrences": 50,
+            "pourcentage": 7.4,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198PQZG",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              }
+            ]
+          },
+          {
+            "competence": "Symfony",
+            "occurrences": 25,
+            "pourcentage": 3.7,
+            "offres": [
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "198JNLX",
+                "intitule": "Développeur Full Stack - PHP/Symfony. (H/F)",
+                "entreprise": "LYNX RH"
+              },
+              {
+                "id": "198JLQK",
+                "intitule": "Développeur DevOps Symfony (H/F)",
+                "entreprise": "LA MUTUELLE VERTE"
+              },
+              {
+                "id": "3431601",
+                "intitule": "Développeur Informatique PHP - Symfony - Angular H/F",
+                "entreprise": "kALI RH."
+              }
+            ]
+          },
+          {
+            "competence": "ASP.NET",
+            "occurrences": 17,
+            "pourcentage": 2.5,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198MNQQ",
+                "intitule": "Développeur C#/Angular, Unity 3D Industriel (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "198DQLP",
+                "intitule": "Développeur(se) informatique  Full Stack C# Javascript/SQL (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "3426265",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3425814",
+                "intitule": "Développeur logiciel JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Django",
+            "occurrences": 13,
+            "pourcentage": 1.9,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "197VPKS",
+                "intitule": "Développeur / Développeuse informatique en SIG & géotechnique (H/F)",
+                "entreprise": "SOCIETE ALPINE DE GEOTECHNIQUE"
+              },
+              {
+                "id": "197RCJZ",
+                "intitule": "Un(e) Développeur Back-End & Systèmes Embarqués (H/F)",
+                "entreprise": "E-THIK"
+              }
+            ]
+          },
+          {
+            "competence": "Laravel",
+            "occurrences": 7,
+            "pourcentage": 1.0,
+            "offres": [
+              {
+                "id": "3425327",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3308172",
+                "intitule": "Développeur logiciel embarqué (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2815385",
+                "intitule": "DÉVELOPPEUR(EUSE) SENIOR H/F",
+                "entreprise": "MAXICOFFEE"
+              },
+              {
+                "id": "2752089",
+                "intitule": "Développeur PHP F/H - Informatique de gestion (H/F)",
+                "entreprise": "CN Amirault"
+              },
+              {
+                "id": "2749145",
+                "intitule": "Développeur.se back end - Intégration API (CMS / PIM / ERP) F/H - POP France (H/F)",
+                "entreprise": "POP France"
+              }
+            ]
+          },
+          {
+            "competence": "FastAPI",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3540671",
+                "intitule": "Développeur Python H/F",
+                "entreprise": "Plus que PRO"
+              },
+              {
+                "id": "3453060",
+                "intitule": "Développeur Python FastAPI - H/F",
+                "entreprise": "Talents IT"
+              },
+              {
+                "id": "2946585",
+                "intitule": "Développeur back-end - Lyon, France  (H/F)",
+                "entreprise": "New Net 3D"
+              },
+              {
+                "id": "2559246",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "PLUS QUE PRO"
+              }
+            ]
+          },
+          {
+            "competence": "Flask",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "197VPKS",
+                "intitule": "Développeur / Développeuse informatique en SIG & géotechnique (H/F)",
+                "entreprise": "SOCIETE ALPINE DE GEOTECHNIQUE"
+              },
+              {
+                "id": "3540671",
+                "intitule": "Développeur Python H/F",
+                "entreprise": "Plus que PRO"
+              },
+              {
+                "id": "2559246",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "PLUS QUE PRO"
+              }
+            ]
+          },
+          {
+            "competence": "Express.js",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "192XMSR",
+                "intitule": "Developer Fullstack Senior (H/F)",
+                "entreprise": "MARILOO"
+              },
+              {
+                "id": "2481114",
+                "intitule": "Développeur .Net / NodeJS H/F",
+                "entreprise": "AKKODIS"
+              }
+            ]
+          },
+          {
+            "competence": "NestJS",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "198CSSF",
+                "intitule": "Lead Full Stack Developeur (h/f)",
+                "entreprise": "ADECCO"
+              },
+              {
+                "id": "3152411",
+                "intitule": "Software Engineer Symphony NestJS - React H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Ruby on Rails",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "8667184",
+                "intitule": "Développeur Ruby (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Spring Framework",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2853702",
+                "intitule": "Développeur Angular Java F/H - Informatique de gestion (H/F)",
+                "entreprise": "CN Amirault"
+              }
+            ]
+          },
+          {
+            "competence": "Struts",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198SXML",
+                "intitule": "Développeur / Développeuse informatique STRUTS (H/F)",
+                "entreprise": "SERV'IT"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 12,
+        "nb_competences_total": 18
+      },
+      "frameworks_mobile": {
+        "competences": [
+          {
+            "competence": "Flutter",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "2813833",
+                "intitule": "Développeur FullStack (H/F)",
+                "entreprise": "MUTUELLE INTERIALE"
+              },
+              {
+                "id": "2770479",
+                "intitule": "Développeur logiciel (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2748222",
+                "intitule": "Lead dev Java JS H/F",
+                "entreprise": "Externatic"
+              },
+              {
+                "id": "2134422",
+                "intitule": "Développeur Full Stack Js - Tours H/F",
+                "entreprise": "Apside"
+              },
+              {
+                "id": "8114595",
+                "intitule": "Développeur C++ (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Ionic",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "2897578",
+                "intitule": "Lead développeur Angular 2 F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "2896738",
+                "intitule": "Développeur Angular F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "2748222",
+                "intitule": "Lead dev Java JS H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "React Native",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "2748222",
+                "intitule": "Lead dev Java JS H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Xamarin",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2920607",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 4
+      },
+      "outils_devops": {
+        "competences": [
+          {
+            "competence": "Docker",
+            "occurrences": 74,
+            "pourcentage": 11.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              }
+            ]
+          },
+          {
+            "competence": "Kubernetes",
+            "occurrences": 51,
+            "pourcentage": 7.6,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198PQZG",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              }
+            ]
+          },
+          {
+            "competence": "Jenkins",
+            "occurrences": 45,
+            "pourcentage": 6.7,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              }
+            ]
+          },
+          {
+            "competence": "Chef",
+            "occurrences": 44,
+            "pourcentage": 6.5,
+            "offres": [
+              {
+                "id": "198SYNB",
+                "intitule": "Chef de Projet Informatique (h/f)",
+                "entreprise": "ADECCO"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198RKWM",
+                "intitule": "Technicien fao (H/F)",
+                "entreprise": "ACTUAL QUIMPER 1089"
+              },
+              {
+                "id": "198NCBL",
+                "intitule": "Technicien(ne) FAO (H/F)",
+                "entreprise": "AROBASE EMPLOI"
+              },
+              {
+                "id": "198BQYB",
+                "intitule": "Développeur .NET Senior / Chef de projet (H/F)",
+                "entreprise": "ROSARA"
+              }
+            ]
+          },
+          {
+            "competence": "GitLab CI",
+            "occurrences": 26,
+            "pourcentage": 3.9,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "191YCXF",
+                "intitule": "Ingénieur.e développement Junior (H/F)",
+                "entreprise": "ASTREE SOFTWARE"
+              }
+            ]
+          },
+          {
+            "competence": "Terraform",
+            "occurrences": 17,
+            "pourcentage": 2.5,
+            "offres": [
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "3445343",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "PROPULSE IT"
+              },
+              {
+                "id": "3302060",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3295463",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Thales Services Numériques Sas"
+              },
+              {
+                "id": "3188968",
+                "intitule": "Lead développeur .NET F/H",
+                "entreprise": "Coexya"
+              }
+            ]
+          },
+          {
+            "competence": "SonarQube",
+            "occurrences": 13,
+            "pourcentage": 1.9,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "3304694",
+                "intitule": "Développeur logiciel JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3241947",
+                "intitule": "Développeur Java (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2920607",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Ansible",
+            "occurrences": 12,
+            "pourcentage": 1.8,
+            "offres": [
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "3445343",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "PROPULSE IT"
+              },
+              {
+                "id": "3445280",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Harry Hope"
+              },
+              {
+                "id": "3427679",
+                "intitule": "Développeur système (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3302060",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Helm",
+            "occurrences": 8,
+            "pourcentage": 1.2,
+            "offres": [
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "3458941",
+                "intitule": "Développeur C# - Angular Confirmé H/F",
+                "entreprise": "SYNANTO"
+              },
+              {
+                "id": "3445343",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "PROPULSE IT"
+              },
+              {
+                "id": "3302060",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2946585",
+                "intitule": "Développeur back-end - Lyon, France  (H/F)",
+                "entreprise": "New Net 3D"
+              }
+            ]
+          },
+          {
+            "competence": "Grafana",
+            "occurrences": 8,
+            "pourcentage": 1.2,
+            "offres": [
+              {
+                "id": "197WSRP",
+                "intitule": "Développeur Infra Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              },
+              {
+                "id": "3302060",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2946585",
+                "intitule": "Développeur back-end - Lyon, France  (H/F)",
+                "entreprise": "New Net 3D"
+              },
+              {
+                "id": "2749196",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "2489417",
+                "intitule": "Développeur DevOps confirmé H/F",
+                "entreprise": "ISAGRI"
+              }
+            ]
+          },
+          {
+            "competence": "Prometheus",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3439007",
+                "intitule": "Ingénieur analyste développeur (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3302060",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2749196",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "2483227",
+                "intitule": "Ingénieur DevOps H/F",
+                "entreprise": "AKKODIS"
+              },
+              {
+                "id": "1757543",
+                "intitule": "Ingénieur(e) - Linux - Île-de-France (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Puppet",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "2483227",
+                "intitule": "Ingénieur DevOps H/F",
+                "entreprise": "AKKODIS"
+              },
+              {
+                "id": "1757543",
+                "intitule": "Ingénieur(e) - Linux - Île-de-France (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Vault",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "3445343",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "PROPULSE IT"
+              },
+              {
+                "id": "1757543",
+                "intitule": "Ingénieur(e) - Linux - Île-de-France (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "GitHub Actions",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3317505",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3302060",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Zabbix",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "2489417",
+                "intitule": "Développeur DevOps confirmé H/F",
+                "entreprise": "ISAGRI"
+              },
+              {
+                "id": "1757543",
+                "intitule": "Ingénieur(e) - Linux - Île-de-France (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Nexus",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "2749196",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "6300385",
+                "intitule": "INGÉNIEUR DEVOPS - H/F",
+                "entreprise": "WALLIX"
+              }
+            ]
+          },
+          {
+            "competence": "Nagios",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2853280",
+                "intitule": "Analyste Informatique (H/F)",
+                "entreprise": "UCANSS"
+              }
+            ]
+          },
+          {
+            "competence": "Artifactory",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2489417",
+                "intitule": "Développeur DevOps confirmé H/F",
+                "entreprise": "ISAGRI"
+              }
+            ]
+          },
+          {
+            "competence": "Consul",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "1757543",
+                "intitule": "Ingénieur(e) - Linux - Île-de-France (H/F)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 19,
+        "nb_competences_total": 23
+      },
+      "bases_de_donnees": {
+        "competences": [
+          {
+            "competence": "PostgreSQL",
+            "occurrences": 57,
+            "pourcentage": 8.5,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198PQZG",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              }
+            ]
+          },
+          {
+            "competence": "Oracle",
+            "occurrences": 52,
+            "pourcentage": 7.7,
+            "offres": [
+              {
+                "id": "198RBQP",
+                "intitule": "Développeur informatique (H/F)",
+                "entreprise": "MANPOWER FRANCE"
+              },
+              {
+                "id": "198DQLP",
+                "intitule": "Développeur(se) informatique  Full Stack C# Javascript/SQL (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "197ZDHK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              },
+              {
+                "id": "197ZDGK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              },
+              {
+                "id": "197WSRP",
+                "intitule": "Développeur Infra Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              }
+            ]
+          },
+          {
+            "competence": "MySQL",
+            "occurrences": 47,
+            "pourcentage": 7.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198PZTM",
+                "intitule": "Développeur PHP/ My SQL & Power Platform (H/F)",
+                "entreprise": "ACAF"
+              },
+              {
+                "id": "198JLQK",
+                "intitule": "Développeur DevOps Symfony (H/F)",
+                "entreprise": "LA MUTUELLE VERTE"
+              },
+              {
+                "id": "198HTLB",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse PHP (H/F)",
+                "entreprise": "IMAGINE DEVELOPPEMENT"
+              }
+            ]
+          },
+          {
+            "competence": "SQL Server",
+            "occurrences": 47,
+            "pourcentage": 7.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SZWW",
+                "intitule": "Développeur informatique C# et SQL  (H/F)",
+                "entreprise": "TRANSICIA"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "198BQYB",
+                "intitule": "Développeur .NET Senior / Chef de projet (H/F)",
+                "entreprise": "ROSARA"
+              },
+              {
+                "id": "197ZDHK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              }
+            ]
+          },
+          {
+            "competence": "MongoDB",
+            "occurrences": 33,
+            "pourcentage": 4.9,
+            "offres": [
+              {
+                "id": "198RMRD",
+                "intitule": "Ingénieur en développement Java (h/f)",
+                "entreprise": "ADECCO FRANCE"
+              },
+              {
+                "id": "198JNLX",
+                "intitule": "Développeur Full Stack - PHP/Symfony. (H/F)",
+                "entreprise": "LYNX RH"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "198CXWM",
+                "intitule": "Développeur Fullstack Java/ Angular H/F (H/F)",
+                "entreprise": "AMILTONE"
+              },
+              {
+                "id": "192XMSR",
+                "intitule": "Developer Fullstack Senior (H/F)",
+                "entreprise": "MARILOO"
+              }
+            ]
+          },
+          {
+            "competence": "MariaDB",
+            "occurrences": 11,
+            "pourcentage": 1.6,
+            "offres": [
+              {
+                "id": "198JLQK",
+                "intitule": "Développeur DevOps Symfony (H/F)",
+                "entreprise": "LA MUTUELLE VERTE"
+              },
+              {
+                "id": "198DQLP",
+                "intitule": "Développeur(se) informatique  Full Stack C# Javascript/SQL (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "3316977",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3241947",
+                "intitule": "Développeur Java (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2666584",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Redis",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "3540671",
+                "intitule": "Développeur Python H/F",
+                "entreprise": "Plus que PRO"
+              },
+              {
+                "id": "3444789",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Amiltone"
+              }
+            ]
+          },
+          {
+            "competence": "SQLite",
+            "occurrences": 6,
+            "pourcentage": 0.9,
+            "offres": [
+              {
+                "id": "197PGFZ",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "MEHITS AIRCALO FRANCE"
+              },
+              {
+                "id": "3319522",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3179355",
+                "intitule": "Développeur C# (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3161083",
+                "intitule": "Développeur C# - H/F",
+                "entreprise": "Fiducial"
+              },
+              {
+                "id": "2557183",
+                "intitule": "Développeur logiciel embarqué (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "DB2",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3470271",
+                "intitule": "Développeur Mainframe H/F",
+                "entreprise": "Step Up"
+              },
+              {
+                "id": "3457346",
+                "intitule": "Développeur Mainframe COBOL H/F",
+                "entreprise": "SYNANTO"
+              },
+              {
+                "id": "3124818",
+                "intitule": "Développeur Cobol (H/F)",
+                "entreprise": "HARRY HOPE"
+              },
+              {
+                "id": "2969144",
+                "intitule": "67_SPE_Développeur Cobol (H/F)",
+                "entreprise": "VIVERIS"
+              },
+              {
+                "id": "9703784",
+                "intitule": "Ingénieur DBA Études - DB2 (H/F)",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Snowflake",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3082502",
+                "intitule": "Developpeur - Equipe Bi Powerbi H/F",
+                "entreprise": "Step Up"
+              },
+              {
+                "id": "2878482",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "2878137",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "2482643",
+                "intitule": "DATA ANALYST H/F",
+                "entreprise": ""
+              },
+              {
+                "id": "2254290",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "KAINO CONSULTING"
+              }
+            ]
+          },
+          {
+            "competence": "Elasticsearch",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "2814956",
+                "intitule": "Ingénieur études et développement confirmé F/H",
+                "entreprise": "Coexya"
+              },
+              {
+                "id": "2362402",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "FIGARO CLASSIFIEDS"
+              }
+            ]
+          },
+          {
+            "competence": "HFSQL",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "197QZKS",
+                "intitule": "Développeur WINDEV (H/F)",
+                "entreprise": "TEAMNET"
+              },
+              {
+                "id": "197NSCB",
+                "intitule": "Analyste Sénior (H/F)",
+                "entreprise": "SILICO"
+              },
+              {
+                "id": "1449057",
+                "intitule": "CHARGE DE DEVELOPPEMENT INFORMATIQUE ET AUTOMATISATION H/F",
+                "entreprise": "Groupama"
+              }
+            ]
+          },
+          {
+            "competence": "Cassandra",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3444789",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Amiltone"
+              },
+              {
+                "id": "7926724",
+                "intitule": "Senior Data Engineer - Tech Lead F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "BigQuery",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3179718",
+                "intitule": "DATA ANALYST H/F",
+                "entreprise": ""
+              },
+              {
+                "id": "2362402",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "FIGARO CLASSIFIEDS"
+              }
+            ]
+          },
+          {
+            "competence": "DynamoDB",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 15,
+        "nb_competences_total": 22
+      },
+      "data_ia": {
+        "competences": [
+          {
+            "competence": "Spark",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3330490",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "2878482",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "2878137",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "7926724",
+                "intitule": "Senior Data Engineer - Tech Lead F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Pandas",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "2954785",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2532520",
+                "intitule": "Développeur Python / Django (H/F)",
+                "entreprise": "SULLY GROUP"
+              }
+            ]
+          },
+          {
+            "competence": "TensorFlow",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2044470",
+                "intitule": "EXPERT(E) TECHNIQUE IA F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "PyTorch",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2044470",
+                "intitule": "EXPERT(E) TECHNIQUE IA F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Hugging Face",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "3295093",
+                "intitule": "Ingénieur IA (H/F) - eKonsilio",
+                "entreprise": "eKonsilio"
+              }
+            ]
+          },
+          {
+            "competence": "NumPy",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2954785",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Matplotlib",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2954785",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 7,
+        "nb_competences_total": 12
+      },
+      "securite": {
+        "competences": [
+          {
+            "competence": "OWASP",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "9703383",
+                "intitule": "Ingénieur développement Java / sécurité des applications H/F",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Wireshark",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 2,
+        "nb_competences_total": 9
+      },
+      "cloud": {
+        "competences": [
+          {
+            "competence": "Azure",
+            "occurrences": 57,
+            "pourcentage": 8.5,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              }
+            ]
+          },
+          {
+            "competence": "AWS",
+            "occurrences": 30,
+            "pourcentage": 4.5,
+            "offres": [
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "198CXWM",
+                "intitule": "Développeur Fullstack Java/ Angular H/F (H/F)",
+                "entreprise": "AMILTONE"
+              },
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "191YCXF",
+                "intitule": "Ingénieur.e développement Junior (H/F)",
+                "entreprise": "ASTREE SOFTWARE"
+              }
+            ]
+          },
+          {
+            "competence": "Oracle Cloud",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "3328482",
+                "intitule": "Développeur ou Développeuse Oracle Cloud (H/F)",
+                "entreprise": "SNCF"
+              },
+              {
+                "id": "2549581",
+                "intitule": "Développeur ou Développeuse Oracle Cloud F/H - Informatique de gestion (H/F)",
+                "entreprise": "SNCF ACT"
+              },
+              {
+                "id": "7540261",
+                "intitule": "Développeur ERP (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "OVH",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "0047860",
+                "intitule": "Développeur PHP (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "9187166",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Google Cloud Platform",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198CSSF",
+                "intitule": "Lead Full Stack Developeur (h/f)",
+                "entreprise": "ADECCO"
+              }
+            ]
+          },
+          {
+            "competence": "Scaleway",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "3308172",
+                "intitule": "Développeur logiciel embarqué (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Supabase",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "8115459",
+                "intitule": "Développeur HTML (H/F)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 7,
+        "nb_competences_total": 16
+      },
+      "tests_qualite": {
+        "competences": [
+          {
+            "competence": "JUnit",
+            "occurrences": 7,
+            "pourcentage": 1.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "3445280",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Harry Hope"
+              },
+              {
+                "id": "3404383",
+                "intitule": "Développeur Informatique #Java Angular H/F",
+                "entreprise": "Manpower"
+              },
+              {
+                "id": "3074516",
+                "intitule": "Développeur Full Stack Java/Js (H/F)",
+                "entreprise": "HARRY HOPE"
+              },
+              {
+                "id": "2875951",
+                "intitule": "Développeur Back End Java H/F",
+                "entreprise": "Consort Group"
+              }
+            ]
+          },
+          {
+            "competence": "Postman",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "2790069",
+                "intitule": "Développeur Backend Java - Springboot H/F",
+                "entreprise": "SYNANTO"
+              },
+              {
+                "id": "2483273",
+                "intitule": "Lead Test Engineer H/F",
+                "entreprise": "AKKODIS"
+              },
+              {
+                "id": "2234758",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "1229156",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "0301870",
+                "intitule": "Lead Technical F/H - Cogelec (H/F)",
+                "entreprise": "Cogelec"
+              }
+            ]
+          },
+          {
+            "competence": "Cypress",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3489243",
+                "intitule": "Testeur Assurance Qualité H/F",
+                "entreprise": "ISAGRI"
+              },
+              {
+                "id": "3425327",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2749196",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "2236143",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              }
+            ]
+          },
+          {
+            "competence": "Selenium",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "2749196",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "2483273",
+                "intitule": "Lead Test Engineer H/F",
+                "entreprise": "AKKODIS"
+              },
+              {
+                "id": "2360733",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "THALES"
+              },
+              {
+                "id": "2236143",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              }
+            ]
+          },
+          {
+            "competence": "Playwright",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3489243",
+                "intitule": "Testeur Assurance Qualité H/F",
+                "entreprise": "ISAGRI"
+              },
+              {
+                "id": "3304694",
+                "intitule": "Développeur logiciel JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2573561",
+                "intitule": "Développeur Frontend (H/F)",
+                "entreprise": "SUP INTERIM PONTARLIER"
+              },
+              {
+                "id": "2234758",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              }
+            ]
+          },
+          {
+            "competence": "Jest",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "2307613",
+                "intitule": "Développeur .NET Angular react senior F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "1992104",
+                "intitule": "Lead Developer .net Experimenté (H/F/D)",
+                "entreprise": ""
+              },
+              {
+                "id": "9704066",
+                "intitule": "Développeur Full Stack Java React H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Newman",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2483273",
+                "intitule": "Lead Test Engineer H/F",
+                "entreprise": "AKKODIS"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 7,
+        "nb_competences_total": 9
+      },
+      "environnements_ide": {
+        "competences": [
+          {
+            "competence": "Eclipse",
+            "occurrences": 6,
+            "pourcentage": 0.9,
+            "offres": [
+              {
+                "id": "197NWRZ",
+                "intitule": "Développeur ERP (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "2890607",
+                "intitule": "DÉVELOPPEUR FULL STACK - H/F",
+                "entreprise": "CPAGE"
+              },
+              {
+                "id": "2815172",
+                "intitule": "Développeur.se SIG (H/F)",
+                "entreprise": "Coexya"
+              },
+              {
+                "id": "2283175",
+                "intitule": "TECHLEAD DÉVELOPPEUR - H/F",
+                "entreprise": "CPAGE"
+              },
+              {
+                "id": "1255077",
+                "intitule": "DÉVELOPPEUR JAVA / FULLSTACK SÉNIOR - H/F",
+                "entreprise": "ATOL CONSEILS ET DEVELOPPEMENTS"
+              }
+            ]
+          },
+          {
+            "competence": "Xcode",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3179355",
+                "intitule": "Développeur C# (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3161083",
+                "intitule": "Développeur C# - H/F",
+                "entreprise": "Fiducial"
+              }
+            ]
+          },
+          {
+            "competence": "PyCharm",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "3234424",
+                "intitule": "DÉVELOPPEUR(SE) PYTHON (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Android Studio",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "9790771",
+                "intitule": "Dev Android confirmé H/F (secteur santé)",
+                "entreprise": "Externatic"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 7
+      },
+      "api_integration": {
+        "competences": [
+          {
+            "competence": "REST",
+            "occurrences": 67,
+            "pourcentage": 10.0,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              },
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              }
+            ]
+          },
+          {
+            "competence": "SOAP",
+            "occurrences": 11,
+            "pourcentage": 1.6,
+            "offres": [
+              {
+                "id": "3557508",
+                "intitule": "ANALYSTE INTERFACES H/F",
+                "entreprise": "AFD - Agence Française de développement"
+              },
+              {
+                "id": "3368479",
+                "intitule": "Développeur Fullstack .Net/Javascript H/F",
+                "entreprise": "Michael Page"
+              },
+              {
+                "id": "2908152",
+                "intitule": "Développeur (H/F)",
+                "entreprise": "Up Skills Lyon Tertiaire"
+              },
+              {
+                "id": "2897608",
+                "intitule": "Software Engineer Java métier Sinistre (F/H) (H/F)",
+                "entreprise": "AXA France"
+              },
+              {
+                "id": "2789929",
+                "intitule": "Développeur C# - .Net H/F",
+                "entreprise": "SYNANTO"
+              }
+            ]
+          },
+          {
+            "competence": "Swagger",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "3249070",
+                "intitule": "TECHLEAD C# - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "2897578",
+                "intitule": "Lead développeur Angular 2 F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "2896738",
+                "intitule": "Développeur Angular F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              }
+            ]
+          },
+          {
+            "competence": "GraphQL",
+            "occurrences": 7,
+            "pourcentage": 1.0,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "2969155",
+                "intitule": "Développeur Full Stack .NET H/F",
+                "entreprise": "VIVERIS"
+              },
+              {
+                "id": "2749145",
+                "intitule": "Développeur.se back end - Intégration API (CMS / PIM / ERP) F/H - POP France (H/F)",
+                "entreprise": "POP France"
+              },
+              {
+                "id": "1473672",
+                "intitule": "Lead Développeur / Développeuse JAVA F/H - Informatique de gestion (H/F)",
+                "entreprise": "Raja France"
+              }
+            ]
+          },
+          {
+            "competence": "OpenAPI",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3249070",
+                "intitule": "TECHLEAD C# - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "1229156",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "0301870",
+                "intitule": "Lead Technical F/H - Cogelec (H/F)",
+                "entreprise": "Cogelec"
+              },
+              {
+                "id": "9050442",
+                "intitule": "TECHLEAD TYPESCRIPT/VUE.JS - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "7568896",
+                "intitule": "DÉVELOPPEUR C# - H/F",
+                "entreprise": "Akanea"
+              }
+            ]
+          },
+          {
+            "competence": "gRPC",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3249070",
+                "intitule": "TECHLEAD C# - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "7568896",
+                "intitule": "DÉVELOPPEUR C# - H/F",
+                "entreprise": "Akanea"
+              }
+            ]
+          },
+          {
+            "competence": "OAuth2",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "2749145",
+                "intitule": "Développeur.se back end - Intégration API (CMS / PIM / ERP) F/H - POP France (H/F)",
+                "entreprise": "POP France"
+              },
+              {
+                "id": "1992104",
+                "intitule": "Lead Developer .net Experimenté (H/F/D)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 7,
+        "nb_competences_total": 9
+      },
+      "ux_ui_design": {
+        "competences": [
+          {
+            "competence": "Bootstrap",
+            "occurrences": 7,
+            "pourcentage": 1.0,
+            "offres": [
+              {
+                "id": "3453060",
+                "intitule": "Développeur Python FastAPI - H/F",
+                "entreprise": "Talents IT"
+              },
+              {
+                "id": "3357360",
+                "intitule": "Développeur/se - Full Stack - Défense & Sécurité - Ile de France (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3234424",
+                "intitule": "DÉVELOPPEUR(SE) PYTHON (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2573561",
+                "intitule": "Développeur Frontend (H/F)",
+                "entreprise": "SUP INTERIM PONTARLIER"
+              },
+              {
+                "id": "2305789",
+                "intitule": "Développeur PHP Symfony F/H - Informatique de gestion (H/F)",
+                "entreprise": "LEA Linking Executive Associates"
+              }
+            ]
+          },
+          {
+            "competence": "Figma",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "2307613",
+                "intitule": "Développeur .NET Angular react senior F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "9403473",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Tailwind CSS",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2307613",
+                "intitule": "Développeur .NET Angular react senior F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              }
+            ]
+          },
+          {
+            "competence": "Material UI",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "9703795",
+                "intitule": "Lead développeur Java H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 8
+      },
+      "collaboration_gestion": {
+        "competences": [
+          {
+            "competence": "Git",
+            "occurrences": 125,
+            "pourcentage": 18.6,
+            "offres": [
+              {
+                "id": "198WQCR",
+                "intitule": "Développeur/Développeuse DJANGO (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              }
+            ]
+          },
+          {
+            "competence": "GitLab",
+            "occurrences": 48,
+            "pourcentage": 7.1,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "197SYDK",
+                "intitule": "Développeur C++ / QT / Python en alternance - H/F (H/F)",
+                "entreprise": "CORYS"
+              }
+            ]
+          },
+          {
+            "competence": "Jira",
+            "occurrences": 34,
+            "pourcentage": 5.1,
+            "offres": [
+              {
+                "id": "198JLQK",
+                "intitule": "Développeur DevOps Symfony (H/F)",
+                "entreprise": "LA MUTUELLE VERTE"
+              },
+              {
+                "id": "197NVJW",
+                "intitule": "Développeur JAVA/JEE (H/F)",
+                "entreprise": "NEXITUM"
+              },
+              {
+                "id": "191YCXF",
+                "intitule": "Ingénieur.e développement Junior (H/F)",
+                "entreprise": "ASTREE SOFTWARE"
+              },
+              {
+                "id": "3489243",
+                "intitule": "Testeur Assurance Qualité H/F",
+                "entreprise": "ISAGRI"
+              },
+              {
+                "id": "3445215",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Amiltone"
+              }
+            ]
+          },
+          {
+            "competence": "Azure DevOps",
+            "occurrences": 21,
+            "pourcentage": 3.1,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "3425814",
+                "intitule": "Développeur logiciel JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3304694",
+                "intitule": "Développeur logiciel JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "GitHub",
+            "occurrences": 12,
+            "pourcentage": 1.8,
+            "offres": [
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198CXWM",
+                "intitule": "Développeur Fullstack Java/ Angular H/F (H/F)",
+                "entreprise": "AMILTONE"
+              },
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              },
+              {
+                "id": "3317505",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Confluence",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "198JLQK",
+                "intitule": "Développeur DevOps Symfony (H/F)",
+                "entreprise": "LA MUTUELLE VERTE"
+              },
+              {
+                "id": "191YCXF",
+                "intitule": "Ingénieur.e développement Junior (H/F)",
+                "entreprise": "ASTREE SOFTWARE"
+              },
+              {
+                "id": "3445215",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Amiltone"
+              },
+              {
+                "id": "3310423",
+                "intitule": "Développeur Plateforme actuariel .net C# Azure  - Rennes (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              },
+              {
+                "id": "3241947",
+                "intitule": "Développeur Java (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Notion",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "198DQLP",
+                "intitule": "Développeur(se) informatique  Full Stack C# Javascript/SQL (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "2236143",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              },
+              {
+                "id": "1229156",
+                "intitule": "Développeur Python (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "0483360",
+                "intitule": "Développeur Fullstack .Net - Angular Confirmé - Senior H/F",
+                "entreprise": "Talan"
+              }
+            ]
+          },
+          {
+            "competence": "Bitbucket",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3368479",
+                "intitule": "Développeur Fullstack .Net/Javascript H/F",
+                "entreprise": "Michael Page"
+              },
+              {
+                "id": "3310423",
+                "intitule": "Développeur Plateforme actuariel .net C# Azure  - Rennes (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              },
+              {
+                "id": "2937071",
+                "intitule": "Expert Progress / JAVA - editeur logiciel (Remote) H/F",
+                "entreprise": "Externatic"
+              },
+              {
+                "id": "9703837",
+                "intitule": "Lead Developpeur Java agnostique - editeur logiciel - H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "Figma",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "198LNJF",
+                "intitule": "Développeur Sénior Java React JS‎ (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "198LNDB",
+                "intitule": "Développeur Sénior Java/React JS (H/F)",
+                "entreprise": "AK RECRUTEMENT"
+              },
+              {
+                "id": "2307613",
+                "intitule": "Développeur .NET Angular react senior F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "9403473",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Slack",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "192JKZN",
+                "intitule": "Senior Software Engineer (H/F)",
+                "entreprise": "EDITIONS TECHNIQUES POUR L'AUTOMOBILE ET"
+              }
+            ]
+          },
+          {
+            "competence": "Microsoft Teams",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2653019",
+                "intitule": "Analyste développeur Business Intelligence (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Clickup",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "1228514",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": ""
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 12,
+        "nb_competences_total": 17
+      },
+      "systemes_exploitation": {
+        "competences": [
+          {
+            "competence": "Linux",
+            "occurrences": 73,
+            "pourcentage": 10.9,
+            "offres": [
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TTZW",
+                "intitule": "Technicien tests et programmation (H/F)",
+                "entreprise": "MANPOWER"
+              },
+              {
+                "id": "198SZWW",
+                "intitule": "Développeur informatique C# et SQL  (H/F)",
+                "entreprise": "TRANSICIA"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              }
+            ]
+          },
+          {
+            "competence": "Windows",
+            "occurrences": 37,
+            "pourcentage": 5.5,
+            "offres": [
+              {
+                "id": "198SZWW",
+                "intitule": "Développeur informatique C# et SQL  (H/F)",
+                "entreprise": "TRANSICIA"
+              },
+              {
+                "id": "198QDBH",
+                "intitule": "Analyste-programmeur Adelia (H/F)",
+                "entreprise": "MUTUELLE DU REMPART"
+              },
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              },
+              {
+                "id": "198JGHN",
+                "intitule": "Informaticien(ne) Systèmes et Réseaux, support utilisateurs F/H/ (H/F)",
+                "entreprise": "AD HOC INTERIM & RECRUTEMENT"
+              },
+              {
+                "id": "198JDQV",
+                "intitule": "Technicien support utilisateurs H/F (H/F)",
+                "entreprise": "SARL SYNAMBU"
+              }
+            ]
+          },
+          {
+            "competence": "Android",
+            "occurrences": 12,
+            "pourcentage": 1.8,
+            "offres": [
+              {
+                "id": "198QVZY",
+                "intitule": "Développeur(euse) Informatique Industrielle (H/F)",
+                "entreprise": "PROVENCALE SA"
+              },
+              {
+                "id": "198JDQV",
+                "intitule": "Technicien support utilisateurs H/F (H/F)",
+                "entreprise": "SARL SYNAMBU"
+              },
+              {
+                "id": "198GNRZ",
+                "intitule": "Informaticien (H/F) CDD (H/F)",
+                "entreprise": "UGECAM DE NORMANDIE"
+              },
+              {
+                "id": "197YTTM",
+                "intitule": "Développeur informatique Android et PHP (H/F)",
+                "entreprise": "SAS"
+              },
+              {
+                "id": "3452216",
+                "intitule": "Développeur Qt C++ Confirmé H/F",
+                "entreprise": "ISAGRI"
+              }
+            ]
+          },
+          {
+            "competence": "Unix",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "197ZDHK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              },
+              {
+                "id": "197ZDGK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              },
+              {
+                "id": "3332454",
+                "intitule": "Développeur SAP F/H",
+                "entreprise": "W HUNT"
+              },
+              {
+                "id": "3328637",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "2853280",
+                "intitule": "Analyste Informatique (H/F)",
+                "entreprise": "UCANSS"
+              }
+            ]
+          },
+          {
+            "competence": "AIX",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "198JNLX",
+                "intitule": "Développeur Full Stack - PHP/Symfony. (H/F)",
+                "entreprise": "LYNX RH"
+              },
+              {
+                "id": "197WSRP",
+                "intitule": "Développeur Infra Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              },
+              {
+                "id": "3354443",
+                "intitule": "Développeur informatique H/F",
+                "entreprise": ""
+              },
+              {
+                "id": "3328637",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "3316977",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "iOS",
+            "occurrences": 8,
+            "pourcentage": 1.2,
+            "offres": [
+              {
+                "id": "198GNRZ",
+                "intitule": "Informaticien (H/F) CDD (H/F)",
+                "entreprise": "UGECAM DE NORMANDIE"
+              },
+              {
+                "id": "198FYKB",
+                "intitule": "backend-devops-engineer (h/f)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "198FXYW",
+                "intitule": "Senior Full-Stack Engineer (H/F)",
+                "entreprise": "BOT RESOURCES"
+              },
+              {
+                "id": "3179355",
+                "intitule": "Développeur C# (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3161083",
+                "intitule": "Développeur C# - H/F",
+                "entreprise": "Fiducial"
+              }
+            ]
+          },
+          {
+            "competence": "Debian",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "2897578",
+                "intitule": "Lead développeur Angular 2 F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "2896738",
+                "intitule": "Développeur Angular F/H - Informatique de gestion (H/F)",
+                "entreprise": "Hays France"
+              },
+              {
+                "id": "1757543",
+                "intitule": "Ingénieur(e) - Linux - Île-de-France (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "9392890",
+                "intitule": "Développeur systèmes embarqués (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "8661975",
+                "intitule": "Développeur C++ (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "Windows Server",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "198JGHN",
+                "intitule": "Informaticien(ne) Systèmes et Réseaux, support utilisateurs F/H/ (H/F)",
+                "entreprise": "AD HOC INTERIM & RECRUTEMENT"
+              },
+              {
+                "id": "198GNRZ",
+                "intitule": "Informaticien (H/F) CDD (H/F)",
+                "entreprise": "UGECAM DE NORMANDIE"
+              },
+              {
+                "id": "2483227",
+                "intitule": "Ingénieur DevOps H/F",
+                "entreprise": "AKKODIS"
+              },
+              {
+                "id": "9496848",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "macOS",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "198NLCM",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "SYSTANCIA"
+              },
+              {
+                "id": "2489417",
+                "intitule": "Développeur DevOps confirmé H/F",
+                "entreprise": "ISAGRI"
+              }
+            ]
+          },
+          {
+            "competence": "CentOS",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "198GNRZ",
+                "intitule": "Informaticien (H/F) CDD (H/F)",
+                "entreprise": "UGECAM DE NORMANDIE"
+              },
+              {
+                "id": "9496231",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "RHEL",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "197WSRP",
+                "intitule": "Développeur Infra Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              }
+            ]
+          },
+          {
+            "competence": "Solaris",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "197NVJW",
+                "intitule": "Développeur JAVA/JEE (H/F)",
+                "entreprise": "NEXITUM"
+              }
+            ]
+          },
+          {
+            "competence": "Windows 10",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198GNRZ",
+                "intitule": "Informaticien (H/F) CDD (H/F)",
+                "entreprise": "UGECAM DE NORMANDIE"
+              }
+            ]
+          },
+          {
+            "competence": "Windows 11",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "0400826",
+                "intitule": "Technicien Assistance Informatique F/H - Guyot Environnement Groupe (H/F)",
+                "entreprise": "Guyot Environnement Groupe"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 14,
+        "nb_competences_total": 19
+      },
+      "methodologies_architecture": {
+        "competences": [
+          {
+            "competence": "Agile",
+            "occurrences": 141,
+            "pourcentage": 21.0,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198WKTZ",
+                "intitule": "Développeur(se) Java FullStack (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198TVVW",
+                "intitule": "Développeur informatique (F/H)",
+                "entreprise": "EXPECTRA JBM"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198PZTM",
+                "intitule": "Développeur PHP/ My SQL & Power Platform (H/F)",
+                "entreprise": "ACAF"
+              }
+            ]
+          },
+          {
+            "competence": "DevOps",
+            "occurrences": 83,
+            "pourcentage": 12.4,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198SBXV",
+                "intitule": "Ingénieur DevOps (H/F)",
+                "entreprise": "LYNX RH SERVICES"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198NVSX",
+                "intitule": "Développeur Senior H/F",
+                "entreprise": "CNMSS"
+              },
+              {
+                "id": "198LGVB",
+                "intitule": "Développeur C# (H/F)",
+                "entreprise": "Link Consulting"
+              }
+            ]
+          },
+          {
+            "competence": "Scrum",
+            "occurrences": 81,
+            "pourcentage": 12.1,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "198QQMH",
+                "intitule": "Ingénieur Débutant - Orléans (H/F)",
+                "entreprise": "SOPRA STERIA GROUP"
+              },
+              {
+                "id": "198NVSY",
+                "intitule": "Développeur Java/Angular (F/H) (H/F)",
+                "entreprise": "SOCIETE POUR L'INFORMATIQUE INDUSTRIELLE"
+              },
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              }
+            ]
+          },
+          {
+            "competence": "Microservices",
+            "occurrences": 37,
+            "pourcentage": 5.5,
+            "offres": [
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "198FFPM",
+                "intitule": "Développeur(se) backend expérimenté(e) Node.js et AWS H/F -IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "3445280",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Harry Hope"
+              },
+              {
+                "id": "3422492",
+                "intitule": "Développeur Java Spring Boot (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              },
+              {
+                "id": "3404751",
+                "intitule": "Développeur Informatique C# .Net H/F",
+                "entreprise": "Manpower"
+              }
+            ]
+          },
+          {
+            "competence": "BDD",
+            "occurrences": 22,
+            "pourcentage": 3.3,
+            "offres": [
+              {
+                "id": "198CXWM",
+                "intitule": "Développeur Fullstack Java/ Angular H/F (H/F)",
+                "entreprise": "AMILTONE"
+              },
+              {
+                "id": "3453060",
+                "intitule": "Développeur Python FastAPI - H/F",
+                "entreprise": "Talents IT"
+              },
+              {
+                "id": "3452216",
+                "intitule": "Développeur Qt C++ Confirmé H/F",
+                "entreprise": "ISAGRI"
+              },
+              {
+                "id": "3444789",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Amiltone"
+              },
+              {
+                "id": "3444279",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "Amiltone"
+              }
+            ]
+          },
+          {
+            "competence": "TDD",
+            "occurrences": 18,
+            "pourcentage": 2.7,
+            "offres": [
+              {
+                "id": "197NVJW",
+                "intitule": "Développeur JAVA/JEE (H/F)",
+                "entreprise": "NEXITUM"
+              },
+              {
+                "id": "3368479",
+                "intitule": "Développeur Fullstack .Net/Javascript H/F",
+                "entreprise": "Michael Page"
+              },
+              {
+                "id": "3319522",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3310423",
+                "intitule": "Développeur Plateforme actuariel .net C# Azure  - Rennes (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              },
+              {
+                "id": "3249070",
+                "intitule": "TECHLEAD C# - H/F",
+                "entreprise": "Akanea"
+              }
+            ]
+          },
+          {
+            "competence": "Kanban",
+            "occurrences": 12,
+            "pourcentage": 1.8,
+            "offres": [
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "3457346",
+                "intitule": "Développeur Mainframe COBOL H/F",
+                "entreprise": "SYNANTO"
+              },
+              {
+                "id": "3161395",
+                "intitule": "Développeur Java Spring Boot (F/H) (H/F)",
+                "entreprise": "New Net 3D"
+              },
+              {
+                "id": "2888194",
+                "intitule": "Développeur Java - Angular H/F",
+                "entreprise": "Soors"
+              },
+              {
+                "id": "2813833",
+                "intitule": "Développeur FullStack (H/F)",
+                "entreprise": "MUTUELLE INTERIALE"
+              }
+            ]
+          },
+          {
+            "competence": "DDD",
+            "occurrences": 11,
+            "pourcentage": 1.6,
+            "offres": [
+              {
+                "id": "198WNRT",
+                "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+                "entreprise": "MFTI"
+              },
+              {
+                "id": "3319522",
+                "intitule": "Développeur .NET (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3310423",
+                "intitule": "Développeur Plateforme actuariel .net C# Azure  - Rennes (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              },
+              {
+                "id": "3249070",
+                "intitule": "TECHLEAD C# - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "2875951",
+                "intitule": "Développeur Back End Java H/F",
+                "entreprise": "Consort Group"
+              }
+            ]
+          },
+          {
+            "competence": "SAFe",
+            "occurrences": 10,
+            "pourcentage": 1.5,
+            "offres": [
+              {
+                "id": "197QXBZ",
+                "intitule": "Analyste Développeur COBOL Gbs (H/F)",
+                "entreprise": "SOCIETE GESER BEST"
+              },
+              {
+                "id": "3239286",
+                "intitule": "Développeur(euse) Fullstack (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3033651",
+                "intitule": "DÉVELOPPEUR(EUSE) FONCTIONNEL - H/F",
+                "entreprise": "DSI France Travail"
+              },
+              {
+                "id": "3011112",
+                "intitule": "CONCEPTEUR(TRICE) / DÉVELOPPEUR(EUSE) SI (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2752249",
+                "intitule": "Scrum Master Sénior H/F",
+                "entreprise": "LEA Recrutement"
+              }
+            ]
+          },
+          {
+            "competence": "Clean Architecture",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3249070",
+                "intitule": "TECHLEAD C# - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "2751129",
+                "intitule": "Développeur PHP -SYMFONY Sénior H/F",
+                "entreprise": "LEA Recrutement"
+              },
+              {
+                "id": "9050442",
+                "intitule": "TECHLEAD TYPESCRIPT/VUE.JS - H/F",
+                "entreprise": "Akanea"
+              },
+              {
+                "id": "7568896",
+                "intitule": "DÉVELOPPEUR C# - H/F",
+                "entreprise": "Akanea"
+              }
+            ]
+          },
+          {
+            "competence": "GitFlow",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "198FGMP",
+                "intitule": "Développeur Java/Angular expérimenté H/F - IDF (H/F)",
+                "entreprise": "AKTISEA"
+              },
+              {
+                "id": "197NVJW",
+                "intitule": "Développeur JAVA/JEE (H/F)",
+                "entreprise": "NEXITUM"
+              },
+              {
+                "id": "3425814",
+                "intitule": "Développeur logiciel JAVA (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3422141",
+                "intitule": "Développeur JAVA (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              }
+            ]
+          },
+          {
+            "competence": "Lean",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3328637",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "1999372",
+                "intitule": "Programmeur F/H (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "SOA",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "8646781",
+                "intitule": "Ingénieur d'études (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "CQRS",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2815385",
+                "intitule": "DÉVELOPPEUR(EUSE) SENIOR H/F",
+                "entreprise": "MAXICOFFEE"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 14,
+        "nb_competences_total": 16
+      },
+      "formats_protocoles": {
+        "competences": [
+          {
+            "competence": "HTTPS",
+            "occurrences": 18,
+            "pourcentage": 2.7,
+            "offres": [
+              {
+                "id": "198MNQQ",
+                "intitule": "Développeur C#/Angular, Unity 3D Industriel (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "198JDQV",
+                "intitule": "Technicien support utilisateurs H/F (H/F)",
+                "entreprise": "SARL SYNAMBU"
+              },
+              {
+                "id": "198DQLP",
+                "intitule": "Développeur(se) informatique  Full Stack C# Javascript/SQL (H/F)",
+                "entreprise": "VERTECH'"
+              },
+              {
+                "id": "197ZSDM",
+                "intitule": "Developpeur/concepteur (H/F)",
+                "entreprise": "CARSAT BOURGOGNE FRANCHE-COMTE"
+              },
+              {
+                "id": "197SYDK",
+                "intitule": "Développeur C++ / QT / Python en alternance - H/F (H/F)",
+                "entreprise": "CORYS"
+              }
+            ]
+          },
+          {
+            "competence": "XML",
+            "occurrences": 9,
+            "pourcentage": 1.3,
+            "offres": [
+              {
+                "id": "197ZDHK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              },
+              {
+                "id": "197ZDGK",
+                "intitule": "TECH LEAD - DEVELOPPEUR WINDCHILL (H/F)",
+                "entreprise": "PERCALL"
+              },
+              {
+                "id": "3437526",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3332454",
+                "intitule": "Développeur SAP F/H",
+                "entreprise": "W HUNT"
+              },
+              {
+                "id": "2908152",
+                "intitule": "Développeur (H/F)",
+                "entreprise": "Up Skills Lyon Tertiaire"
+              }
+            ]
+          },
+          {
+            "competence": "JSON",
+            "occurrences": 4,
+            "pourcentage": 0.6,
+            "offres": [
+              {
+                "id": "3437526",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "2888194",
+                "intitule": "Développeur Java - Angular H/F",
+                "entreprise": "Soors"
+              },
+              {
+                "id": "8661975",
+                "intitule": "Développeur C++ (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "9187164",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "HTTP",
+            "occurrences": 3,
+            "pourcentage": 0.4,
+            "offres": [
+              {
+                "id": "197SYDK",
+                "intitule": "Développeur C++ / QT / Python en alternance - H/F (H/F)",
+                "entreprise": "CORYS"
+              },
+              {
+                "id": "3328637",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "CGI"
+              },
+              {
+                "id": "1255077",
+                "intitule": "DÉVELOPPEUR JAVA / FULLSTACK SÉNIOR - H/F",
+                "entreprise": "ATOL CONSEILS ET DEVELOPPEMENTS"
+              }
+            ]
+          },
+          {
+            "competence": "YAML",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3445343",
+                "intitule": "Développeur / Développeuse informatique (H/F)",
+                "entreprise": "PROPULSE IT"
+              },
+              {
+                "id": "2489417",
+                "intitule": "Développeur DevOps confirmé H/F",
+                "entreprise": "ISAGRI"
+              }
+            ]
+          },
+          {
+            "competence": "UDP",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2812538",
+                "intitule": "DEVELOPPEUR C / C++ CHEZ CLIENT FINAL H/F",
+                "entreprise": "STUDIO RH"
+              }
+            ]
+          },
+          {
+            "competence": "SSH",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "3453060",
+                "intitule": "Développeur Python FastAPI - H/F",
+                "entreprise": "Talents IT"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 7,
+        "nb_competences_total": 14
+      },
+      "outils_monitoring": {
+        "competences": [
+          {
+            "competence": "Datadog",
+            "occurrences": 5,
+            "pourcentage": 0.7,
+            "offres": [
+              {
+                "id": "3422455",
+                "intitule": "Développeur java (H/F)",
+                "entreprise": "Forums Talents Handicap"
+              },
+              {
+                "id": "2937071",
+                "intitule": "Expert Progress / JAVA - editeur logiciel (Remote) H/F",
+                "entreprise": "Externatic"
+              },
+              {
+                "id": "2483210",
+                "intitule": "Développeur .NET/Cloud H/F",
+                "entreprise": "AKKODIS"
+              },
+              {
+                "id": "2362402",
+                "intitule": "Analyste-programmeur / Analyste-programmeuse informatique (H/F)",
+                "entreprise": "FIGARO CLASSIFIEDS"
+              },
+              {
+                "id": "9703837",
+                "intitule": "Lead Developpeur Java agnostique - editeur logiciel - H/F",
+                "entreprise": "Externatic"
+              }
+            ]
+          },
+          {
+            "competence": "AppDynamics",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2091354",
+                "intitule": "Lead Tech H/F",
+                "entreprise": "CREDIT MUTUEL ARKEA"
+              }
+            ]
+          },
+          {
+            "competence": "Splunk",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "2888246",
+                "intitule": "Analyste CERT/SOC (H/F)",
+                "entreprise": "LUTESSA"
+              }
+            ]
+          },
+          {
+            "competence": "Sentry",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "198JLQK",
+                "intitule": "Développeur DevOps Symfony (H/F)",
+                "entreprise": "LA MUTUELLE VERTE"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 4,
+        "nb_competences_total": 10
+      },
+      "certifications": {
+        "competences": [
+          {
+            "competence": "Scrum Master",
+            "occurrences": 14,
+            "pourcentage": 2.1,
+            "offres": [
+              {
+                "id": "3409729",
+                "intitule": "E.Leclerc - Tech Lead - H/F",
+                "entreprise": "E.Leclerc"
+              },
+              {
+                "id": "3239286",
+                "intitule": "Développeur(euse) Fullstack (H/F)",
+                "entreprise": ""
+              },
+              {
+                "id": "3049564",
+                "intitule": "Développeur IT RH et Immobilier (H/F)",
+                "entreprise": "Harmonie Mutuelle"
+              },
+              {
+                "id": "3033651",
+                "intitule": "DÉVELOPPEUR(EUSE) FONCTIONNEL - H/F",
+                "entreprise": "DSI France Travail"
+              },
+              {
+                "id": "3011112",
+                "intitule": "CONCEPTEUR(TRICE) / DÉVELOPPEUR(EUSE) SI (H/F)",
+                "entreprise": ""
+              }
+            ]
+          },
+          {
+            "competence": "ISTQB",
+            "occurrences": 2,
+            "pourcentage": 0.3,
+            "offres": [
+              {
+                "id": "3489243",
+                "intitule": "Testeur Assurance Qualité H/F",
+                "entreprise": "ISAGRI"
+              },
+              {
+                "id": "2236143",
+                "intitule": "Cegedim - Informaticien / Informaticienne (H/F)",
+                "entreprise": "Cegedim"
+              }
+            ]
+          },
+          {
+            "competence": "PMP",
+            "occurrences": 1,
+            "pourcentage": 0.1,
+            "offres": [
+              {
+                "id": "3238162",
+                "intitule": "Manager des systèmes d'information H/F",
+                "entreprise": "LEA Recrutement"
+              }
+            ]
+          }
+        ],
+        "nb_competences_detectees": 3,
+        "nb_competences_total": 9
+      }
+    },
+    "nb_offres_analysees": 672
+  }
+}

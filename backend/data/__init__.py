@@ -14,7 +14,7 @@ from .competences import (
 # API publique du module data
 __all__ = [
     "COMPETENCES_REFERENTIEL",
-    "CATEGORIES_COMPETENCES", 
+    "CATEGORIES_COMPETENCES",
     "NB_CATEGORIES",
     "NB_COMPETENCES_TOTAL",
     "charger_competences_referentiel",

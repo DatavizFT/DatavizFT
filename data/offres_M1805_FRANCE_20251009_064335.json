@@ -1,0 +1,825 @@
+{
+  "metadata": {
+    "date_collecte": "2025-10-09T06:43:35.293297",
+    "nb_offres": 10,
+    "code_rome": "M1805",
+    "source": "France Travail API v2",
+    "version_collector": "DatavizFT v1.0"
+  },
+  "offres": [
+    {
+      "id": "198WQCR",
+      "intitule": "Développeur/Développeuse DJANGO (H/F)",
+      "description": "Missions principales :\n\nEn tant que Développeur(se) Django Junior, vous aurez la charge de : \n\n-Développer et maintenir des applications web en utilisant le framework Django ; \n-Concevoir des modèles de données et interagir avec des bases de données relationnelles (PostgreSQL, MySQL) ; \n-Implémenter des vues, templates et formulaires côté back-end ; \n-Participer à l'intégration d'API externes et au développement de services REST ; \n-Écrire des tests unitaires et assurer la qualité du code ; \n-Collaborer avec les équipes produit, design et infrastructure. \n\n\nCompétences requises :\n-Maîtrise de Python et du framework Django ; \n-Bonne connaissance des bases de données relationnelles et du langage SQL ; \n-Compréhension des concepts MVC/MVT, ORM et RESTful APIs ; \n-Utilisation de Git et des outils de versioning ; \n-Notions en HTML, CSS, JavaScript (bonus si expérience avec React ou Vue.js). \n\n\nProfil recherché : \n-Formation : Bac+2/3 en informatique ou développement web ; \n-Expérience : 3 ans minimum d'expériences. \n\nQualités personnelles : \n\n-Rigueur et sens du détail ; \n\n-Esprit d'équipe et bonnes capacités de communication ; \n-Curiosité technique et volonté d'apprendre ; \n-Esprit logique et structuré. \n\n Avantages :\n-Mutuelle d'entreprise \n-Tickets restaurant \n-Prise en charge du Navigo \n\nComment postuler ? \nEnvoyez votre CV via France Travail ou directement à l'adresse suivante : recrutement@mfti.io \n\n",
+      "dateCreation": "2025-10-08T15:04:59.748Z",
+      "dateActualisation": "2025-10-08T15:29:17.523Z",
+      "lieuTravail": {
+        "libelle": "Ile-de-France"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "MFTI",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "3 An(s)",
+      "langues": [
+        {
+          "libelle": "Anglais",
+          "exigence": "S"
+        }
+      ],
+      "competences": [
+        {
+          "code": "300688",
+          "libelle": "Application web",
+          "exigence": "S"
+        },
+        {
+          "code": "109846",
+          "libelle": "Concevoir une application web",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "commentaire": "Selon le profil",
+        "complement1": "Primes",
+        "listeComplements": [
+          {
+            "code": "1",
+            "libelle": "Primes"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "39H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {},
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "6",
+      "qualificationLibelle": "Employé qualifié",
+      "codeNAF": "70.22Z",
+      "secteurActivite": "70",
+      "secteurActiviteLibelle": "Conseil pour les affaires et autres conseils de gestion",
+      "qualitesProfessionnelles": [
+        {
+          "libelle": "Faire preuve de rigueur et de précision",
+          "description": "Capacité à réaliser des tâches en suivant avec exactitude les règles, les procédures, les instructions qui ont été fournies, sans réaliser d'erreur et à transmettre clairement des informations. Se montrer ponctuel et respectueux des règles de savoir-vivre usuelles."
+        },
+        {
+          "libelle": "Faire preuve de créativité, d'inventivité",
+          "description": "Capacité à créer, imaginer quelque chose de nouveau (nouveau produit, nouvelle solution, ...)."
+        },
+        {
+          "libelle": "Faire preuve d'autonomie",
+          "description": "Capacité à prendre en charge son activité sans devoir être encadré de façon continue (le cas échéant, à solliciter les autres acteurs de l'entreprise)."
+        }
+      ],
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198WQCR"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "39H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198WPLD",
+      "intitule": "Développeur / Développeuse informatique (H/F)",
+      "description": "Notre entreprise poursuit sa transformation digitale et souhaite intégrer un Développeur n8n & IA en CDI.\nLa mission principale : concevoir et déployer des agents intelligents afin d'assister nos collaborateurs permanents dans leurs tâches quotidiennes et optimiser nos processus internes.\n\nDévelopper et maintenir des workflows automatisés sous n8n.\nCréer des agents IA (basés sur OpenAI, Anthropic, etc.) pour améliorer l'efficacité opérationnelle.\nIntégrer et connecter nos différents outils métiers (Mesagerie, bases de données, logiciels internes.).\nDocumenter et assurer la pérennité des solutions mises en place.\n\nMaîtrise de n8n et des intégrations API. Expérience dans l'utilisation de modèles de langage (LLMs) et solutions d'IA. Autonomie, rigueur et capacité à comprendre les besoins métier. Une expérience en développement (JavaScript/TypeScript) constitue un atout.\n\nRémunération : 2500€/mois minimum (à négocier selon expertise) + avantages\n\nPoste à Paris, place de la Nation - métro à proximité - équipe dynamique et très impliquée - entreprise en fort développement - cadre de travail agréable - emploi stable et évolutif - liberté d'action pour innover et proposer vos idées - un projet stratégique avec des défis techniques passionnant. \n\nMerci d'adresser votre CV accompagné, si possible, d'exemples de projets réalisés en lien avec l'automatisation ou l'IA.",
+      "dateCreation": "2025-10-08T14:49:07.935Z",
+      "dateActualisation": "2025-10-08T16:54:06.231Z",
+      "lieuTravail": {
+        "libelle": "75 - PARIS 11",
+        "latitude": 48.858831,
+        "longitude": 2.379253,
+        "codePostal": "75011",
+        "commune": "75111"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "I-INTERIM",
+        "description": "Le travail pour tous !",
+        "url": "http://www.i-interim.com",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "D",
+      "experienceLibelle": "Débutant accepté",
+      "competences": [
+        {
+          "code": "300688",
+          "libelle": "Application web",
+          "exigence": "S"
+        },
+        {
+          "code": "109846",
+          "libelle": "Concevoir une application web",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "libelle": "Mensuel de 2500.0 Euros sur 12.0 mois",
+        "complement1": "Indemnité transports",
+        "complement2": "Titres restaurant / Prime de panier",
+        "listeComplements": [
+          {
+            "code": "14",
+            "libelle": "Indemnité transports"
+          },
+          {
+            "code": "6",
+            "libelle": "Titres restaurant / Prime de panier"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "40H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "I-INTERIM - M. Samy HAMMAMI",
+        "coordonnees1": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198WPLD",
+        "courriel": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198WPLD"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "deplacementCode": "1",
+      "deplacementLibelle": "Jamais",
+      "qualificationCode": "7",
+      "qualificationLibelle": "Technicien",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198WPLD"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "40H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198WNRT",
+      "intitule": "Développeur/Développeuse C#.Net Core (H/F)",
+      "description": "Descriptif du poste :\n\nDans le cadre du développement de nos projets, nous recherchons un(e) Développeur(se) C# .NET Core pour renforcer notre équipe et participer activement à la conception, au développement et à l'optimisation de nos applications Back Office.\n\nVos missions :\n\nIntégré(e) à une équipe agile, vous interviendrez sur toutes les phases du cycle de développement. Vos principales responsabilités seront de :\n\n-Concevoir, développer et maintenir des applications en C# / .NET Core ;\n\n-Participer à la refonte et à l'évolution des solutions existantes ;\n\n-Optimiser les performances, la sécurité et la fiabilité des applications ;\n\n-Mettre en place des tests unitaires et d'intégration pour garantir la qualité du code ;\n\n-Documenter les développements et assurer la traçabilité technique ;\n\n-Collaborer étroitement avec les autres membres de l'équipe technique ;\n\n-Participer aux revues de code et partager les bonnes pratiques de développement.\n\n\nEnvironnement technique :\n\nVous travaillerez dans un environnement technique moderne et structuré :\n\n-Langage & Framework : C#, .NET 6 à 8, ASP.NET Core MVC (Razor)\n\n-Base de données : SQL Server, procédures stockées, Dapper\n\n-Front-end : JavaScript, TagHelpers\n\n-Outils & Méthodologies : Visual Studio 2022, Git, Azure DevOps, méthodologie Scrum\n\n-Architecture : DDD, architecture hexagonale, Domain Events \"In Memory\"\n\n\nProfil recherché :\n\n- Vous disposez d'au moins 5 ans d'expérience en développement C# / .NET Core (Alternance et stages compris) ;\n\n-Vous maîtrisez les principes de conception logicielle (SOLID, DDD, design patterns) ;\n\n-Vous êtes à l'aise avec SQL Server et les problématiques de performance applicative ;\n\n-Vous êtes rigoureux(se), autonome et aimez travailler en équipe ;\n\n\nAvantages :\n\n-Mutuelle d'entreprise  \n\n-Tickets restaurant  \n\n-Prise en charge du Navigo  \n\n\nConditions du poste :\n\nType de contrat : CDI \n\nDurée hebdomadaire : 39h \n\nLieu : Ile de France\n\nRémunération : Selon profil \n\n \n\nComment postuler ? \n\nEnvoyez votre CV via France Travail ou directement à l'adresse suivante : recrutement@mfti.io \n",
+      "dateCreation": "2025-10-08T14:34:59.546Z",
+      "dateActualisation": "2025-10-08T15:26:26.821Z",
+      "lieuTravail": {
+        "libelle": "Ile-de-France"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "MFTI",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "5 An(s)",
+      "langues": [
+        {
+          "libelle": "Anglais",
+          "exigence": "S"
+        }
+      ],
+      "competences": [
+        {
+          "code": "300688",
+          "libelle": "Application web",
+          "exigence": "S"
+        },
+        {
+          "code": "109846",
+          "libelle": "Concevoir une application web",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "commentaire": "Selon le profil",
+        "complement1": "Primes",
+        "listeComplements": [
+          {
+            "code": "1",
+            "libelle": "Primes"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "39H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {},
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "6",
+      "qualificationLibelle": "Employé qualifié",
+      "codeNAF": "70.22Z",
+      "secteurActivite": "70",
+      "secteurActiviteLibelle": "Conseil pour les affaires et autres conseils de gestion",
+      "qualitesProfessionnelles": [
+        {
+          "libelle": "Faire preuve de rigueur et de précision",
+          "description": "Capacité à réaliser des tâches en suivant avec exactitude les règles, les procédures, les instructions qui ont été fournies, sans réaliser d'erreur et à transmettre clairement des informations. Se montrer ponctuel et respectueux des règles de savoir-vivre usuelles."
+        },
+        {
+          "libelle": "Faire preuve de créativité, d'inventivité",
+          "description": "Capacité à créer, imaginer quelque chose de nouveau (nouveau produit, nouvelle solution, ...)."
+        },
+        {
+          "libelle": "Faire preuve d'autonomie",
+          "description": "Capacité à prendre en charge son activité sans devoir être encadré de façon continue (le cas échéant, à solliciter les autres acteurs de l'entreprise)."
+        }
+      ],
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198WNRT"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "39H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198WKTZ",
+      "intitule": "Développeur(se) Java FullStack (H/F)",
+      "description": "Qui sommes-nous ? \n\nMFTi.io est une entreprise de prestations informatiques spécialisée dans les nouvelles technologies, l'intelligence artificielle et la cybersécurité. Nous accompagnons nos collaborateurs dans le développement de leurs compétences et l'aboutissement de leurs projets leur permettant d'exprimer toute leur valeur. Nous valorisons l'écoute, l'épanouissement de nos consultant. \n\nMissions principales :\nEn tant que Développeur(se) Java Fullstack, vous aurez la charge de : \n\n-Participer aux cérémonies Agile de la Squad et réaliser les démonstrations de ses réalisations. \n\n-Réaliser le développement d'évolutions et de corrections sur le produit. \n\n-Relire le code des évolutions réalisées par d'autres développeurs du produit et faire les retours adaptés. \n\n-Mettre à jour la documentation produit en lien avec les évolutions apportées ainsi que les collections de tests (non régression, sondes, etc.). \n\n-Surveiller et maintenir la qualité du produit sur ses évolutions (refactoring, ajout de tests unitaires, couverture de code, etc.). \n\n-Déployer les composants sur les différents environnements hors production. \n\n-Participer aux diagnostics en cas d'incidents. \n\n-Concevoir et développer les applications web ; \n\n \nL'environnement Technique : \n\nJava 17+, Spring Boot, Hibernate, Angular 16+, Git, Maven/Gradle, SonarQube, Jenkins/GitLab CI, Docker, Kubernetes, Linux, Apache/Nginx, REST/GraphQL, tests automatisés (JUnit, Mockito). \n\n \nProfil recherché : \n\n-Vous êtes diplômé(e) d'une école d'Ingénieur ou équivalent Bac+5 \n\n-Vous possédez un niveau d'anglais confirmé, vous permettant d'évoluer au sein d'une équipe multiculturelle. \n\nAvantages :\n\n-Mutuelle d'entreprise \n\n-Tickets restaurant \n\n-Prise en charge du Navigo \n\n\nConditions du poste: \n\n-Type de contrat : CDI \n\n-Durée hebdomadaire : 39h \n\n-Lieu : Ile de France\n\n-Rémunération : Selon profil \n\n\nRejoignez-nous et évoluez dans un environnement innovant !",
+      "dateCreation": "2025-10-08T12:59:15.887Z",
+      "dateActualisation": "2025-10-08T17:24:11.883Z",
+      "lieuTravail": {
+        "libelle": "Île-de-France"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "MFTI",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "4 An(s)",
+      "langues": [
+        {
+          "libelle": "Anglais",
+          "exigence": "S"
+        }
+      ],
+      "competences": [
+        {
+          "code": "300688",
+          "libelle": "Application web",
+          "exigence": "S"
+        },
+        {
+          "code": "109846",
+          "libelle": "Concevoir une application web",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "commentaire": "Selon le profil",
+        "complement1": "Primes",
+        "listeComplements": [
+          {
+            "code": "1",
+            "libelle": "Primes"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "39H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "MFTI - Mme Maria KEITA",
+        "coordonnees1": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198WKTZ",
+        "courriel": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198WKTZ"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "6",
+      "qualificationLibelle": "Employé qualifié",
+      "codeNAF": "70.22Z",
+      "secteurActivite": "70",
+      "secteurActiviteLibelle": "Conseil pour les affaires et autres conseils de gestion",
+      "qualitesProfessionnelles": [
+        {
+          "libelle": "Faire preuve de rigueur et de précision",
+          "description": "Capacité à réaliser des tâches en suivant avec exactitude les règles, les procédures, les instructions qui ont été fournies, sans réaliser d'erreur et à transmettre clairement des informations. Se montrer ponctuel et respectueux des règles de savoir-vivre usuelles."
+        },
+        {
+          "libelle": "Faire preuve de créativité, d'inventivité",
+          "description": "Capacité à créer, imaginer quelque chose de nouveau (nouveau produit, nouvelle solution, ...)."
+        },
+        {
+          "libelle": "Faire preuve d'autonomie",
+          "description": "Capacité à prendre en charge son activité sans devoir être encadré de façon continue (le cas échéant, à solliciter les autres acteurs de l'entreprise)."
+        }
+      ],
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198WKTZ"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "39H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198WGKC",
+      "intitule": "Ingénieur Développement Cobol (H/F)",
+      "description": "Chez Alteca le management de proximité, le bien-être et l'évolution de nos collaborateurs sont des priorités qui nous permettent, chaque jour, de proposer la meilleure expertise possible à nos clients.\n\nEt c'est grâce à ces convictions, que nous sommes aujourd'hui référencés auprès de partenaires grands comptes dans les secteurs de la Banque, de l'Assurance ou encore de la Distribution.\n\n> En tant qu'Ingénieur Conception et Développement COBOL (H/F), tu seras rattaché(e) au Pôle Technologie de la région EST. Ton Manager sera Ahlem (Responsable d'Agence sur STRASBOURG). Interlocuteur privilégié, il assurera ton intégration durant tes trois premiers mois dans l'entreprise, ta montée en compétences, tes points de suivi tout au long de tes missions et tes Entretiens Annuels.\n\nL'offre portée par notre pôle Technologie consiste à garantir une expertise technologique auprès de nos clients bancaires pour l'élaboration, l'amélioration et le maintien des applications et des systèmes d'information dans des environnements évolutifs où il faut faire preuve d'adaptation.\n\n> Tu auras également accès à une communauté technique d'experts grâce aux nombreux Webinars organisés tout au long de l'année, tu pourras aussi participer aux projets de notre Centre de R&D ou encore assister aux MID'INNO (présentations de nos collaborateurs sur des thématiques données comme la Green Tech, l'IA).\n\n> Rejoindre ALTECA c'est aussi rejoindre une entreprise engagée sur la RSE (labellisée Ecovadis Gold 2024), pour le bien-être de ses salariés (labellisée HappyAtWork et classée 1ère entreprise du digital de +500 salariés), et dans la formation de ses stagiaires et alternants (labellisée HappyTrainees pour la 3ème année consécutive).\n\nVotre mission : \nEn coordination avec les équipes, tes missions seront les suivantes :\n- Rédaction des spécifications techniques détaillées : analyse des besoins utilisateurs, étude de faisabilité.\n- Développement en COBOL : développement, réaction de la documentation technique, conception et exécution des tests unitaires\n- Support technique : maintenance corrective et évolutive.\n\nLe profil : \ndiplômé(e) d'un Bac+3 à Bac+5  (Ingénieur ou Universitaire), tu disposes d'une solide connaissance en informatique. \n\nTa personnalité : tu es une personne organisée, rigoureux(se), force de proposition, tu disposes d'un bon relationnel et tu aimes le travail en équipe. Tu apprécies et contribues à développer un contexte de travail bienveillant et qui favorise le partage de connaissances. Enfin, tu sais aussi être force de proposition sur les améliorations qualités à apporter.\n\n1 poste à pourvoir en CDI.\nActuellement en partenariat avec M2i, le poste est à pourvoir dès janvier 2026 après une formation destinée à te préparer aux méthodes et outils nécessaires (la formation démarre le 20 octobre).\n\nEn tant que signataire de la charte de diversité en entreprise, Alteca favorise un environnement de travail inclusif et respectueux de tous. A compétences égales, tous nos postes sont ouverts aux personnes en situation de handicap.",
+      "dateCreation": "2025-10-08T11:27:44.556Z",
+      "dateActualisation": "2025-10-08T11:27:45.035Z",
+      "lieuTravail": {
+        "libelle": "67 - SCHILTIGHEIM",
+        "latitude": 48.605277,
+        "longitude": 7.748604,
+        "codePostal": "67300",
+        "commune": "67447"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "ALTECA",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "D",
+      "experienceLibelle": "Débutant accepté",
+      "formations": [
+        {
+          "niveauLibelle": "Bac+5 et plus ou équivalents",
+          "exigence": "E"
+        }
+      ],
+      "competences": [
+        {
+          "code": "126535",
+          "libelle": "Réaliser des études et développements informatiques",
+          "exigence": "E"
+        }
+      ],
+      "salaire": {
+        "libelle": "Mensuel de 30000.0 Euros à 33000.0 Euros sur 12.0 mois",
+        "complement1": "Indemnité transports",
+        "complement2": "Intéressement / participation",
+        "listeComplements": [
+          {
+            "code": "14",
+            "libelle": "Indemnité transports"
+          },
+          {
+            "code": "10",
+            "libelle": "Intéressement / participation"
+          },
+          {
+            "code": "6",
+            "libelle": "Titres restaurant / Prime de panier"
+          },
+          {
+            "code": "9",
+            "libelle": "CSE"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "36H30/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "ALTECA - Mme Noémie NTOTO",
+        "coordonnees1": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198WGKC",
+        "courriel": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198WGKC"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "deplacementCode": "1",
+      "deplacementLibelle": "Jamais",
+      "qualificationCode": "9",
+      "qualificationLibelle": "Cadre",
+      "codeNAF": "62.02A",
+      "secteurActivite": "62",
+      "secteurActiviteLibelle": "Conseil en systèmes et logiciels informatiques",
+      "qualitesProfessionnelles": [
+        {
+          "libelle": "Faire preuve d'autonomie",
+          "description": "Capacité à prendre en charge son activité sans devoir être encadré de façon continue (le cas échéant, à solliciter les autres acteurs de l'entreprise)."
+        },
+        {
+          "libelle": "Faire preuve de créativité, d'inventivité",
+          "description": "Capacité à créer, imaginer quelque chose de nouveau (nouveau produit, nouvelle solution, ...)."
+        },
+        {
+          "libelle": "Faire preuve de rigueur et de précision",
+          "description": "Capacité à réaliser des tâches en suivant avec exactitude les règles, les procédures, les instructions qui ont été fournies, sans réaliser d'erreur et à transmettre clairement des informations. Se montrer ponctuel et respectueux des règles de savoir-vivre usuelles."
+        }
+      ],
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198WGKC"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "36H30/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198WDXM",
+      "intitule": "Développeur informatique (F/H)",
+      "description": "Vous intégrez un projet qui vise à remplacer ou faire évoluer une solution existante basée sur Groovy, exigeant une refonte complète de l'approche et des technologies. \nVous êtes recruté pour concevoir et coder une pipeline CI/CD en Python.\nVotre expertise technique avancée en Python est indispensable pour garantir un code modulaire, performant et évolutif de l'ensemble de la chaîne. \nVous appliquerez votre maîtrise des algorithmes dynamiques et des structures de données pour concevoir des processus d'intégration et de déploiement d'une efficacité optimale. \nEn utilisant votre capacité à structurer et automatiser des workflows complexes, vous transformerez les processus manuels en une chaîne de production logicielle fiable et rapide. \n\nCe poste, basé à ORLEANS est à pourvoir dans le cadre d'une mission d'une durée de 12 mois, renouvelable.\n\nLa rémunération brute annuelle est à négocier selon votre expérience.",
+      "dateCreation": "2025-10-08T11:03:22.920Z",
+      "dateActualisation": "2025-10-08T11:03:23.178Z",
+      "lieuTravail": {
+        "libelle": "45 - Orléans",
+        "latitude": 47.884842,
+        "longitude": 1.908837,
+        "codePostal": "45000",
+        "commune": "45234"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "EXPECTRA",
+        "description": "Expectra, leader en France de l'intérim spécialisé et du recrutement en CDI de cadres et agents de maîtrise.\nLes consultants du Département Informatique - Infogérance vous proposent des opportunités de carrière.",
+        "logo": "https://api.francetravail.fr/exp-rechercheoffre/v1/logo-entreprise/l0Rt2BWxYEI1lep85WWYIHEZ2q2uSJlm",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "MIS",
+      "typeContratLibelle": "Intérim - 12 Mois",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "3 An(s)",
+      "formations": [
+        {
+          "codeFormation": "31084",
+          "domaineLibelle": "Informatique de gestion",
+          "niveauLibelle": "Bac+5 et plus ou équivalents",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "libelle": "Annuel de 40000.0 Euros sur 12.0 mois"
+      },
+      "dureeTravailLibelle": "35H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "EXPECTRA - Mme Lucile ROSSI",
+        "coordonnees1": "https://www.expectra.fr/offre/307-S26-0001932_01C/A?utm_source=pole-emploi&utm_medium=jobboard&utm_campaign=offres",
+        "urlPostulation": "https://www.expectra.fr/offre/307-S26-0001932_01C/A?utm_source=pole-emploi&utm_medium=jobboard&utm_campaign=offres"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "9",
+      "qualificationLibelle": "Cadre",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198WDXM"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "35H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198VTLB",
+      "intitule": "Technicien d'études (H/F)",
+      "description": "Manpower Cabinet de recrutement de l'Essonne recherche pour son client, un acteur du secteur de l'aéronautique, un Technicien d'études ANTENNES (H/F)\nRattaché(e) à une équipe technique passionnée, vous participerez activement au développement d'antennes et de circuits hyperfréquences, de la conception à la validation. \n \nVos principales missions : \n-Participer à la mise au point et à la validation de maquettes et prototypes \n-Réaliser les mesures et tests de performance (diagrammes, paramètres S, etc.) \n-Monter et ajuster les prototypes avant essais \n-Rédiger la documentation technique et enregistrer les résultats de mesure \n-Participer aux essais de qualification dans les centres d'essai (déplacements ponctuels) \n \nIssu(e) d'une formation Bac 2/3 (BTS, DUT, Licence professionnelle) orientée électronique, hyperfréquences ou électromagnétisme, vous justifiez d'une première expérience (stage ou alternance) dans un environnement similaire. \n \nVous maîtrisez les bases en mesures d'antennes et de circuits hyperfréquences et êtes à l'aise avec les outils bureautiques (Word, Excel). \n \nRigoureux(se), curieux(se) et motivé(e) par la technologie, vous avez envie de contribuer à des projets techniques concrets dans un environnement innovant. \n \nCe poste en CDD de 9 à 12 mois offre la possibilité d'une évolution vers un CDI. \n \nProcessus de recrutement \n \n1er entretien avec Fadwa ou Virginie Manpower \n2ème entretien avec le client",
+      "dateCreation": "2025-10-07T20:04:34.262Z",
+      "dateActualisation": "2025-10-08T16:04:33.596Z",
+      "lieuTravail": {
+        "libelle": "91 - DOURDAN",
+        "latitude": 48.570204,
+        "longitude": 2.034308,
+        "codePostal": "91410",
+        "commune": "91200"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Programmeur / Programmeuse d'études",
+      "entreprise": {
+        "nom": "MANPOWER FRANCE",
+        "description": "Faites confiance à Manpower, votre partenaire emploi :\n- Des opportunités nombreuses et diversifiées\n- Une expertise RH et des conseils emploi\n- Une employabilité durable avec le programme MyPath® \n- Des démarches facilitées \n- Des avantages et des services",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDD",
+      "typeContratLibelle": "CDD - 9 Mois",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "D",
+      "experienceLibelle": "Débutant accepté",
+      "langues": [
+        {
+          "libelle": "Anglais",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "libelle": "Annuel de 30000.0 Euros à 34000.0 Euros sur 12.0 mois"
+      },
+      "dureeTravailLibelle": "35H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "MANPOWER FRANCE - Mme Virginie JOVER",
+        "coordonnees1": "https://www.manpower.fr/offers/details/1101324994?partenaire=FRANCE_TRAVAIL",
+        "urlPostulation": "https://www.manpower.fr/offers/details/1101324994?partenaire=FRANCE_TRAVAIL"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "2",
+      "qualificationLibelle": "Ouvrier spécialisé",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198VTLB"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "35H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198VMQF",
+      "intitule": "Programmeur FAO (H/F)",
+      "description": "Nous recherchons pour notre client, une entreprise située à St Malo et spécialisée dans la mécanique\nde précision et l'impression 3D métal, un.e programmeur FAO (Fabrication Assistée par Ordinateur). \n\nDans le cadre de votre mission, vous serez en charge de :\n\n- Programmer sur logiciel ESPRIT l'usinage 3,4 et 5 axes. Pièces issues de\nblocs matière ou d'impression 3D métal ;\n- Définir et programmer les outillages de prise de pièces ;\n- Gérer les outils de coupe ;\n- Simuler en FAO pour certains devis. Votre profil :\n\nVous êtes issu.e d'une formation de type Bac Pro Usinage/Bac +2 avec une expérience en programmation\nimpérative.\nVous maîtrisez la lecture de plans.\nVous connaissez idéalement le logiciel ESPRIT.\nVous avez une expérience en usinage sur machines.",
+      "dateCreation": "2025-10-07T16:00:31.747Z",
+      "dateActualisation": "2025-10-07T17:05:56.971Z",
+      "lieuTravail": {
+        "libelle": "35 - ST MALO",
+        "latitude": 48.637703,
+        "longitude": -2.015903,
+        "codePostal": "35400",
+        "commune": "35288"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Programmeur industriel / Programmeuse industrielle",
+      "entreprise": {
+        "nom": "EMERAUDE INTERIM",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "MIS",
+      "typeContratLibelle": "Intérim - 25 Jour(s)",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "1 An(s)",
+      "salaire": {
+        "libelle": "Horaire de 11.88 Euros à 13.0 Euros sur 12.0 mois"
+      },
+      "dureeTravailLibelle": "39H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "coordonnees1": "https://app.mytalentplug.com/description-offre.aspx?ojid=v7loV/498dswsamfQzw1XQ==",
+        "urlPostulation": "https://app.mytalentplug.com/description-offre.aspx?ojid=v7loV/498dswsamfQzw1XQ=="
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "6",
+      "qualificationLibelle": "Employé qualifié",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198VMQF"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "39H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198VJHV",
+      "intitule": "Programmeur Multi Index (H/F)",
+      "description": "Rejoignez l'équipe dynamique d'Aquila RH Sallanches !\n\nEn tant qu'acteur engagé dans le recrutement en CDD, CDI et intérim, nous faisons bien plus que simplement vous offrir un emploi. Nous vous accompagnons avec passion et expertise dans le développement de votre carrière professionnelle.\n\nVos missions :\nÉlaborer les stratégies d'usinage\nRéaliser les programmations Siemens\nMonter et valider les nouvelles pièces\nEffectuer les réglages et garantir la qualité de production\n\nPoste en CDI, horaires de journée 39h du lundi au vendredi, basé à Magland.\n\nL'entreprise propose également :\n\nune mutuelle prise en charge à 80%, \nun 13ème mois, \nun Comité d'Entreprise pour de nombreux avantages, \nune participation en fonction des résultats de l'entreprise.\n\nPrérequis :\nMinimum 5 ans d'expérience en programmation\nMaîtrise des machines Index\nCapacité à former et accompagner les régleurs\n\nEnvoyez-nous votre CV dès aujourd'hui et embarquez pour une aventure professionnelle pleine d'énergie et d'opportunités !",
+      "dateCreation": "2025-10-07T14:51:49.450Z",
+      "dateActualisation": "2025-10-07T15:58:01.916Z",
+      "lieuTravail": {
+        "libelle": "74 - Magland",
+        "latitude": 46.021087,
+        "longitude": 6.621225,
+        "codePostal": "74300",
+        "commune": "74159"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Programmeur industriel / Programmeuse industrielle",
+      "entreprise": {
+        "nom": "MONT BLANC RH",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "5 An(s)",
+      "competences": [
+        {
+          "code": "486497",
+          "libelle": "Argumenter sur le choix des technologies à adopter",
+          "exigence": "S"
+        },
+        {
+          "code": "485121",
+          "libelle": "Maintenir à jour la documentation technique et les manuels d'utilisation",
+          "exigence": "S"
+        }
+      ],
+      "salaire": {
+        "libelle": "Mensuel de 3300.0 Euros sur 12.0 mois",
+        "complement1": "Primes",
+        "complement2": "CSE",
+        "listeComplements": [
+          {
+            "code": "1",
+            "libelle": "Primes"
+          },
+          {
+            "code": "9",
+            "libelle": "CSE"
+          },
+          {
+            "code": "6",
+            "libelle": "Titres restaurant / Prime de panier"
+          }
+        ]
+      },
+      "dureeTravailLibelle": "39H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "MONT BLANC RH - M. Nicolas Ganavat",
+        "coordonnees1": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198VJHV",
+        "courriel": "Pour postuler, utiliser le lien suivant : https://candidat.francetravail.fr/offres/recherche/detail/198VJHV"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "deplacementCode": "1",
+      "deplacementLibelle": "Jamais",
+      "qualificationCode": "4",
+      "qualificationLibelle": "Ouvrier qualifié (P3,P4,OHQ)",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "qualitesProfessionnelles": [
+        {
+          "libelle": "Faire preuve de rigueur et de précision",
+          "description": "Capacité à réaliser des tâches en suivant avec exactitude les règles, les procédures, les instructions qui ont été fournies, sans réaliser d'erreur et à transmettre clairement des informations. Se montrer ponctuel et respectueux des règles de savoir-vivre usuelles."
+        },
+        {
+          "libelle": "Faire preuve d'autonomie",
+          "description": "Capacité à prendre en charge son activité sans devoir être encadré de façon continue (le cas échéant, à solliciter les autres acteurs de l'entreprise)."
+        },
+        {
+          "libelle": "Faire preuve de sens des responsabilités",
+          "description": "Capacité à engager sa responsabilité pour atteindre un objectif clairement exprimé et à signaler les éventuels freins à lever pour atteindre l'objectif."
+        }
+      ],
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198VJHV"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "39H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    },
+    {
+      "id": "198TVVW",
+      "intitule": "Développeur informatique (F/H)",
+      "description": "Vous évoluerez dans une équipe en mode agile des projets de développement de solutions destiné au secteur de l'aéronautique. \n\nCe poste requiert que vous puissiez :\n- Concevoir et développer des applications web robustes en PHP avec le framework Symfony. \n- Modéliser et gérer des bases de données avec Doctrine et MySQL. \n- Développer des interfaces utilisateur dynamiques et performantes avec Angular. \n- Implémenter et optimiser des recherches avancées avec ElasticSearch. \n- Collaborer étroitement avec les équipes produit et design pour concevoir des solutions adaptées.",
+      "dateCreation": "2025-10-07T10:51:28.692Z",
+      "dateActualisation": "2025-10-08T10:08:08.599Z",
+      "lieuTravail": {
+        "libelle": "13 - Vitrolles",
+        "latitude": 43.426232,
+        "longitude": 5.278694,
+        "codePostal": "13127",
+        "commune": "13117"
+      },
+      "romeCode": "M1805",
+      "romeLibelle": "Développeur / Développeuse informatique",
+      "appellationlibelle": "Développeur / Développeuse informatique",
+      "entreprise": {
+        "nom": "EXPECTRA JBM",
+        "description": "Expectra, leader en France de l'intérim spécialisé et du recrutement en CDI de cadres et agents de maîtrise.\nLes consultants du Département Informatique & Télécoms vous proposent des opportunités de carrière.",
+        "logo": "https://api.francetravail.fr/exp-rechercheoffre/v1/logo-entreprise/l0Rt2BWxYEI1lep85WWYIHEZ2q2uSJlm",
+        "entrepriseAdaptee": false
+      },
+      "typeContrat": "CDI",
+      "typeContratLibelle": "CDI",
+      "natureContrat": "Contrat travail",
+      "experienceExige": "E",
+      "experienceLibelle": "3 An(s)",
+      "formations": [
+        {
+          "codeFormation": "31054",
+          "domaineLibelle": "Informatique - Systèmes d'information et numérique",
+          "niveauLibelle": "Bac+5 et plus ou équivalents",
+          "exigence": "E"
+        }
+      ],
+      "salaire": {
+        "libelle": "Annuel de 45000.0 Euros sur 12.0 mois"
+      },
+      "dureeTravailLibelle": "35H/semaine\nTravail en journée",
+      "dureeTravailLibelleConverti": "Temps plein",
+      "alternance": false,
+      "contact": {
+        "nom": "EXPECTRA JBM - Mme Jade RENUT",
+        "coordonnees1": "https://www.expectra.fr/offre/307-S13-R001626_13R/A?utm_source=pole-emploi&utm_medium=jobboard&utm_campaign=offres",
+        "urlPostulation": "https://www.expectra.fr/offre/307-S13-R001626_13R/A?utm_source=pole-emploi&utm_medium=jobboard&utm_campaign=offres"
+      },
+      "agence": {},
+      "nombrePostes": 1,
+      "accessibleTH": false,
+      "qualificationCode": "8",
+      "qualificationLibelle": "Agent de maîtrise",
+      "codeNAF": "78.20Z",
+      "secteurActivite": "78",
+      "secteurActiviteLibelle": "Activités des agences de travail temporaire",
+      "origineOffre": {
+        "origine": "1",
+        "urlOrigine": "https://candidat.francetravail.fr/offres/recherche/detail/198TVVW"
+      },
+      "offresManqueCandidats": false,
+      "contexteTravail": {
+        "horaires": [
+          "35H/semaine\nTravail en journée"
+        ]
+      },
+      "entrepriseAdaptee": false,
+      "employeurHandiEngage": false
+    }
+  ]
+}
