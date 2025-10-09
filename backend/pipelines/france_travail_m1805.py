@@ -35,9 +35,9 @@ class PipelineM1805:
         # Configuration
         self.code_rome = self.config.get("code_rome", "M1805")
 
-        print("🚀 Pipeline M1805 initialisé")
+        print("[INIT] Pipeline M1805 initialise")
         print(
-            f"📋 {len(self.competences_referentiel)} catégories de compétences chargées"
+            f"[DATA] {len(self.competences_referentiel)} categories de competences chargees"
         )
 
     def verifier_derniere_execution(self) -> dict[str, Any]:
@@ -121,14 +121,14 @@ class PipelineM1805:
         Returns:
             Liste des offres collectées
         """
-        print(f"\n🔍 COLLECTE DES OFFRES {self.code_rome}")
+        print(f"\n[COLLECT] COLLECTE DES OFFRES {self.code_rome}")
         print("=" * 50)
 
         offres = self.api_client.collecter_offres_par_code_rome(
             self.code_rome, max_offres=max_offres
         )
 
-        print(f"✅ {len(offres)} offres collectées")
+        print(f"[OK] {len(offres)} offres collectees")
         return offres
 
     def analyser_competences(self, offres: list) -> dict[str, Any]:
@@ -141,12 +141,12 @@ class PipelineM1805:
         Returns:
             Résultats de l'analyse
         """
-        print("\n🎯 ANALYSE DES COMPÉTENCES")
+        print("\n[ANALYZE] ANALYSE DES COMPETENCES")
         print("=" * 50)
 
         resultats = self.analyzer.analyser_offres(offres, verbose=True)
 
-        print("✅ Analyse terminée")
+        print("[OK] Analyse terminee")
         return resultats
 
     def sauvegarder_donnees(
@@ -162,7 +162,7 @@ class PipelineM1805:
         Returns:
             Dict avec les chemins des fichiers sauvegardés
         """
-        print("\n💾 SAUVEGARDE DES DONNÉES")
+        print("\n[SAVE] SAUVEGARDE DES DONNEES")
         print("=" * 50)
 
         # Créer la structure de dossiers
@@ -189,7 +189,7 @@ class PipelineM1805:
             "competences": chemin_competences,
         }
 
-        print("✅ Toutes les données sauvegardées")
+        print("[OK] Toutes les donnees sauvegardees")
         return chemins
 
     def executer_pipeline_complet(

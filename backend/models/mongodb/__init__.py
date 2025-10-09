@@ -4,13 +4,13 @@ Définit les documents MongoDB et leurs validations
 """
 
 from .documents import (
-    OffreDocument,
     CompetenceDocument,
+    OffreDocument,
     StatsDocument,
 )
 from .schemas import (
-    OFFRE_SCHEMA,
     COMPETENCE_SCHEMA,
+    OFFRE_SCHEMA,
     STATS_SCHEMA,
     create_collection_with_schema,
 )
@@ -19,7 +19,7 @@ from .schemas import (
 __all__ = [
     # Documents
     "OffreDocument",
-    "CompetenceDocument", 
+    "CompetenceDocument",
     "StatsDocument",
     # Schemas de validation
     "OFFRE_SCHEMA",

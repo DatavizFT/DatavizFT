@@ -5,13 +5,13 @@ Gestion des connexions, repositories et opérations MongoDB
 
 from .connection import (
     DatabaseConnection,
+    close_database,
     get_database,
     init_database,
-    close_database,
 )
 from .repositories import (
-    OffresRepository,
     CompetencesRepository,
+    OffresRepository,
     StatsRepository,
 )
 
@@ -19,11 +19,11 @@ from .repositories import (
 __all__ = [
     # Connexion
     "DatabaseConnection",
-    "get_database", 
+    "get_database",
     "init_database",
     "close_database",
     # Repositories
     "OffresRepository",
-    "CompetencesRepository", 
+    "CompetencesRepository",
     "StatsRepository",
 ]

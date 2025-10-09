@@ -3,7 +3,11 @@ DatavizFT - Point d'entrée principal
 Exécute le pipeline de collecte et d'analyse des offres M1805
 """
 
+import os
 import sys
+
+# Ajouter le dossier parent au path pour les imports relatifs
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from backend.pipelines.france_travail_m1805 import run_pipelineFT
 

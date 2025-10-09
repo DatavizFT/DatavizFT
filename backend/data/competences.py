@@ -5,16 +5,15 @@ Chargement et exposition du référentiel de compétences depuis competences.jso
 
 import json
 from pathlib import Path
-from typing import Dict, List
 
 
-def charger_competences_referentiel() -> Dict[str, List[str]]:
+def charger_competences_referentiel() -> dict[str, list[str]]:
     """
     Charge le référentiel de compétences depuis le fichier JSON
 
     Returns:
         Dict contenant les compétences organisées par catégorie
-        
+
     Raises:
         FileNotFoundError: Si le fichier competences.json n'existe pas
         json.JSONDecodeError: Si le fichier JSON est malformé
@@ -46,26 +45,26 @@ NB_COMPETENCES_TOTAL = sum(
 def valider_referentiel() -> bool:
     """
     Valide la cohérence du référentiel de compétences
-    
+
     Returns:
         True si le référentiel est valide, False sinon
     """
     if not COMPETENCES_REFERENTIEL:
         return False
-        
-    for categorie, competences in COMPETENCES_REFERENTIEL.items():
+
+    for _categorie, competences in COMPETENCES_REFERENTIEL.items():
         if not isinstance(competences, list):
             return False
         if len(competences) == 0:
             return False
-            
+
     return True
 
 
-def obtenir_toutes_competences() -> List[str]:
+def obtenir_toutes_competences() -> list[str]:
     """
     Obtient la liste de toutes les compétences (toutes catégories confondues)
-    
+
     Returns:
         Liste plate de toutes les compétences
     """
@@ -75,22 +74,22 @@ def obtenir_toutes_competences() -> List[str]:
     return toutes_competences
 
 
-def rechercher_competence(terme: str) -> List[tuple[str, str]]:
+def rechercher_competence(terme: str) -> list[tuple[str, str]]:
     """
     Recherche une compétence dans le référentiel
-    
+
     Args:
         terme: Terme de recherche (insensible à la casse)
-        
+
     Returns:
         Liste de tuples (categorie, competence) correspondant au terme
     """
     resultats = []
     terme_lower = terme.lower()
-    
+
     for categorie, competences in COMPETENCES_REFERENTIEL.items():
         for competence in competences:
             if terme_lower in competence.lower():
                 resultats.append((categorie, competence))
-                
+
     return resultats

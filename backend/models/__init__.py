@@ -4,9 +4,9 @@ Définit les structures de données pour validation et sérialisation
 """
 
 from .competence import (
+    CategorieCompetence,
     CompetenceModel,
     CompetenceStats,
-    CategorieCompetence,
 )
 from .offre import (
     EntrepriseModel,
@@ -20,12 +20,12 @@ from .offre import (
 __all__ = [
     # Modèles offres d'emploi
     "OffreFranceTravail",
-    "OffreEmploiModel", 
+    "OffreEmploiModel",
     "EntrepriseModel",
     "LocalisationModel",
     "SalaireModel",
     # Modèles compétences
     "CompetenceModel",
-    "CompetenceStats", 
+    "CompetenceStats",
     "CategorieCompetence",
 ]
