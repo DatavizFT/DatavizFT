@@ -69,4 +69,8 @@ echo ================================
 echo ✅ Votre code est prêt pour le commit/push !
 echo 💡 Conseil: Exécutez ce script avant chaque commit
 echo.
-pause
+
+REM Pause seulement si pas en mode automatique
+if not "%1"=="--auto" (
+    pause
+)

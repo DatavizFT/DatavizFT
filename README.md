@@ -40,13 +40,22 @@ python backend/main.py
 
 ## 📋 **Utilisation**
 
-### **Collecte automatique**
+### **Modes d'exécution**
 ```bash
 # Collecte normale (respecte la limite 24h)
 python backend/main.py
 
-# Collecte forcée (ignore la limite)
+# Collecte forcée (ignore la limite 24h)
 python backend/main.py --force
+
+# Pipeline avec limite d'offres collectés (développement/test)
+python backend/main.py --limit 50
+
+# Affichage des statistiques
+python backend/main.py --stats
+
+# Aide complète
+python backend/main.py --help
 ```
 
 ### **Résultats générés**
@@ -103,7 +112,8 @@ Méthodologies:   Agile (21.6%), DevOps (13.2%), Scrum (10.9%)
 ### **Qualité du code**
 ```bash
 # Pipeline de qualité complet (Windows)
-.\quality.bat                   # Black, Ruff, MyPy, Bandit
+.\quality.bat                   # Mode interactif avec pause
+.\quality.bat --auto            # Mode automatique sans pause
 
 # Ou commandes individuelles
 python -m black backend/        # Formatage
