@@ -3,6 +3,7 @@
 > **Système intelligent d'analyse et de visualisation des offres d'emploi tech en France**
 
 [![CI/CD Pipeline](https://github.com/DatavizFT/DatavizFT/workflows/CI/CD%20Pipeline/badge.svg)](https://github.com/DatavizFT/DatavizFT/actions)
+[![CodeQL](https://github.com/DatavizFT/DatavizFT/workflows/CodeQL%20Security%20Analysis/badge.svg)](https://github.com/DatavizFT/DatavizFT/actions)
 [![Coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg)](./htmlcov/index.html)
 [![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://python.org)
 [![Code Quality](https://img.shields.io/badge/code%20quality-A+-green.svg)](./quality.bat)
@@ -107,8 +108,12 @@ make quality                    # Black, Ruff, MyPy, Vulture
 # Tests avec couverture
 python -m pytest --cov=backend --cov-report=html
 
-# Vérification sécurité
+# Vérification sécurité locale
 bandit -r backend/
+safety check
+
+# Analyse sécurité avancée (GitHub Actions)
+# CodeQL s'exécute automatiquement sur push/PR
 ```
 
 ### **Logging professionnel**
@@ -123,7 +128,7 @@ logger.info("Pipeline démarré", extra={
 
 ### **GitHub Actions automatique**
 - ✅ **Tests** et validation qualité
-- 🔒 **Analyse sécurité** avec CodeQL
+- 🔒 **Analyse sécurité** avec CodeQL + Bandit + Safety
 - 📦 **Release automatique** avec changelog
 - 🚀 **Déploiement** vers environnements
 
