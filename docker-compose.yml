@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  # Base de données MongoDB
+  mongodb:
+    image: mongo:7.0
+    container_name: datavizft_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      # Configuration d'administration
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: datavizft2025
+      MONGO_INITDB_DATABASE: dataviz_ft_dev
+    volumes:
+      # Persistance des données
+      - mongodb_data:/data/db
+      # Scripts d'initialisation
+      - ./backend/database/init-scripts:/docker-entrypoint-initdb.d:ro
+      # Configuration MongoDB
+      - ./backend/database/mongo-config:/etc/mongo:ro
+    networks:
+      - datavizft_network
+    command: >
+      mongod 
+      --auth
+      --bind_ip_all
+      --logpath /var/log/mongodb/mongod.log
+      --logappend
+
+  # Interface d'administration MongoDB
+  mongo-express:
+    image: mongo-express:1.0
+    container_name: datavizft_mongo_express  
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      # Connexion à MongoDB
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: datavizft2025
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_MONGODB_PORT: 27017
+      # Interface d'authentification
+      ME_CONFIG_BASICAUTH_USERNAME: datavizft
+      ME_CONFIG_BASICAUTH_PASSWORD: admin123
+      # Configuration avancée
+      ME_CONFIG_OPTIONS_EDITORTHEME: ambiance
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: "true"
+    depends_on:
+      - mongodb
+    networks:
+      - datavizft_network
+
+  # Service backend DatavizFT (optionnel pour développement)
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: datavizft_backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      # Variables MongoDB
+      MONGODB_URL: mongodb://datavizft_app:secure_app_password@mongodb:27017/dataviz_ft_dev?authSource=dataviz_ft_dev
+      MONGODB_DATABASE: dataviz_ft_dev
+      # Variables application
+      APP_ENV: development
+      LOG_LEVEL: DEBUG
+    volumes:
+      # Code source en développement
+      - ./backend:/app/backend:ro
+      - ./data:/app/data:rw
+      - ./logs:/app/logs:rw
+    depends_on:
+      - mongodb
+    networks:
+      - datavizft_network
+    profiles:
+      - dev  # Activer avec: docker-compose --profile dev up
+
+# Volumes persistants
+volumes:
+  mongodb_data:
+    name: datavizft_mongodb_data
+
+# Réseau interne
+networks:
+  datavizft_network:
+    name: datavizft_network
+    driver: bridge
