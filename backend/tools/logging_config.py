@@ -7,7 +7,7 @@ import logging.handlers
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any
 
 import structlog
 from pythonjsonlogger import jsonlogger
@@ -67,6 +67,7 @@ def setup_file_logging(app_name: str, log_level: str) -> None:
         backupCount=5,
         encoding="utf-8",
     )
+    file_handler.setLevel(getattr(logging, log_level.upper()))
 
     # Handler pour les erreurs avec rotation
     error_handler = logging.handlers.RotatingFileHandler(

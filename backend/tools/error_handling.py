@@ -2,9 +2,9 @@
 Gestionnaire d'erreurs centralisé pour DatavizFT
 """
 
-from enum import Enum
-from typing import Any, Dict, Optional
 from datetime import datetime
+from enum import Enum
+from typing import Any
 
 from pydantic import BaseModel
 
@@ -36,9 +36,9 @@ class DatavizError(BaseModel):
     category: ErrorCategory
     severity: ErrorSeverity
     message: str
-    details: Optional[Dict[str, Any]] = None
+    details: dict[str, Any] | None = None
     timestamp: datetime = datetime.now()
-    user_message: Optional[str] = None  # Message safe pour l'utilisateur
+    user_message: str | None = None  # Message safe pour l'utilisateur
 
     class Config:
         json_encoders = {datetime: lambda v: v.isoformat()}
@@ -52,8 +52,8 @@ class DatavizFTException(Exception):
         message: str,
         category: ErrorCategory,
         severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-        details: Optional[Dict[str, Any]] = None,
-        user_message: Optional[str] = None,
+        details: dict[str, Any] | None = None,
+        user_message: str | None = None,
     ):
         super().__init__(message)
         self.error = DatavizError(
@@ -76,7 +76,7 @@ class DatavizFTException(Exception):
 class FranceTravailAPIError(DatavizFTException):
     """Erreur API France Travail"""
 
-    def __init__(self, message: str, status_code: Optional[int] = None):
+    def __init__(self, message: str, status_code: int | None = None):
         super().__init__(
             message=f"Erreur API France Travail: {message}",
             category=ErrorCategory.EXTERNAL_SERVICE_ERROR,
@@ -89,7 +89,7 @@ class FranceTravailAPIError(DatavizFTException):
 class CompetenceAnalysisError(DatavizFTException):
     """Erreur lors de l'analyse des compétences"""
 
-    def __init__(self, message: str, offre_id: Optional[str] = None):
+    def __init__(self, message: str, offre_id: str | None = None):
         super().__init__(
             message=f"Erreur analyse compétences: {message}",
             category=ErrorCategory.BUSINESS_LOGIC_ERROR,
@@ -118,7 +118,7 @@ class ErrorManager:
 
     @staticmethod
     def handle_error(
-        error: Exception, logger: Any, context: Optional[Dict[str, Any]] = None
+        error: Exception, logger: Any, context: dict[str, Any] | None = None
     ) -> DatavizError:
         """Traite une erreur de manière centralisée"""
 
