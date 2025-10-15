@@ -80,95 +80,41 @@ backend/
 | **Qualité** | Black, Ruff, MyPy, Vulture, pre-commit |
 | **CI/CD** | GitHub Actions, auto-release, sécurité |
 
-## 📊 **Résultats d'analyse**
+---
 
-### **Données collectées en temps réel**
-- ✅ **997 offres** développeur M1805 analysées
-- 🔍 **190 compétences** techniques détectées
-- 📈 **19 catégories** (langages, frameworks, cloud, DevOps...)
-- ⏰ **Mise à jour quotidienne** automatique
+## Fonctionnalités
 
-### **Top technologies détectées**
-```yaml
-Langages:        Java (23.2%), SQL (20.2%), JavaScript (15.2%)
-Frameworks:      Angular (12.4%), React (6.5%), Spring Boot (7.2%)
-DevOps:          Docker (10.9%), Kubernetes (8.1%), Jenkins (6.5%)
-Cloud:           Azure (7.2%), AWS (3.9%), Google Cloud (0.3%)
-Méthodologies:   Agile (21.6%), DevOps (13.2%), Scrum (10.9%)
-```
-
-## 🔧 **Développement**
-
-### **Qualité du code**
-```bash
-# Pipeline de qualité complet
-make quality                    # Black, Ruff, MyPy, Vulture
-
-# Tests avec couverture
-python -m pytest --cov=backend --cov-report=html
-
-# Vérification sécurité
-bandit -r backend/
-```
-
-### **Logging professionnel**
-```python
-# Logs structurés avec métadonnées
-logger.info("Pipeline démarré", extra={
-    "pipeline": "france_travail_m1805",
-    "mode": "normal", 
-    "component": "main"
-})
-```
-
-### **GitHub Actions automatique**
-- ✅ **Tests** et validation qualité
-- 🔒 **Analyse sécurité** avec CodeQL
-- 📦 **Release automatique** avec changelog
-- 🚀 **Déploiement** vers environnements
-
-## 📚 **Documentation**
-
-| Guide | Description |
-|-------|-------------|
-| [Architecture](docs/architecture_backend_refactorisee.md) | Design patterns et structure |
-| [Logging](docs/logging_system.md) | Système de logs professionnel |
-| [Tests](docs/tests_guide.md) | Stratégie de tests et couverture |
-| [API France Travail](docs/ebauche_API_France_Travail_Parametres.md) | Intégration API officielle |
-
-## 🤝 **Contribution**
-
-1. **Fork** le projet
-2. **Créez** une branche feature (`git checkout -b feature/amazing-feature`)
-3. **Committez** vos changements (`git commit -m 'Add amazing feature'`)
-4. **Push** vers la branche (`git push origin feature/amazing-feature`)
-5. **Ouvrez** une Pull Request
-
-### **Standards de qualité**
-- ✅ Tests avec couverture > 90%
-- ✅ Code formaté avec Black + Ruff
-- ✅ Type hints avec MyPy
-- ✅ Documentation complète
-- ✅ Logs structurés
-
-## 🏆 **Performances**
-
-```bash
-# Métriques du pipeline
-Collecte API:       997 offres en 74 secondes
-Analyse IA:         190 compétences détectées
-Sauvegarde:         3 formats (JSON, enrichi, analyse)
-Qualité code:       95% couverture, 0 vulnérabilité
-Logging:            Rotation automatique, métadonnées enrichies
-```
-
-## 📄 **Licence**
-
-Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+- Cartes choroplèthes interactives avec filtres temporels
+- Indicateurs dynamiques (à définir)
+- API REST
+- CI/CD
+- Tests unitaires et d’intégration (backend et frontend)
+- Sécurité : validation des entrées, protection SQL, monitoring
 
 ---
 
-<div align="center">
-  <strong>Fait avec ❤️ pour la communauté tech française</strong><br>
-  <sub>Contribuez à l'amélioration continue du marché de l'emploi tech !</sub>
-</div>
+## Planification des sprints
+
+| Sprint | Objectifs clés | Livrables attendus |
+|----------|----------------|---------------------|
+| **Sprint 1** | Définition du périmètre, architecture technique, setup du mono-repo, accès à l’API France Travail | Cahier des charges, arborescence initiale, accès API fonctionnel |
+| **Sprint 2** | Collecte exploratoire via API, enrichissement des données | Module de collecte, détection des stacks, géolocalisation, validation des champs |
+| **Sprint 3** | Modélisation et stockage | Schéma SQL, base PostgreSQL/PostGIS opérationnelle, tests d’insertion |
+| **Sprint 4** | Interface et visualisation | Squelette React, comparaison des librairies dataviz, premiers composants fonctionnels |
+| **Sprint 5** | DevOps et automatisation | Docker Compose, CI/CD GitHub Actions, gestion des environnements, .env standardisé |
+| **Sprint 6** | Tests et qualité | Couverture backend/frontend, tests E2E, monitoring, alerting automatisé |
+
+---
+
+### Intégration des tests
+
+- **Sprint 1** : Configuration des outils (`pytest`, `Jest`, `MSW`, `httpx`)
+- **Sprint 2–3** : Tests unitaires backend (collecte, enrichissement, modèles)
+- **Sprint 4** : Tests React (composants, hooks, appels API mockés)
+- **Sprint 5–6** : Tests d’intégration et end-to-end (Playwright ou Cypress)
+
+---
+
+## Licence
+
+A définir

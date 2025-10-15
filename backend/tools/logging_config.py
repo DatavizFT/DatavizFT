@@ -2,6 +2,7 @@
 Configuration logging professionnelle pour DatavizFT
 """
 import logging
+import logging.handlers
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -45,37 +46,59 @@ def configure_logging(
         level=getattr(logging, log_level.upper()),
     )
 
-    # Logger pour les métriques
-    if environment == "production":
-        setup_file_logging(app_name, log_level)
+    # Logger pour les fichiers (toujours actif)
+    setup_file_logging(app_name, log_level)
 
 
 def setup_file_logging(app_name: str, log_level: str) -> None:
-    """Configure le logging vers fichier pour la production"""
+    """Configure le logging vers fichier avec rotation"""
     
     log_dir = Path("logs")
     log_dir.mkdir(exist_ok=True)
     
-    # Handler pour les logs généraux
-    file_handler = logging.FileHandler(
+    # Handler pour les logs généraux avec rotation (5MB max, 5 fichiers)
+    file_handler = logging.handlers.RotatingFileHandler(
         log_dir / f"{app_name}.log",
+        maxBytes=5*1024*1024,  # 5MB
+        backupCount=5,
         encoding="utf-8"
     )
     
-    # Handler pour les erreurs
-    error_handler = logging.FileHandler(
+    # Handler pour les erreurs avec rotation
+    error_handler = logging.handlers.RotatingFileHandler(
         log_dir / f"{app_name}-errors.log",
+        maxBytes=5*1024*1024,  # 5MB
+        backupCount=3,
         encoding="utf-8"
     )
     error_handler.setLevel(logging.ERROR)
     
-    # Format JSON pour la production
-    formatter = jsonlogger.JsonFormatter(
+    # Formatter simple qui nettoie les codes ANSI
+    class CleanFormatter(logging.Formatter):
+        """Formatter qui supprime les codes de couleurs ANSI"""
+        
+        def format(self, record):
+            # Supprimer les codes ANSI des messages
+            import re
+            ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+            if hasattr(record, 'msg'):
+                record.msg = ansi_escape.sub('', str(record.msg))
+            formatted = super().format(record)
+            return ansi_escape.sub('', formatted)
+    
+    # Format simple pour les logs généraux
+    simple_formatter = CleanFormatter(
+        '%(asctime)s [%(levelname)s] %(name)s: %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+    
+    # Format JSON pour les erreurs
+    json_formatter = jsonlogger.JsonFormatter(
         "%(asctime)s %(name)s %(levelname)s %(message)s"
     )
     
-    file_handler.setFormatter(formatter)
-    error_handler.setFormatter(formatter)
+    file_handler.setFormatter(simple_formatter)
+    error_handler.setFormatter(json_formatter)
     
     # Ajout aux loggers
     root_logger = logging.getLogger()
@@ -83,9 +106,25 @@ def setup_file_logging(app_name: str, log_level: str) -> None:
     root_logger.addHandler(error_handler)
 
 
-def get_logger(name: str) -> Any:
-    """Récupère un logger structuré"""
-    return structlog.get_logger(name)
+class ExtendedLogger:
+    """Logger étendu avec méthode success()"""
+    
+    def __init__(self, logger: Any):
+        self._logger = logger
+    
+    def __getattr__(self, name: str) -> Any:
+        """Délégation vers le logger original"""
+        return getattr(self._logger, name)
+    
+    def success(self, message: str, **kwargs) -> None:
+        """Log de succès avec niveau INFO et emoji de succès"""
+        self._logger.info(f"✅ {message}", **kwargs)
+
+
+def get_logger(name: str) -> ExtendedLogger:
+    """Récupère un logger structuré étendu"""
+    base_logger = structlog.get_logger(name)
+    return ExtendedLogger(base_logger)
 
 
 # Context managers pour le logging métier
