@@ -102,8 +102,12 @@ Méthodologies:   Agile (21.6%), DevOps (13.2%), Scrum (10.9%)
 
 ### **Qualité du code**
 ```bash
-# Pipeline de qualité complet
-make quality                    # Black, Ruff, MyPy, Vulture
+# Pipeline de qualité complet (Windows)
+.\quality.bat                   # Black, Ruff, MyPy, Bandit
+
+# Ou commandes individuelles
+python -m black backend/        # Formatage
+python -m ruff check backend/   # Linting
 
 # Tests avec couverture
 python -m pytest --cov=backend --cov-report=html

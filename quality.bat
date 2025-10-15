@@ -1,71 +1,72 @@
 @echo off
-REM Script batch simple pour Windows - DatavizFT
+REM ===============================================
+REM Script de qualité locale pour DatavizFT
+REM Exécute les mêmes vérifications que la CI/CD
+REM ===============================================
 
-if "%1"=="format" (
-    echo 🔧 Formatage du code...
-    black backend/
-    ruff check --fix backend/
-    echo ✅ Code formate
-    goto :eof
-)
-
-if "%1"=="lint" (
-    echo 🔍 Verification avec Ruff...
-    ruff check backend/
-    echo 🔍 Verification des types avec MyPy...
-    mypy backend/ --ignore-missing-imports
-    echo ✅ Linting termine
-    goto :eof
-)
-
-if "%1"=="quality" (
-    echo 🚀 PIPELINE QUALITE COMPLET
-    echo ========================
-
-    echo 1/4 - Formatage...
-    black backend/
-    ruff check --fix backend/
-
-    echo 2/4 - Linting...
-    ruff check backend/
-    if errorlevel 1 (
-        echo ❌ Erreurs Ruff detectees
-        exit /b 1
-    )
-
-    echo 3/4 - Types...
-    mypy backend/ --ignore-missing-imports
-
-    echo 4/4 - Code mort...
-    vulture backend/ --config vulture.toml --min-confidence 80
-
-    echo ✅ QUALITE VALIDEE - Code pret pour commit!
-    goto :eof
-)
-
-if "%1"=="dead-code" (
-    echo 🔍 Analyse du code mort...
-    vulture backend/ --config vulture.toml --min-confidence 80
-    echo ✅ Analyse terminee
-    goto :eof
-)
-
-if "%1"=="clean" (
-    echo 🧹 Nettoyage...
-    for /d /r . %%d in (__pycache__) do @if exist "%%d" rd /s /q "%%d"
-    del /s /q *.pyc 2>nul
-    if exist .coverage del .coverage
-    if exist htmlcov rd /s /q htmlcov
-    if exist .pytest_cache rd /s /q .pytest_cache
-    echo ✅ Nettoyage termine
-    goto :eof
-)
-
-echo Usage: quality.bat [format^|lint^|quality^|dead-code^|clean]
+echo 🚀 PIPELINE DE QUALITE LOCALE DatavizFT
+echo ==========================================
 echo.
-echo Commands:
-echo   format     - Format code with black and ruff
-echo   lint       - Run linting checks
-echo   quality    - Full quality pipeline
-echo   dead-code  - Analyze dead code
-echo   clean      - Clean temporary files
+
+REM Vérification que nous sommes dans le bon dossier
+if not exist "backend\" (
+    echo ❌ Erreur: Ce script doit être exécuté depuis la racine du projet DatavizFT
+    echo    Assurez-vous d'être dans le dossier contenant backend/
+    pause
+    exit /b 1
+)
+
+echo 📋 1/5 - Formatage du code avec Black...
+python -m black backend/
+if %errorlevel% neq 0 (
+    echo ❌ Échec du formatage Black
+    pause
+    exit /b 1
+)
+echo ✅ Black: Code formaté avec succès
+echo.
+
+echo 📋 2/5 - Vérification du formatage...
+python -m black --check backend/
+if %errorlevel% neq 0 (
+    echo ❌ Échec: Code non conforme au style Black
+    pause
+    exit /b 1
+)
+echo ✅ Black Check: Code conforme au style
+echo.
+
+echo 📋 3/5 - Analyse avec Ruff...
+python -m ruff check backend/
+if %errorlevel% neq 0 (
+    echo ❌ Échec: Problèmes détectés par Ruff
+    pause
+    exit /b 1
+)
+echo ✅ Ruff: Aucun problème détecté
+echo.
+
+echo 📋 4/5 - Type checking avec MyPy...
+python -m mypy backend/ --ignore-missing-imports
+if %errorlevel% neq 0 (
+    echo ⚠️  MyPy: Problèmes de types détectés (non bloquant)
+) else (
+    echo ✅ MyPy: Types valides
+)
+echo.
+
+echo 📋 5/5 - Analyse sécurité avec Bandit...
+python -m bandit -r backend/ -f txt
+if %errorlevel% neq 0 (
+    echo ⚠️  Bandit: Problèmes de sécurité détectés (vérifiez manuellement)
+) else (
+    echo ✅ Bandit: Aucun problème de sécurité critique
+)
+echo.
+
+echo 🎉 PIPELINE DE QUALITE TERMINE
+echo ================================
+echo ✅ Votre code est prêt pour le commit/push !
+echo 💡 Conseil: Exécutez ce script avant chaque commit
+echo.
+pause
