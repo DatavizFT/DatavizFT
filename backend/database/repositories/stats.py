@@ -25,6 +25,8 @@ class StatsRepository:
         self.db = database
         self.collection_stats = database.stats_competences
         self.collection_offres = database.offres
+        # Alias pour compatibilité (collection par défaut = stats)
+        self.collection = self.collection_stats
 
     async def save_competence_stats(self, stats: CompetenceStats) -> bool:
         """

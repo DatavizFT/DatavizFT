@@ -6,29 +6,28 @@ Execute après l'installation de Docker Desktop
 
 import subprocess
 import sys
-import time
 
 
 def check_docker_quick():
     """Vérification rapide de Docker"""
     print("Verification rapide de Docker Desktop...")
     print("=" * 40)
-    
+
     # Test 1: Docker command
     try:
         result = subprocess.run(
-            ["docker", "--version"], 
-            capture_output=True, 
-            text=True, 
+            ["docker", "--version"],
+            capture_output=True,
+            text=True,
             timeout=10
         )
-        
+
         if result.returncode == 0:
             print(f"✅ Docker installe: {result.stdout.strip()}")
         else:
             print("❌ Docker non trouve")
             return False
-            
+
     except FileNotFoundError:
         print("❌ Commande docker non trouvee")
         print("💡 Assurez-vous que Docker Desktop est installe et redemarrez le terminal")
@@ -36,16 +35,16 @@ def check_docker_quick():
     except subprocess.TimeoutExpired:
         print("❌ Docker ne repond pas")
         return False
-    
+
     # Test 2: Docker daemon
     try:
         result = subprocess.run(
-            ["docker", "info"], 
-            capture_output=True, 
-            text=True, 
+            ["docker", "info"],
+            capture_output=True,
+            text=True,
             timeout=15
         )
-        
+
         if result.returncode == 0:
             print("✅ Docker Engine fonctionne")
             return True
@@ -53,7 +52,7 @@ def check_docker_quick():
             print("❌ Docker Engine arrete")
             print("💡 Lancez Docker Desktop et attendez que l'icone soit verte")
             return False
-            
+
     except subprocess.TimeoutExpired:
         print("❌ Docker Engine ne repond pas")
         print("💡 Verifiez que Docker Desktop est demarre")

@@ -4,7 +4,6 @@ Centralise toutes les configurations de l'application
 """
 
 import os
-from typing import Optional
 
 from dotenv import load_dotenv
 
@@ -26,22 +25,27 @@ class Config:
     # -----------------------------------------------------------------------------
     # API France Travail
     # -----------------------------------------------------------------------------
-    FRANCETRAVAIL_CLIENT_ID: Optional[str] = os.getenv("FRANCETRAVAIL_CLIENT_ID")
-    FRANCETRAVAIL_CLIENT_SECRET: Optional[str] = os.getenv("FRANCETRAVAIL_CLIENT_SECRET")
-    TOKEN_URL: str = os.getenv("TOKEN_URL", "https://francetravail.io/connexion/oauth2/access_token?realm=%2Fpartenaire")
+    FRANCETRAVAIL_CLIENT_ID: str | None = os.getenv("FRANCETRAVAIL_CLIENT_ID")
+    FRANCETRAVAIL_CLIENT_SECRET: str | None = os.getenv("FRANCETRAVAIL_CLIENT_SECRET")
+    TOKEN_URL: str = os.getenv(
+        "TOKEN_URL",
+        "https://entreprise.francetravail.fr/connexion/oauth2/access_token?realm=%2Fpartenaire",
+    )
     API_BASE_URL: str = "https://api.francetravail.io/partenaire/offresdemploi/v2"
 
     # Limites API
     FRANCE_TRAVAIL_RATE_LIMIT: int = int(os.getenv("FRANCE_TRAVAIL_RATE_LIMIT", "200"))
-    FRANCE_TRAVAIL_MAX_RESULTS: int = int(os.getenv("FRANCE_TRAVAIL_MAX_RESULTS", "1000"))
+    FRANCE_TRAVAIL_MAX_RESULTS: int = int(
+        os.getenv("FRANCE_TRAVAIL_MAX_RESULTS", "1000")
+    )
     FRANCE_TRAVAIL_TIMEOUT: int = int(os.getenv("FRANCE_TRAVAIL_TIMEOUT", "30"))
 
     # -----------------------------------------------------------------------------
     # MongoDB
     # -----------------------------------------------------------------------------
     MONGODB_URL: str = os.getenv(
-        "MONGODB_URL", 
-        "mongodb://admin:datavizft2025@localhost:27017/dataviz_ft_dev?authSource=admin"
+        "MONGODB_URL",
+        "mongodb://admin:datavizft2025@localhost:27017/dataviz_ft_dev?authSource=admin",
     )
     MONGODB_DATABASE: str = os.getenv("MONGODB_DATABASE", "dataviz_ft_dev")
     MONGODB_HOST: str = os.getenv("MONGODB_HOST", "localhost")
@@ -58,7 +62,9 @@ class Config:
     MONGODB_MIN_POOL_SIZE: int = int(os.getenv("MONGODB_MIN_POOL_SIZE", "10"))
     MONGODB_CONNECT_TIMEOUT: int = int(os.getenv("MONGODB_CONNECT_TIMEOUT", "10000"))
     MONGODB_SOCKET_TIMEOUT: int = int(os.getenv("MONGODB_SOCKET_TIMEOUT", "30000"))
-    MONGODB_SERVER_SELECTION_TIMEOUT: int = int(os.getenv("MONGODB_SERVER_SELECTION_TIMEOUT", "5000"))
+    MONGODB_SERVER_SELECTION_TIMEOUT: int = int(
+        os.getenv("MONGODB_SERVER_SELECTION_TIMEOUT", "5000")
+    )
 
     # -----------------------------------------------------------------------------
     # Pipeline Configuration
@@ -69,7 +75,9 @@ class Config:
     PIPELINE_RETRY_DELAY: int = int(os.getenv("PIPELINE_RETRY_DELAY", "5"))
 
     # Nettoyage automatique
-    AUTO_CLEANUP_ENABLED: bool = os.getenv("AUTO_CLEANUP_ENABLED", "true").lower() == "true"
+    AUTO_CLEANUP_ENABLED: bool = (
+        os.getenv("AUTO_CLEANUP_ENABLED", "true").lower() == "true"
+    )
     AUTO_CLEANUP_DAYS: int = int(os.getenv("AUTO_CLEANUP_DAYS", "365"))
     AUTO_CLEANUP_HOUR: int = int(os.getenv("AUTO_CLEANUP_HOUR", "2"))
 
@@ -77,27 +85,30 @@ class Config:
     COMPETENCES_MIN_LENGTH: int = int(os.getenv("COMPETENCES_MIN_LENGTH", "2"))
     COMPETENCES_MAX_LENGTH: int = int(os.getenv("COMPETENCES_MAX_LENGTH", "50"))
     COMPETENCES_BLACKLIST: list[str] = os.getenv(
-        "COMPETENCES_BLACKLIST", 
-        "a,le,la,les,de,du,des,et,ou,pour,avec"
+        "COMPETENCES_BLACKLIST", "a,le,la,les,de,du,des,et,ou,pour,avec"
     ).split(",")
 
     # -----------------------------------------------------------------------------
     # Security
     # -----------------------------------------------------------------------------
     SECRET_KEY: str = os.getenv("SECRET_KEY", "dev-secret-key-change-in-production")
-    JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "jwt-secret-key-change-in-production")
+    JWT_SECRET_KEY: str = os.getenv(
+        "JWT_SECRET_KEY", "jwt-secret-key-change-in-production"
+    )
 
     # CORS
     CORS_ORIGINS: list[str] = os.getenv(
-        "CORS_ORIGINS", 
-        "http://localhost:3000,http://localhost:8080,http://127.0.0.1:3000"
+        "CORS_ORIGINS",
+        "http://localhost:3000,http://localhost:8080,http://127.0.0.1:3000",
     ).split(",")
-    CORS_ALLOW_CREDENTIALS: bool = os.getenv("CORS_ALLOW_CREDENTIALS", "true").lower() == "true"
+    CORS_ALLOW_CREDENTIALS: bool = (
+        os.getenv("CORS_ALLOW_CREDENTIALS", "true").lower() == "true"
+    )
 
     # -----------------------------------------------------------------------------
     # Performance & Monitoring
     # -----------------------------------------------------------------------------
-    REDIS_URL: Optional[str] = os.getenv("REDIS_URL")
+    REDIS_URL: str | None = os.getenv("REDIS_URL")
     REDIS_TTL: int = int(os.getenv("REDIS_TTL", "3600"))
 
     ENABLE_METRICS: bool = os.getenv("ENABLE_METRICS", "true").lower() == "true"
@@ -107,7 +118,9 @@ class Config:
     # -----------------------------------------------------------------------------
     # Development Tools
     # -----------------------------------------------------------------------------
-    MONGO_EXPRESS_ENABLED: bool = os.getenv("MONGO_EXPRESS_ENABLED", "true").lower() == "true"
+    MONGO_EXPRESS_ENABLED: bool = (
+        os.getenv("MONGO_EXPRESS_ENABLED", "true").lower() == "true"
+    )
     MONGO_EXPRESS_PORT: int = int(os.getenv("MONGO_EXPRESS_PORT", "8081"))
     MONGO_EXPRESS_USERNAME: str = os.getenv("MONGO_EXPRESS_USERNAME", "datavizft")
     MONGO_EXPRESS_PASSWORD: str = os.getenv("MONGO_EXPRESS_PASSWORD", "admin123")
@@ -119,7 +132,7 @@ class Config:
     def get_mongodb_url(cls) -> str:
         """
         Retourne l'URL MongoDB configurée
-        
+
         Returns:
             URL de connexion MongoDB
         """
@@ -129,7 +142,7 @@ class Config:
     def is_development(cls) -> bool:
         """
         Vérifie si on est en mode développement
-        
+
         Returns:
             True si développement
         """
@@ -139,7 +152,7 @@ class Config:
     def is_production(cls) -> bool:
         """
         Vérifie si on est en mode production
-        
+
         Returns:
             True si production
         """
@@ -149,7 +162,7 @@ class Config:
     def get_log_config(cls) -> dict:
         """
         Configuration des logs
-        
+
         Returns:
             Configuration de logging
         """

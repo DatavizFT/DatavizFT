@@ -26,12 +26,12 @@ class DockerMongoDBSetup:
         try:
             # Test Docker version
             result = subprocess.run(
-                ["docker", "--version"], 
-                capture_output=True, 
-                text=True, 
+                ["docker", "--version"],
+                capture_output=True,
+                text=True,
                 timeout=10
             )
-            
+
             if result.returncode == 0:
                 print(f"✅ Docker installé: {result.stdout.strip()}")
             else:
@@ -40,12 +40,12 @@ class DockerMongoDBSetup:
 
             # Test Docker daemon
             result = subprocess.run(
-                ["docker", "info"], 
-                capture_output=True, 
-                text=True, 
+                ["docker", "info"],
+                capture_output=True,
+                text=True,
                 timeout=10
             )
-            
+
             if result.returncode == 0:
                 print("✅ Docker Engine fonctionne")
                 return True
@@ -77,7 +77,7 @@ class DockerMongoDBSetup:
         # Vérifier la configuration des volumes
         try:
             content = self.compose_file.read_text(encoding="utf-8")
-            
+
             if "mongodb_data:/data/db" in content:
                 print("✅ Volume persistant configuré")
             else:
@@ -140,10 +140,10 @@ class DockerMongoDBSetup:
 
             if result.returncode == 0:
                 lines = result.stdout.strip().split('\n')
-                
+
                 mongodb_running = False
                 mongo_express_running = False
-                
+
                 for line in lines:
                     if "datavizft_mongodb" in line:
                         print(f"🗄️  MongoDB: {line}")
@@ -185,20 +185,20 @@ class DockerMongoDBSetup:
             if result.returncode == 0:
                 if "datavizft_mongodb_data" in result.stdout:
                     print("✅ Volume MongoDB persistant créé")
-                    
+
                     # Obtenir les détails du volume
                     volume_result = subprocess.run(
                         ["docker", "volume", "inspect", "datavizft_mongodb_data"],
                         capture_output=True,
                         text=True
                     )
-                    
+
                     if volume_result.returncode == 0:
                         import json
                         volume_info = json.loads(volume_result.stdout)[0]
                         mountpoint = volume_info.get("Mountpoint", "N/A")
                         print(f"📂 Emplacement: {mountpoint}")
-                    
+
                     return True
                 else:
                     print("❌ Volume MongoDB manquant")
@@ -215,23 +215,23 @@ class DockerMongoDBSetup:
         try:
             # Attendre que MongoDB soit prêt
             print("⏳ Attente de MongoDB (30s max)...")
-            
+
             for i in range(30):
                 try:
                     result = subprocess.run(
-                        ["docker", "exec", "datavizft_mongodb", "mongosh", 
+                        ["docker", "exec", "datavizft_mongodb", "mongosh",
                          "--eval", "db.version()", "--quiet"],
                         capture_output=True,
                         text=True,
                         timeout=5
                     )
-                    
+
                     if result.returncode == 0:
                         print("✅ MongoDB prêt")
                         break
                 except:
                     pass
-                
+
                 time.sleep(1)
                 print(f"   Tentative {i+1}/30...")
             else:
@@ -250,7 +250,7 @@ class DockerMongoDBSetup:
             '''
 
             result = subprocess.run(
-                ["docker", "exec", "datavizft_mongodb", "mongosh", 
+                ["docker", "exec", "datavizft_mongodb", "mongosh",
                  "dataviz_ft_dev", "--eval", test_command, "--quiet"],
                 capture_output=True,
                 text=True
@@ -275,37 +275,37 @@ class DockerMongoDBSetup:
         print("\n" + "="*60)
         print("🎉 Configuration Docker MongoDB terminée!")
         print("="*60)
-        
+
         print("\n📊 Informations de connexion:")
-        print(f"   URL MongoDB: mongodb://admin:datavizft2025@localhost:27017/dataviz_ft_dev?authSource=admin")
-        print(f"   Base de données: dataviz_ft_dev")
-        print(f"   Admin: admin / datavizft2025")
-        
+        print("   URL MongoDB: mongodb://admin:datavizft2025@localhost:27017/dataviz_ft_dev?authSource=admin")
+        print("   Base de données: dataviz_ft_dev")
+        print("   Admin: admin / datavizft2025")
+
         print("\n🌐 Interface Web Mongo Express:")
-        print(f"   URL: http://localhost:8081")
-        print(f"   Login: datavizft / admin123")
-        
+        print("   URL: http://localhost:8081")
+        print("   Login: datavizft / admin123")
+
         print("\n💾 Persistance:")
-        print(f"   ✅ Volume Docker: datavizft_mongodb_data")
-        print(f"   ✅ Données persistantes même après redémarrage")
-        
+        print("   ✅ Volume Docker: datavizft_mongodb_data")
+        print("   ✅ Données persistantes même après redémarrage")
+
         print("\n🛠️  Commandes utiles:")
-        print(f"   Arrêter:    docker compose down")
-        print(f"   Redémarrer: docker compose up -d mongodb mongo-express")
-        print(f"   Logs:       docker compose logs mongodb")
-        print(f"   Shell:      docker exec -it datavizft_mongodb mongosh")
-        
+        print("   Arrêter:    docker compose down")
+        print("   Redémarrer: docker compose up -d mongodb mongo-express")
+        print("   Logs:       docker compose logs mongodb")
+        print("   Shell:      docker exec -it datavizft_mongodb mongosh")
+
         print("\n🧪 Test de connexion Python:")
-        print(f"   python scripts/test_mongodb.py")
+        print("   python scripts/test_mongodb.py")
 
 
 def main():
     """Fonction principale"""
     print("🐳 Configuration Docker MongoDB avec Persistance")
     print("=" * 55)
-    
+
     setup = DockerMongoDBSetup()
-    
+
     # Étapes de configuration
     steps = [
         ("Vérification Docker", setup.check_docker),
@@ -315,9 +315,9 @@ def main():
         ("Vérification volumes", setup.check_volumes),
         ("Test persistance", setup.test_persistence),
     ]
-    
+
     success_count = 0
-    
+
     for step_name, step_func in steps:
         print(f"\n📋 {step_name}...")
         try:
@@ -335,10 +335,10 @@ def main():
                     break
         except Exception as e:
             print(f"❌ Erreur {step_name}: {e}")
-    
+
     # Résumé final
     print(f"\n📊 Résumé: {success_count}/{len(steps)} étapes réussies")
-    
+
     if success_count == len(steps):
         setup.show_connection_info()
         return True

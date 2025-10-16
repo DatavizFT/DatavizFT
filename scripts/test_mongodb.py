@@ -14,10 +14,10 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent))
 
 try:
+    import dns.resolver  # Pour les connexions SRV
     import pymongo
     from motor.motor_asyncio import AsyncIOMotorClient
     from pymongo import MongoClient
-    import dns.resolver  # Pour les connexions SRV
 except ImportError as e:
     print(f"❌ Dépendance manquante: {e}")
     print("📦 Installez les dépendances: pip install pymongo motor dnspython")
@@ -53,7 +53,7 @@ class MongoDBTester:
 
             # Test de connexion
             server_info = self.sync_client.server_info()
-            print(f"✅ Connexion synchrone réussie!")
+            print("✅ Connexion synchrone réussie!")
             print(f"   Version MongoDB: {server_info.get('version')}")
             print(f"   URL: {self.mongodb_url}")
 
@@ -91,7 +91,7 @@ class MongoDBTester:
 
             # Test de connexion
             server_info = await self.async_client.server_info()
-            print(f"✅ Connexion asynchrone réussie!")
+            print("✅ Connexion asynchrone réussie!")
             print(f"   Version MongoDB: {server_info.get('version')}")
 
             # Test d'accès à la base

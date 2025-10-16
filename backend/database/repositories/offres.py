@@ -6,11 +6,14 @@ Gestion CRUD et requêtes avancées pour les offres MongoDB
 from datetime import datetime, timedelta
 from typing import Any
 
+import structlog
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from pymongo import DESCENDING
 from pymongo.errors import DuplicateKeyError
 
 from ...models.offre import OffreEmploiModel
+
+logger = structlog.get_logger(__name__)
 
 
 class OffresRepository:
@@ -52,7 +55,7 @@ class OffresRepository:
 
     async def insert_many_offres(self, offres: list[OffreEmploiModel]) -> int:
         """
-        Insère plusieurs offres en lot
+        Insère plusieurs offres en lot avec déduplication
 
         Args:
             offres: Liste d'offres à insérer
@@ -63,18 +66,45 @@ class OffresRepository:
         if not offres:
             return 0
 
+        # ✅ Déduplication optimisée avec une seule requête
+        source_ids = [offre.source_id for offre in offres]
+
+        # Récupérer tous les source_id existants en une fois
+        existing_cursor = self.collection.find(
+            {"source_id": {"$in": source_ids}}, {"source_id": 1, "_id": 0}
+        )
+        existing_source_ids = {doc["source_id"] async for doc in existing_cursor}
+
+        # Filtrer les nouvelles offres
+        offres_nouvelles = [
+            offre for offre in offres if offre.source_id not in existing_source_ids
+        ]
+
+        doublons = len(offres) - len(offres_nouvelles)
+        if doublons > 0:
+            logger.info(f"{doublons} doublons détectés et ignorés")
+
+        if not offres_nouvelles:
+            logger.info("Aucune nouvelle offre à insérer")
+            return 0
+
         try:
-            # Conversion en dicts
-            offres_dicts = [offre.dict() for offre in offres]
+            # Conversion en dicts pour nouvelles offres uniquement
+            offres_dicts = [offre.dict() for offre in offres_nouvelles]
 
             result = await self.collection.insert_many(
                 offres_dicts,
-                ordered=False,  # Continue même si certaines sont dupliquées
+                ordered=False,  # Continue même si certaines échouent
             )
-            return len(result.inserted_ids)
+
+            nb_inserees = len(result.inserted_ids)
+            logger.info(
+                f"{nb_inserees} nouvelles offres insérées, {doublons} doublons ignorés"
+            )
+            return nb_inserees
 
         except Exception as e:
-            print(f"❌ Erreur insertion batch: {e}")
+            logger.error(f"Erreur insertion batch: {e}")
             return 0
 
     async def get_offre_by_source_id(self, source_id: str) -> dict[str, Any] | None:
@@ -111,6 +141,64 @@ class OffresRepository:
         )
 
         return await cursor.to_list(length=limit)
+
+    async def get_toutes_offres(self, limit: int = 10000) -> list[dict[str, Any]]:
+        """
+        Récupère toutes les offres (pour séries temporelles long terme)
+
+        Args:
+            limit: Limite du nombre de résultats
+
+        Returns:
+            Liste de toutes les offres triées par date de création
+        """
+        logger.info(f"Récupération de toutes les offres (limite: {limit})")
+
+        cursor = (
+            self.collection.find({})  # Pas de filtre de date
+            .sort("date_creation", DESCENDING)  # Plus récentes en premier
+            .limit(limit)
+        )
+
+        offres = await cursor.to_list(length=limit)
+        logger.info(f"{len(offres)} offres récupérées pour analyse time series")
+        return offres
+
+    async def get_offres_par_periode(
+        self,
+        date_debut: datetime | None = None,
+        date_fin: datetime | None = None,
+        limit: int = 10000,
+    ) -> list[dict[str, Any]]:
+        """
+        Récupère les offres sur une période spécifique pour time series
+
+        Args:
+            date_debut: Date de début (incluse)
+            date_fin: Date de fin (incluse)
+            limit: Limite du nombre de résultats
+
+        Returns:
+            Liste des offres dans la période triées par date
+        """
+        query = {}
+
+        if date_debut or date_fin:
+            query["date_creation"] = {}
+            if date_debut:
+                query["date_creation"]["$gte"] = date_debut
+            if date_fin:
+                query["date_creation"]["$lte"] = date_fin
+
+        logger.info(f"Récupération offres période {date_debut} -> {date_fin}")
+
+        cursor = (
+            self.collection.find(query).sort("date_creation", DESCENDING).limit(limit)
+        )
+
+        offres = await cursor.to_list(length=limit)
+        logger.info(f"{len(offres)} offres trouvées dans la période")
+        return offres
 
     async def get_offres_by_competence(
         self, competence: str, limit: int = 50

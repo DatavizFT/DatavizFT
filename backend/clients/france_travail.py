@@ -27,6 +27,7 @@ class FranceTravailAPIClient:
         self.base_url = API_BASE_URL
         self._headers: dict[str, str] | None = None
         self._token: str | None = None
+        self._client: httpx.Client | None = None
 
     def _get_token(self) -> str:
         """Obtient un token d'authentification OAuth2 pour l'API France Travail"""
@@ -236,6 +237,15 @@ class FranceTravailAPIClient:
             Liste des offres correspondant aux filtres
         """
         return self.collecter_offres_paginees(filtres, **kwargs)
+
+    def close(self):
+        """Ferme les connexions HTTP ouvertes"""
+        if self._client:
+            self._client.close()
+            self._client = None
+        # Reset du token et headers
+        self._token = None
+        self._headers = None
 
 
 # Fonction utilitaire pour compatibilité

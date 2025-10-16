@@ -1,8 +1,9 @@
 """Configuration et fixtures pour les tests."""
 import json
 import tempfile
+from collections.abc import Generator
 from pathlib import Path
-from typing import Any, Dict, Generator
+from typing import Any
 from unittest.mock import Mock
 
 import pytest
@@ -16,7 +17,7 @@ def temp_dir() -> Generator[Path, None, None]:
 
 
 @pytest.fixture
-def sample_competences_data() -> Dict[str, Any]:
+def sample_competences_data() -> dict[str, Any]:
     """Données d'exemple pour les tests de compétences."""
     return {
         "competences": [
@@ -28,7 +29,7 @@ def sample_competences_data() -> Dict[str, Any]:
             },
             {
                 "libelle": "SQL",
-                "code": "COMP_002", 
+                "code": "COMP_002",
                 "type": "technique",
                 "niveau": "avancé"
             }
@@ -41,7 +42,7 @@ def sample_competences_data() -> Dict[str, Any]:
 
 
 @pytest.fixture
-def sample_offre_data() -> Dict[str, Any]:
+def sample_offre_data() -> dict[str, Any]:
     """Données d'exemple d'offre France Travail."""
     return {
         "id": "123456789",
@@ -62,7 +63,7 @@ def sample_offre_data() -> Dict[str, Any]:
     }
 
 
-@pytest.fixture 
+@pytest.fixture
 def mock_france_travail_client() -> Mock:
     """Mock du client France Travail."""
     mock_client = Mock()
@@ -83,7 +84,7 @@ def mock_france_travail_client() -> Mock:
 
 
 @pytest.fixture
-def sample_json_file(temp_dir: Path, sample_competences_data: Dict[str, Any]) -> Path:
+def sample_json_file(temp_dir: Path, sample_competences_data: dict[str, Any]) -> Path:
     """Crée un fichier JSON temporaire avec des données d'exemple."""
     json_file = temp_dir / "sample_data.json"
     with json_file.open("w", encoding="utf-8") as f:

@@ -1,13 +1,15 @@
 """
-MongoDB Documents et Schemas - Structures MongoDB spécifiques
-Définit les documents MongoDB et leurs validations
+MongoDB Schemas - Structures MongoDB spécifiques
+Définit les schemas et modèles MongoDB
 """
 
-from .documents import (
-    CompetenceDocument,
-    OffreDocument,
-    StatsDocument,
-)
+# NOTE: Documents mongoengine désactivés pour l'instant
+# from .documents import (
+#     CompetenceDocument,
+#     OffreDocument,
+#     StatsDocument,
+# )
+
 from .schemas import (
     COMPETENCE_SCHEMA,
     OFFRE_SCHEMA,

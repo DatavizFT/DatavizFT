@@ -3,9 +3,132 @@ MongoDB Schemas - Définitions de validation MongoDB native
 Schemas de validation JSON pour MongoDB (sans dépendance externe)
 """
 
+from datetime import datetime
 from typing import Any
 
 from motor.motor_asyncio import AsyncIOMotorDatabase
+from pydantic import BaseModel, Field
+
+
+class OffreEmploiModel(BaseModel):
+    """
+    Modèle Pydantic pour les offres d'emploi dans MongoDB
+    CONSERVATION COMPLÈTE de toutes les données API France Travail
+    """
+
+    # Identifiants
+    source_id: str = Field(..., description="ID unique dans le système source")
+    intitule: str = Field(..., max_length=500, description="Titre du poste")
+    description: str = Field(default="", description="Description complète")
+
+    # Dates
+    date_creation: datetime = Field(default_factory=datetime.now)
+    date_mise_a_jour: datetime | None = None
+    date_collecte: datetime = Field(default_factory=datetime.now)
+    date_traitement: datetime | None = None
+
+    # DONNÉES API COMPLÈTES - Conservation intégrale sans perte
+    donnees_api_originales: dict = Field(
+        default_factory=dict, description="Copie complète des données API"
+    )
+
+    # Entreprise
+    entreprise: dict = Field(
+        default_factory=dict, description="Informations entreprise complètes"
+    )
+
+    # Localisation avec GPS
+    localisation: dict = Field(
+        default_factory=dict, description="Informations géographiques avec coordonnées"
+    )
+
+    # Contrat étendu
+    contrat: dict = Field(
+        default_factory=dict, description="Informations contractuelles complètes"
+    )
+
+    # Rome et métier
+    rome_code: str = Field(default="M1805", description="Code ROME du métier")
+    rome_libelle: str = Field(default="", description="Libellé ROME du métier")
+    appellation_libelle: str = Field(default="", description="Appellation du métier")
+
+    # Secteur d'activité
+    code_naf: str = Field(default="", description="Code NAF de l'entreprise")
+    secteur_activite: str = Field(default="", description="Code secteur d'activité")
+    secteur_activite_libelle: str = Field(
+        default="", description="Libellé secteur d'activité"
+    )
+
+    # Qualification
+    qualification_code: str = Field(default="", description="Code qualification")
+    qualification_libelle: str = Field(default="", description="Libellé qualification")
+
+    # Salaire
+    salaire: dict = Field(
+        default_factory=dict, description="Informations salariales complètes"
+    )
+
+    # Formations, langues, permis (listes complètes)
+    formations: list[dict] = Field(
+        default_factory=list, description="Formations requises"
+    )
+    langues: list[dict] = Field(default_factory=list, description="Langues requises")
+    permis: list[dict] = Field(default_factory=list, description="Permis requis")
+    competences_requises: list[dict] = Field(
+        default_factory=list, description="Compétences requises par l'API"
+    )
+    qualites_professionnelles: list[dict] = Field(
+        default_factory=list, description="Qualités professionnelles"
+    )
+    outils_bureautiques: str = Field(
+        default="", description="Outils bureautiques requis"
+    )
+
+    # Contact et agence
+    contact: dict = Field(default_factory=dict, description="Informations de contact")
+    agence: dict = Field(default_factory=dict, description="Informations de l'agence")
+
+    # Métadonnées étendues
+    nombre_postes: int = Field(default=1, description="Nombre de postes à pourvoir")
+    accessible_th: bool = Field(
+        default=False, description="Accessible aux travailleurs handicapés"
+    )
+    deplacement_code: str = Field(default="", description="Code déplacement")
+    deplacement_libelle: str = Field(default="", description="Libellé déplacement")
+    tranche_effectif_etab: str = Field(
+        default="", description="Tranche effectif établissement"
+    )
+    entreprise_adaptee: bool = Field(default=False, description="Entreprise adaptée")
+    employeur_handi_engage: bool = Field(
+        default=False, description="Employeur handi engagé"
+    )
+
+    # Origine et contexte
+    origine_offre: dict = Field(default_factory=dict, description="Origine de l'offre")
+    offres_manque_candidats: bool = Field(
+        default=False, description="Offre manque de candidats"
+    )
+    contexte_travail: dict = Field(
+        default_factory=dict, description="Contexte de travail"
+    )
+    complement_exercice: str = Field(default="", description="Complément d'exercice")
+    condition_exercice: str = Field(default="", description="Condition d'exercice")
+
+    # Compétences analysées
+    competences_extraites: list[str] = Field(
+        default_factory=list, description="Compétences extraites par analyse"
+    )
+
+    # Métadonnées système
+    code_rome: str = Field(default="M1805", description="Code ROME (legacy)")
+    source: str = Field(default="france_travail_api")
+    traite: bool = Field(default=False)
+
+    class Config:
+        """Configuration Pydantic"""
+
+        json_encoders = {datetime: lambda v: v.isoformat()}
+
 
 # Schema de validation pour la collection offres
 OFFRE_SCHEMA = {
