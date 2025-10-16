@@ -35,12 +35,13 @@
 - ✅ **Vérification 24h** pour éviter la sur-collecte
 - ✅ **Pipeline asynchrone** avec gestion concurrente
 
-### 🧠 Analyse des Compétences  
+### 🧠 Analyse des Compétences
+
 - **19 catégories** de compétences techniques
-- **190+ technologies** référencées
+- **259+ technologies** référencées
 - **Scoring de pertinence** par contexte
 - **Tendances temporelles** automatisées
-- **Géolocalisation** par département
+- **Géolocalisation** par département / coordonnées gps
 
 ### 🗄️ Base de Données MongoDB
 - **Collections optimisées** avec index performants
