@@ -6,7 +6,7 @@ Expose tous les pipelines disponibles et leurs fonctions d'entrée
 # Import de la nouvelle architecture modulaire
 from .instances.france_travail_pipeline import FranceTravailPipeline
 
-# Exports principaux  
+# Exports principaux
 __all__ = [
     # Nouvelle architecture modulaire
     "FranceTravailPipeline",

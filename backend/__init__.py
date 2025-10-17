@@ -14,10 +14,10 @@ from .data import (
 
 # Exports principaux depuis pipelines
 from .pipelines import (
+    PIPELINES_DISPONIBLES,
     FranceTravailPipeline,
     lister_pipelines_disponibles,
     obtenir_pipeline,
-    PIPELINES_DISPONIBLES,
 )
 from .tools import CompetenceAnalyzer, FileManager, charger_config_pipeline
 

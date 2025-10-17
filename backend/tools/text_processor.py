@@ -124,17 +124,17 @@ def creer_patterns_recherche(competence: str) -> list[str]:
         Liste des patterns regex à utiliser
     """
     competence_lower = competence.lower()
-    
+
     # Compétences qui utilisent SEULEMENT les patterns spéciaux (pas de pattern automatique)
     competences_patterns_seulement = {"c#", ".net", "asp.net", "c++"}
-    
+
     # Patterns spécialisés pour améliorer la détection
     patterns_speciaux = {
         "javascript": [r"\bjs\b", r"\bjavascript\b"],
         "typescript": [r"\bts\b(?!\s*(?:test|tests))", r"\btypescript\b"],
         ".net": [
             r"\.net\b",
-            r"\bdotnet\b", 
+            r"\bdotnet\b",
             r"\bnet framework\b",
             r"\bnet core\b",
             r"\bnet 5\b",
@@ -144,7 +144,7 @@ def creer_patterns_recherche(competence: str) -> list[str]:
         ],
         "c#": [
             r"\bc#(?=\s|$)",  # C# suivi d'un espace ou fin de ligne
-            r"(?<=\s)c#",     # C# précédé d'un espace
+            r"(?<=\s)c#",  # C# précédé d'un espace
             r"\bc sharp\b",
             r"\bcsharp\b",
         ],

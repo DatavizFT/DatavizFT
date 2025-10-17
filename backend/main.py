@@ -245,7 +245,7 @@ async def main_force_analyses():
         resultat = await pipeline.executer_pipeline_complet(
             max_offres=1000,
             forcer_execution=False,  # Ne pas forcer la collecte
-            forcer_analyses=True     # Forcer les analyses
+            forcer_analyses=True,  # Forcer les analyses
         )
 
         if resultat.get("success", False):
@@ -266,7 +266,7 @@ async def main_force_analyses():
 
             print(f"📊 Analyses forcées terminées: {nb_offres} offres analysées")
             print(f"🧠 {nb_competences} compétences détectées")
-            
+
             if top_competences:
                 print("🏆 Top 5 compétences:")
                 for i, comp in enumerate(top_competences[:5], 1):
