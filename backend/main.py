@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Import du nouveau pipeline MongoDB
 import asyncio
 
-from backend.pipelines.france_travail_mongodb import PipelineMongoDBM1805
+from backend.pipelines.instances.france_travail_pipeline import FranceTravailPipeline
 from backend.tools.logging_config import configure_logging, get_logger
 
 
@@ -35,7 +35,7 @@ async def afficher_statistiques():
 
     try:
         # Créer le pipeline qui gère sa propre connexion
-        pipeline = PipelineMongoDBM1805()
+        pipeline = FranceTravailPipeline()
         stats = await pipeline.obtenir_statistiques_mongodb()
 
         logger.info(
@@ -86,7 +86,7 @@ async def main_avec_limite(limite: int):
     )
 
     try:
-        pipeline = PipelineMongoDBM1805()
+        pipeline = FranceTravailPipeline()
 
         # Exécution avec limite
         resultat = await pipeline.executer_pipeline_complet(
@@ -162,7 +162,7 @@ async def main_force():
     )
 
     try:
-        pipeline = PipelineMongoDBM1805()
+        pipeline = FranceTravailPipeline()
 
         # Exécuter le pipeline MongoDB complet forcé
         resultat = await pipeline.executer_pipeline_complet(
@@ -228,6 +228,79 @@ async def main_force():
             pass
 
 
+async def main_force_analyses():
+    """Forcer l'analyse des compétences et la génération des statistiques"""
+    configure_logging()
+    logger = get_logger(__name__)
+
+    logger.warning(
+        "Démarrage forcé des analyses (compétences + statistiques)",
+        extra={"mode": "force_analyses", "component": "main"},
+    )
+
+    try:
+        pipeline = FranceTravailPipeline()
+
+        # Exécuter le pipeline avec forcer_analyses=True
+        resultat = await pipeline.executer_pipeline_complet(
+            max_offres=1000,
+            forcer_execution=False,  # Ne pas forcer la collecte
+            forcer_analyses=True     # Forcer les analyses
+        )
+
+        if resultat.get("success", False):
+            nb_offres = resultat.get("nb_offres_analysees", 0)
+            nb_competences = resultat.get("nb_competences_detectees", 0)
+            top_competences = resultat.get("top_competences", [])
+
+            logger.info(
+                "✅ Analyses forcées terminées avec succès",
+                extra={
+                    "pipeline": "france_travail_mongodb",
+                    "mode": "force_analyses",
+                    "status": "success",
+                    "nb_offres": nb_offres,
+                    "nb_competences": nb_competences,
+                },
+            )
+
+            print(f"📊 Analyses forcées terminées: {nb_offres} offres analysées")
+            print(f"🧠 {nb_competences} compétences détectées")
+            
+            if top_competences:
+                print("🏆 Top 5 compétences:")
+                for i, comp in enumerate(top_competences[:5], 1):
+                    nom = comp.get("competence", "Unknown")
+                    pct = comp.get("pourcentage", 0)
+                    print(f"   {i}. {nom}: {pct}%")
+        else:
+            error_msg = resultat.get("error", "Erreur inconnue")
+            logger.error(
+                "Erreur lors des analyses forcées",
+                extra={
+                    "pipeline": "france_travail_mongodb",
+                    "mode": "force_analyses",
+                    "status": "failed",
+                    "error": error_msg,
+                },
+            )
+            print(f"❌ Erreur analyses: {error_msg}")
+
+    except Exception as e:
+        logger.critical(
+            "Erreur fatale lors des analyses forcées",
+            extra={"error": str(e), "mode": "force_analyses", "component": "main"},
+            exc_info=True,
+        )
+        print(f"❌ Erreur critique: {e}")
+    finally:
+        try:
+            if "pipeline" in locals():
+                await pipeline.close_database_connection()
+        except Exception:
+            pass
+
+
 async def main():
     """Point d'entrée principal - Lance le pipeline MongoDB avec vérification intelligente"""
     configure_logging()
@@ -239,7 +312,7 @@ async def main():
     )
 
     try:
-        pipeline = PipelineMongoDBM1805()
+        pipeline = FranceTravailPipeline()
 
         # Vérifier si une collecte récente existe
         derniere_collecte = await pipeline.verifier_collecte_recente()
@@ -271,9 +344,9 @@ async def main():
         )
 
         if resultat["success"]:
-            resultats_details = resultat.get("resultats", {})
-            nb_offres = resultats_details.get("nb_offres_sauvegardees", 0)
-            nb_competences = resultats_details.get("nb_competences_extraites", 0)
+            # Le pipeline retourne directement les données, pas dans une enveloppe "resultats"
+            nb_offres = resultat.get("nb_offres_sauvegardees", 0)
+            nb_competences = resultat.get("nb_competences_detectees", 0)
 
             logger.success(
                 "Pipeline MongoDB exécuté avec succès",
@@ -341,7 +414,8 @@ def parse_arguments():
         epilog="""
 Exemples d'utilisation:
   python backend/main.py                 # Exécution normale
-  python backend/main.py --force         # Forcer l'exécution
+  python backend/main.py --force         # Forcer l'exécution complète
+  python backend/main.py --force-analyses   # Forcer seulement les analyses
   python backend/main.py --limit 50      # Limiter à 50 offres
   python backend/main.py --stats         # Afficher les statistiques
         """,
@@ -351,6 +425,12 @@ Exemples d'utilisation:
         "--force",
         action="store_true",
         help="Forcer l'exécution (ignore la vérification 24h)",
+    )
+
+    parser.add_argument(
+        "--force-analyses",
+        action="store_true",
+        help="Forcer l'analyse des compétences et génération des statistiques",
     )
 
     parser.add_argument(
@@ -370,6 +450,8 @@ async def run_main():
 
     if args.stats:
         await afficher_statistiques()
+    elif args.force_analyses:
+        await main_force_analyses()
     elif args.limit:
         await main_avec_limite(args.limit)
     elif args.force:

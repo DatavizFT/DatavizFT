@@ -123,20 +123,20 @@ class OffresRepository:
         self, jours: int = 7, limit: int = 100
     ) -> list[dict[str, Any]]:
         """
-        Récupère les offres récentes
+        Récupère les offres récemment collectées par l'application
 
         Args:
-            jours: Nombre de jours de recul
+            jours: Nombre de jours de recul depuis la collecte
             limit: Limite du nombre de résultats
 
         Returns:
-            Liste des offres récentes
+            Liste des offres récemment collectées
         """
         date_limite = datetime.now() - timedelta(days=jours)
 
         cursor = (
-            self.collection.find({"date_creation": {"$gte": date_limite}})
-            .sort("date_creation", DESCENDING)
+            self.collection.find({"date_collecte": {"$gte": date_limite}})
+            .sort("date_collecte", DESCENDING)
             .limit(limit)
         )
 
@@ -381,3 +381,71 @@ class OffresRepository:
             "repartition_mensuelle": monthly_stats,
             "collection_name": "offres",
         }
+    
+    async def get_existing_source_ids(self, source_ids: list[str]) -> set[str]:
+        """
+        Vérifie quels source_id existent déjà en base
+        
+        Args:
+            source_ids: Liste des IDs à vérifier
+            
+        Returns:
+            Set des source_id existants
+        """
+        cursor = self.collection.find(
+            {"source_id": {"$in": source_ids}}, 
+            {"source_id": 1, "_id": 0}
+        )
+        
+        existing_docs = await cursor.to_list(length=None)
+        return {doc["source_id"] for doc in existing_docs}
+    
+    async def get_active_offers_by_source(self, source_name: str) -> list[dict[str, Any]]:
+        """
+        Récupère les offres actives (sans date_cloture) pour une source
+        
+        Args:
+            source_name: Nom de la source (ex: "france_travail")
+            
+        Returns:
+            Liste des offres actives avec leurs source_id
+        """
+        cursor = self.collection.find(
+            {
+                "source": source_name,
+                "date_cloture": {"$exists": False}
+            },
+            {"source_id": 1, "_id": 0}
+        )
+        
+        return await cursor.to_list(length=None)
+    
+    async def close_offers(self, source_ids: list[str]) -> int:
+        """
+        Marque des offres comme clôturées en ajoutant date_cloture
+        
+        Args:
+            source_ids: Liste des source_id à clôturer
+            
+        Returns:
+            Nombre d'offres clôturées
+        """
+        result = await self.collection.update_many(
+            {"source_id": {"$in": source_ids}},
+            {"$set": {"date_cloture": datetime.now()}}
+        )
+        
+        return result.modified_count
+
+    async def get_closed_offers(self) -> list[dict[str, Any]]:
+        """
+        Récupère les offres qui ont une date de clôture définie
+
+        Returns:
+            Liste des offres clôturées
+        """
+        cursor = self.collection.find(
+            {"date_cloture": {"$exists": True}}
+        )
+
+        return await cursor.to_list(length=None)

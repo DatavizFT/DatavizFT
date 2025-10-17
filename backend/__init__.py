@@ -14,10 +14,10 @@ from .data import (
 
 # Exports principaux depuis pipelines
 from .pipelines import (
-    PipelineM1805,
+    FranceTravailPipeline,
     lister_pipelines_disponibles,
-    run_pipeline_avec_limite,
-    run_pipelineFT,
+    obtenir_pipeline,
+    PIPELINES_DISPONIBLES,
 )
 from .tools import CompetenceAnalyzer, FileManager, charger_config_pipeline
 
@@ -29,10 +29,10 @@ __all__ = [
     "NB_CATEGORIES",
     "NB_COMPETENCES_TOTAL",
     # Pipelines
-    "PipelineM1805",
-    "run_pipelineFT",
-    "run_pipeline_avec_limite",
+    "FranceTravailPipeline",
     "lister_pipelines_disponibles",
+    "obtenir_pipeline",
+    "PIPELINES_DISPONIBLES",
     # Outils essentiels
     "FranceTravailAPIClient",
     "CompetenceAnalyzer",

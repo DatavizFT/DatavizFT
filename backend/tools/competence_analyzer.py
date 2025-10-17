@@ -76,7 +76,7 @@ class CompetenceAnalyzer:
                             "competence": competence,
                             "occurrences": count,
                             "pourcentage": round(pourcentage, 1),
-                            "offres": offres_avec_competence[:5],
+                            "offres": offres_avec_competence,  # TOUTES les offres, pas seulement 5
                         }
                     )
 
@@ -104,6 +104,30 @@ class CompetenceAnalyzer:
             "resultats_par_categorie": resultats_par_categorie,
             "nb_offres_analysees": nb_offres_total,
         }
+
+    def analyser_texte(self, texte: str) -> list[str]:
+        """
+        Analyse un texte pour détecter les compétences présentes
+        
+        Args:
+            texte: Texte à analyser (intitulé + description d'offre)
+            
+        Returns:
+            Liste des compétences détectées dans le texte
+        """
+        competences_detectees = []
+        
+        if not texte:
+            return competences_detectees
+        
+        # Parcourir toutes les catégories et compétences du référentiel
+        for categorie, competences_liste in self.referentiel.items():
+            for competence in competences_liste:
+                if rechercher_competence_dans_texte(texte, competence):
+                    if competence not in competences_detectees:
+                        competences_detectees.append(competence)
+        
+        return competences_detectees
 
 
 # Fonction utilitaire pour compatibilité

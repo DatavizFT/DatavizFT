@@ -123,22 +123,38 @@ def creer_patterns_recherche(competence: str) -> list[str]:
     Returns:
         Liste des patterns regex à utiliser
     """
-    patterns = [rf"\b{re.escape(competence.lower())}\b"]
-
     competence_lower = competence.lower()
-
+    
+    # Compétences qui utilisent SEULEMENT les patterns spéciaux (pas de pattern automatique)
+    competences_patterns_seulement = {"c#", ".net", "asp.net", "c++"}
+    
     # Patterns spécialisés pour améliorer la détection
     patterns_speciaux = {
         "javascript": [r"\bjs\b", r"\bjavascript\b"],
         "typescript": [r"\bts\b(?!\s*(?:test|tests))", r"\btypescript\b"],
-        "c#": [
-            r"\bc#\b",
-            r"\bc sharp\b",
-            r"\bcsharp\b",
+        ".net": [
             r"\.net\b",
-            r"\bdotnet\b",
+            r"\bdotnet\b", 
             r"\bnet framework\b",
             r"\bnet core\b",
+            r"\bnet 5\b",
+            r"\bnet 6\b",
+            r"\bnet 7\b",
+            r"\bnet 8\b",
+        ],
+        "c#": [
+            r"\bc#(?=\s|$)",  # C# suivi d'un espace ou fin de ligne
+            r"(?<=\s)c#",     # C# précédé d'un espace
+            r"\bc sharp\b",
+            r"\bcsharp\b",
+        ],
+        "asp.net": [
+            r"\basp\.net\b",
+            r"\basp net\b",
+            r"\baspnet\b",
+            r"\bblazor\b",
+            r"\bmvc\b(?=.*(?:asp|\.net))",  # MVC seulement si associé à ASP ou .NET
+            r"\bweb api\b",
         ],
         "c++": [r"\bc\+\+\b", r"\bcpp\b", r"\bc plus plus\b"],
         "sql": [
@@ -195,6 +211,14 @@ def creer_patterns_recherche(competence: str) -> list[str]:
         "react native": [r"\breact native\b", r"\breactnative\b"],
         "flutter": [r"\bflutter\b", r"\bdart flutter\b"],
     }
+
+    # Initialiser la liste des patterns
+    if competence_lower in competences_patterns_seulement:
+        # Pour ces compétences, utiliser SEULEMENT les patterns spéciaux
+        patterns = []
+    else:
+        # Pour les autres, commencer par le pattern automatique
+        patterns = [rf"\b{re.escape(competence_lower)}\b"]
 
     if competence_lower in patterns_speciaux:
         patterns.extend(patterns_speciaux[competence_lower])

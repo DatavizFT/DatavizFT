@@ -3,20 +3,14 @@ Backend pipelines - Pipelines de traitement des données
 Expose tous les pipelines disponibles et leurs fonctions d'entrée
 """
 
-# Import du pipeline principal M1805
-from .france_travail_m1805 import (
-    PipelineM1805,
-    run_pipeline_avec_limite,
-    run_pipelineFT,
-)
+# Import de la nouvelle architecture modulaire
+from .instances.france_travail_pipeline import FranceTravailPipeline
 
-# Exports principaux
+# Exports principaux  
 __all__ = [
-    # Classes de pipelines
-    "PipelineM1805",
-    # Fonctions d'exécution
-    "run_pipelineFT",  # Pipeline complet avec vérification 24h
-    "run_pipeline_avec_limite",  # Pipeline avec limite d'offres
+    # Nouvelle architecture modulaire
+    "FranceTravailPipeline",
+    # Classes de base (si nécessaires à l'externe)
 ]
 
 # Configuration des pipelines disponibles
@@ -24,7 +18,7 @@ PIPELINES_DISPONIBLES = {
     "M1805": {
         "nom": "France Travail - Études et développement informatique",
         "code_rome": "M1805",
-        "classe": PipelineM1805,
+        "classe": FranceTravailPipeline,
         "description": "Collecte et analyse des offres d'emploi pour les développeurs",
     }
 }

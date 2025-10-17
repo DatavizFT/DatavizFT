@@ -15,7 +15,7 @@ sys.path.append(str(Path(__file__).parent.parent))
 from backend.clients.france_travail import FranceTravailAPIClient
 from backend.config import Config
 from backend.database import close_database, get_database, init_database
-from backend.pipelines.france_travail_mongodb import PipelineMongoDBM1805
+from backend.pipelines.instances.france_travail_pipeline import FranceTravailPipeline
 from backend.tools.logging_config import get_logger
 
 logger = get_logger(__name__)
@@ -43,7 +43,7 @@ class TesteurPipelineMongoDB:
             self.client_api = FranceTravailAPIClient()
 
             # Créer le pipeline
-            self.pipeline = PipelineMongoDBM1805(config=self.config)
+            self.pipeline = FranceTravailPipeline()
 
             logger.info("✅ Setup des composants terminé")
             return True

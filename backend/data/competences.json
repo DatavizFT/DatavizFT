@@ -1,9 +1,9 @@
 {
     "langages": [
-        "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "PHP", "Go", "Rust",
+        "Python", "JavaScript", "TypeScript", "Java", "C#", ".NET", "C++", "PHP", "Go", "Rust",
         "Ruby", "Kotlin", "Swift", "R", "Scala", "Perl", "Bash", "SQL", "HTML", "CSS",
         "SASS", "SCSS", "PowerShell", "VBA", "COBOL", "Delphi", "Lua", "Dart", "Groovy",
-        "WinDev", "WebDev", "WinDev Mobile"
+        "WinDev", "WebDev"
     ],
     "frameworks_frontend": [
         "React", "Angular", "Vue.js", "Svelte", "Next.js", "Nuxt.js"
@@ -20,7 +20,7 @@
         "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions",
         "Travis CI", "CircleCI", "Terraform", "Ansible", "Vagrant", "Helm",
         "Prometheus", "Grafana", "ELK Stack", "Nagios", "Zabbix", "SonarQube",
-        "Artifactory", "Nexus", "Chef", "Puppet", "Consul", "Vault"
+        "Artifactory", "Nexus", "Puppet", "Consul", "Vault"
     ],
     "bases_de_donnees": [
         "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis", "Cassandra",

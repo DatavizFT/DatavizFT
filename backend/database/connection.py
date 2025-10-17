@@ -69,10 +69,10 @@ class DatabaseConnection:
         try:
             # Test ping asynchrone
             await self.async_client.admin.command("ping")
-            print(f"✅ Connexion MongoDB réussie: {self.database_name}")
+            print(f"[OK] Connexion MongoDB réussie: {self.database_name}")
             return True
         except Exception as e:
-            print(f"❌ Erreur connexion MongoDB: {e}")
+            print(f"[ERREUR] Erreur connexion MongoDB: {e}")
             return False
 
     def connect_sync(self) -> bool:
@@ -85,10 +85,10 @@ class DatabaseConnection:
         try:
             # Test ping synchrone
             self.sync_client.admin.command("ping")
-            print(f"✅ Connexion MongoDB synchrone réussie: {self.database_name}")
+            print(f"[OK] Connexion MongoDB synchrone réussie: {self.database_name}")
             return True
         except Exception as e:
-            print(f"❌ Erreur connexion MongoDB synchrone: {e}")
+            print(f"[ERREUR] Erreur connexion MongoDB synchrone: {e}")
             return False
 
     async def close(self):
@@ -103,7 +103,7 @@ class DatabaseConnection:
             self._sync_client = None
             self._sync_db = None
 
-        print("🔌 Connexions MongoDB fermées")
+        print("[DB] Connexions MongoDB fermées")
 
     async def create_indexes(self):
         """Crée les index optimaux pour les collections"""
@@ -216,7 +216,7 @@ async def init_database() -> bool:
         await conn.create_indexes()
         return True
     except Exception as e:
-        print(f"❌ Erreur création index: {e}")
+        print(f"[ERREUR] Erreur création index: {e}")
         return False
 
 
