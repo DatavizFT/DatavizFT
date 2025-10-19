@@ -73,7 +73,7 @@ def nettoyer_texte(texte: str) -> str:
 
 def extraire_texte_offre(offre: dict[str, Any]) -> str:
     """
-    Extrait et combine l'intitulé et la description d'une offre
+    Extrait et combine l'intitulé, la description et les compétences requises d'une offre
 
     Args:
         offre: Dictionnaire représentant une offre d'emploi
@@ -83,9 +83,19 @@ def extraire_texte_offre(offre: dict[str, Any]) -> str:
     """
     intitule = offre.get("intitule", "")
     description = offre.get("description", "")
+    
+    # Extraction des compétences requises (champ France Travail)
+    competences_requises_texte = ""
+    competences_requises = offre.get("competences_requises", [])
+    if competences_requises and isinstance(competences_requises, list):
+        libelles_competences = []
+        for comp in competences_requises:
+            if isinstance(comp, dict) and "libelle" in comp:
+                libelles_competences.append(comp["libelle"])
+        competences_requises_texte = " ".join(libelles_competences)
 
-    # Combinaison et nettoyage
-    texte_complet = f"{intitule} {description}"
+    # Combinaison et nettoyage de tous les champs
+    texte_complet = f"{intitule} {description} {competences_requises_texte}"
     return nettoyer_texte(texte_complet)
 
 

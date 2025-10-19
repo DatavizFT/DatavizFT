@@ -6,12 +6,15 @@
         "WinDev", "WebDev"
     ],
     "frameworks_frontend": [
-        "React", "Angular", "Vue.js", "Svelte", "Next.js", "Nuxt.js"
+        "React", "Angular", "Vue.js", "Svelte", "Next.js", "Nuxt.js",
+        "jQuery", "Bootstrap", "Ember.js", "Backbone.js", "Alpine.js",
+        "Stimulus", "Lit", "Solid.js", "Preact", "Qwik"
     ],
     "frameworks_backend": [
         "Django", "Flask", "FastAPI", "Spring Boot", "Express.js", "NestJS",
         "Symfony", "Laravel", "Ruby on Rails", "ASP.NET", "Spring Framework",
-        "Quarkus", "Micronaut", "Struts", "Play Framework", "Phoenix", "Gin", "Echo"
+        "Quarkus", "Micronaut", "Struts", "Play Framework", "Phoenix", "Gin", "Echo",
+        "Node.js", "Koa.js", "Hapi.js", "Meteor.js", "Sails.js"
     ],
     "frameworks_mobile": [
         "React Native", "Flutter", "Ionic", "Xamarin"
@@ -31,6 +34,12 @@
     "data_ia": [
         "TensorFlow", "PyTorch", "Scikit-learn", "Keras", "OpenCV", "Hugging Face",
         "Pandas", "NumPy", "Matplotlib", "Seaborn", "Spark", "Dask"
+    ],
+    "datavisualisation": [
+        "D3.js", "Apache ECharts", "Chart.js", "Plotly", "Highcharts", "AmCharts", 
+        "Recharts", "Victory", "Nivo", "Observable Plot", "Vega-Lite", "Bokeh", 
+        "Altair", "Dash", "Streamlit", "Grafana", "Tableau", "Power BI", 
+        "QlikView", "Looker", "Metabase", "Superset", "Kibana", "DataStudio"
     ],
     "securite": [
         "OWASP", "Kali Linux", "Metasploit", "Wireshark", "Burp Suite",
@@ -55,7 +64,7 @@
     ],
     "ux_ui_design": [
         "Figma", "Adobe XD", "Sketch", "InVision", "Zeplin",
-        "Tailwind CSS", "Bootstrap", "Material UI"
+        "Tailwind CSS", "Material UI", "Ant Design", "Chakra UI", "Bulma"
     ],
     "collaboration_gestion": [
         "Jira", "Trello", "Notion", "Confluence", "Git", "GitHub",
@@ -65,7 +74,7 @@
     "systemes_exploitation": [
         "Linux", "Windows", "macOS", "Ubuntu", "CentOS", "Red Hat", "RHEL", "Debian",
         "Alpine", "FreeBSD", "Windows Server", "Unix", "AIX", "Solaris", "SUSE", 
-        "Android", "iOS", "Windows 10", "Windows 11"
+        "Android", "iOS", "Windows 10", "Windows 11", "AS400", "IBM i", "Mainframe", "z/OS"
     ],
     "methodologies_architecture": [
         "Agile", "Scrum", "Kanban", "DevOps", "Microservices", "SOA",
@@ -79,6 +88,53 @@
     "outils_monitoring": [
         "Datadog", "New Relic", "AppDynamics", "Splunk", "Elastic APM",
         "Sentry", "Rollbar", "Bugsnag", "LogRocket", "Hotjar"
+    ],
+    "outils_build_package": [
+        "npm", "Yarn", "pnpm", "Webpack", "Vite", "Parcel", "Rollup", "esbuild",
+        "Babel", "ESLint", "Prettier", "Grunt", "Gulp", "Bower", "Maven", "Gradle",
+        "pip", "Poetry", "Pipenv", "Composer", "Bundle", "NuGet", "Cargo"
+    ],
+    "cms_ecommerce": [
+        "WordPress", "Drupal", "Joomla", "Magento", "Shopify", "WooCommerce", "PrestaShop",
+        "Strapi", "Contentful", "Sanity", "Ghost", "Craft CMS", "Typo3", "Concrete5",
+        "BigCommerce", "Opencart", "osCommerce", "Zen Cart", "Spree Commerce", "Sylius"
+    ],
+    "blockchain_web3": [
+        "Solidity", "Ethereum", "Bitcoin", "Smart Contracts", "Web3.js", "Ethers.js",
+        "Truffle", "Hardhat", "Ganache", "OpenZeppelin", "Chainlink", "Polygon", "Binance Smart Chain",
+        "Hyperledger", "Fabric", "Solana", "Cardano", "Polkadot", "NFT", "DeFi", "IPFS", "MetaMask"
+    ],
+    "gaming_multimedia": [
+        "Unity", "Unreal Engine", "Godot", "GameMaker", "Construct", "Blender", "Maya", "3ds Max",
+        "Cinema 4D", "Adobe After Effects", "Adobe Premiere", "Adobe Photoshop", "Adobe Illustrator",
+        "Substance Painter", "ZBrush", "Houdini", "Autodesk", "SketchUp", "Davinci Resolve"
+    ],
+    "automatisation_rpa": [
+        "UiPath", "Blue Prism", "Automation Anywhere", "Power Automate", "Zapier", "IFTTT",
+        "Selenium", "Puppeteer", "Playwright", "Robot Framework", "Apache Airflow", "Celery",
+        "Cron", "Task Scheduler", "AutoHotkey", "Macro Recorder", "WorkFusion", "Kofax"
+    ],
+    "protocoles_reseaux": [
+        "TCP/IP", "HTTP", "HTTPS", "DNS", "DHCP", "VPN", "SSL/TLS", "LDAP", "Active Directory",
+        "SMTP", "POP3", "IMAP", "NTP", "SNMP", "BGP", "OSPF", "VLAN", "NAT", "Firewall",
+        "IPSec", "OpenVPN", "WireGuard", "Cisco", "Juniper", "Palo Alto", "pfSense"
+    ],
+    "reporting_etl": [
+        "Talend", "Pentaho", "SSIS", "Informatica", "Apache Airflow", "dbt", "Apache Spark",
+        "Apache Kafka", "Apache NiFi", "Fivetran", "Stitch", "Matillion", "Alteryx", 
+        "DataStage", "Ab Initio", "Snaplogic", "Boomi", "Mulesoft", "Apache Beam", "Luigi"
+    ],
+    "design_multimedia": [
+        "Adobe Creative Suite", "Photoshop", "Illustrator", "InDesign", "After Effects", "Premiere Pro",
+        "Figma", "Sketch", "Adobe XD", "Canva", "Affinity Designer", "CorelDRAW", "GIMP", "Inkscape",
+        "Procreate", "Framer", "Principle", "ProtoPie", "Marvel", "Balsamiq", "Wireframe"
+    ],
+    "erp_progiciels": [
+        "SAP", "SAP ERP", "SAP S/4HANA", "SAP ABAP", "SAP BASIS", "SAP FICO", "SAP MM", "SAP SD",
+        "Sage", "Sage X3", "Sage 100", "Sage Paie", "Sage Comptabilité", "Sage CRM",
+        "Oracle E-Business Suite", "Oracle EBS", "Oracle Fusion Cloud", "Microsoft Dynamics", 
+        "Dynamics 365", "Dynamics AX", "Dynamics NAV", "Workday", "Salesforce", 
+        "PeopleSoft", "JD Edwards", "Infor", "Epicor", "QAD"
     ],
     "certifications": [
         "AWS Certified", "Azure Certified", "Google Cloud Certified",

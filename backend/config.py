@@ -36,7 +36,7 @@ class Config:
     # Limites API
     FRANCE_TRAVAIL_RATE_LIMIT: int = int(os.getenv("FRANCE_TRAVAIL_RATE_LIMIT", "200"))
     FRANCE_TRAVAIL_MAX_RESULTS: int = int(
-        os.getenv("FRANCE_TRAVAIL_MAX_RESULTS", "1000")
+        os.getenv("FRANCE_TRAVAIL_MAX_RESULTS", "10000")  # Augmenté pour ne pas limiter
     )
     FRANCE_TRAVAIL_TIMEOUT: int = int(os.getenv("FRANCE_TRAVAIL_TIMEOUT", "30"))
 

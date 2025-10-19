@@ -166,7 +166,7 @@ async def main_force():
 
         # Exécuter le pipeline MongoDB complet forcé
         resultat = await pipeline.executer_pipeline_complet(
-            max_offres=1000, forcer_execution=True  # Collecte large
+            max_offres=None, forcer_execution=True  # Aucune limite - toutes les offres API
         )
 
         if resultat["success"]:
@@ -243,7 +243,7 @@ async def main_force_analyses():
 
         # Exécuter le pipeline avec forcer_analyses=True
         resultat = await pipeline.executer_pipeline_complet(
-            max_offres=1000,
+            max_offres=None,  # Aucune limite
             forcer_execution=False,  # Ne pas forcer la collecte
             forcer_analyses=True,  # Forcer les analyses
         )
