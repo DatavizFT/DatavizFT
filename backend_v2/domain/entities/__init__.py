@@ -11,13 +11,13 @@ Entités disponibles :
 - Statistics : Statistiques et métriques avec calculs métier
 """
 
-# Les imports seront ajoutés quand les entités seront créées
-# from .job import Job
+
+from .job import Job
 # from .competence import Competence  
 # from .statistics import Statistics
 
 __all__ = [
-    # "Job",
+    "Job",
     # "Competence", 
     # "Statistics",
 ]

@@ -13,12 +13,13 @@ Repositories disponibles :
 """
 
 # Les imports seront ajoutés quand les interfaces seront créées
-# from .job_repository import JobRepository
+from .job_repository import JobRepository
 # from .competence_repository import CompetenceRepository
 # from .statistics_repository import StatisticsRepository
 
 __all__ = [
-    # "JobRepository",
+    "JobRepository",
+    "JobRepository",
     # "CompetenceRepository", 
     # "StatisticsRepository",
 ]

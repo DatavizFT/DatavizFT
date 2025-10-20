@@ -18,16 +18,17 @@ Principes :
 - Indépendant de la technologie
 """
 
-from .entities import Job, Competence, Statistics
-from .repositories import JobRepository, CompetenceRepository, StatisticsRepository
+from .entities import Job
+from .repositories import JobRepository
 
 __all__ = [
     # Entités
     "Job",
-    "Competence", 
-    "Statistics",
+    #"Competence", 
+    #"Statistics",
     # Repositories (interfaces)
     "JobRepository",
-    "CompetenceRepository",
-    "StatisticsRepository",
+    #"CompetenceRepository",
+    #"StatisticsRepository",
+    "CollectorPipeline",
 ]
