@@ -22,3 +22,15 @@ class JobRepository(Protocol):
         Récupère une offre par son identifiant.
         """
         ...
+
+    async def get_all_active_source_id(self) -> List[Any]:
+        """
+        Retourne la liste de tous les source_id des offres actives en base.
+        """
+        ...
+
+    async def get_all_jobs_source_id(self) -> List[Any]:
+        """
+        Retourne la liste de tous les source_id présents en base.
+        """
+        ...

@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any
 
 import structlog
-from pythonjsonlogger import jsonlogger
+from pythonjsonlogger.json import JsonFormatter
 
 def configure_logging(
     app_name: str = "dataviz-ft",
@@ -93,7 +93,7 @@ def setup_file_logging(app_name: str, log_level: str, log_dir: str = "logs") -> 
     simple_formatter = CleanFormatter(
         "%(asctime)s [%(levelname)s] %(name)s: %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
     )
-    json_formatter = jsonlogger.JsonFormatter(
+    json_formatter = JsonFormatter(
         "%(asctime)s %(name)s %(levelname)s %(message)s"
     )
 

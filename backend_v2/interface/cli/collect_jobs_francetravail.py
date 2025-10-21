@@ -28,22 +28,12 @@ async def main():
 
     try:
         client = FranceTravailAPIClient()
-        service = CollectJobsService(client)
-        logger.info("[CLI] Lancement de la collecte via CollectJobsService")
-        total_offre = service.collect_jobs({"codeROME": code_rome}, page_size=150, max_offres=100)
-
-        # Connexion MongoDB et repository
         mongo = MongoDBConnection()
         job_repo = JobRepositoryMongoDB(mongo.async_db)
+        service = CollectJobsService(client, job_repo)
+        logger.info("[CLI] Lancement de la collecte via CollectJobsService")
+        total_offre = await service.collect_jobs({"codeROME": code_rome}, page_size=150)
 
-        # recuperation de tous les ids en base
-        logger.info("[CLI] Récupération des source_id en base MongoDB")
-        job_id = await job_repo.get_all_jobs_source_id()
-        logger.info("[CLI] Nombre d'id en base MongoDB", nb_id=len(job_id))
-        if job_id:
-            logger.info("[CLI] Premier id en base MongoDB", first_id=job_id[0])
-        # if total_offre:
-        #     logger.info("Première offre brute (JSON):\n" + json.dumps(total_offre[0], indent=2, ensure_ascii=False, cls=MongoJsonEncoder))
 
     except DatavizFTException as e:
         logger.error("[CLI] Erreur métier DatavizFT", error=str(e), details=getattr(e, 'job_data', None))

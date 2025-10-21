@@ -55,7 +55,7 @@ class Job:
         raw_data: Optional[Dict[str, Any]] = None,
         competences_extraites: Optional[List[str]] = None,
         date_suppression: Optional[datetime] = None,
-        active: bool = True,
+        is_active: bool = True,
         traite: bool = False,
         alternance: Optional[bool] = False,
         date_de_traitement: Optional[datetime] = None,
@@ -100,7 +100,7 @@ class Job:
 
         self.competences_extraites = competences_extraites or []
         self.date_suppression = date_suppression
-        self.active = active
+        self.is_active = is_active
         self.traite = traite
         self.date_de_traitement = date_de_traitement
 
@@ -163,7 +163,7 @@ class Job:
                 date_suppression=None,
                 traite=False,
                 date_de_traitement=None,
-                active=True,
+                is_active=True,
             )
         except Exception as e:
             raise InvalidJobDataException(
@@ -212,7 +212,7 @@ class Job:
             "date_suppression": self.date_suppression.isoformat() if self.date_suppression else None,
             "traite": self.traite,
             "date_de_traitement": self.date_de_traitement.isoformat() if self.date_de_traitement else None,
-            "active": self.active,
+            "is_active": self.is_active,
             "raw_data": self.raw_data,
         }
 
