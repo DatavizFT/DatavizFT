@@ -9,7 +9,7 @@ import sys
 import asyncio
 import json
 from bson import ObjectId
-from backend_v2.infrastructure.external_apis import FranceTravailAPIClient
+from backend_v2.infrastructure.clients import FranceTravailAPIClient
 from backend_v2.application.services.collect_jobs_service import CollectJobsService
 from backend_v2.infrastructure.database.mongodb import MongoDBConnection
 from backend_v2.infrastructure.repositories.job_repository_mongodb import JobRepositoryMongoDB

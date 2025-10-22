@@ -6,123 +6,69 @@ Représente une offre d'emploi telle que reçue de l'API France Travail.
 Inclut toutes les informations pertinentes pour l'analyse métier.
 """
 
+
+from pydantic import BaseModel, Field, field_validator
 from typing import List, Optional, Dict, Any
 from datetime import datetime
 from backend_v2.shared import InvalidJobDataException
 
-class Job:
-    """
-    Entité métier représentant une offre d'emploi complète.
-    Tous les champs de l'API France Travail sont présents.
-    """
-    def __init__(
-        self,
-        job_id: str,
-        intitule: str,
-        description: str,
-        date_creation: datetime,
-        date_actualisation: Optional[datetime],
-        lieu_travail: Dict[str, Any],
-        entreprise: Dict[str, Any],
-        agence: Dict[str, Any],
-        type_contrat: str,
-        nombre_postes: int,
-        type_contrat_libelle: str,
-        qualification_code: str,
-        qualification_libelle: str,
-        code_NAF: str,
-        nature_contrat: str,
-        experience_exigee: Optional[str],
-        experience_libelle: Optional[str],
-        niveau_formation: Optional[str],
-        salaire: Optional[Dict[str, Any]],
-        competences: Optional[List[Dict[str, Any]]],
-        langues: Optional[List[Dict[str, Any]]],
-        permis: Optional[List[Dict[str, Any]]],
-        avantages: Optional[List[str]],
-        secteurs: Optional[List[str]],
-        contact: Optional[Dict[str, Any]],
-        secteur_activite: Optional[str] = None,
-        accessible_TH: Optional[bool] = None,
-        duree_travail_libelle: Optional[str] = None,
-        duree_travail_libelle_converti: Optional[str] = None,
-        code_rome: Optional[str] = None,
-        libelle_rome: Optional[str] = None,
-        appellation_libelle: Optional[str] = None,
-        source: Optional[str] = None,
-        url_offre: Optional[str] = None,
-        origine: Optional[str] = None,
-        raw_data: Optional[Dict[str, Any]] = None,
-        competences_extraites: Optional[List[str]] = None,
-        date_suppression: Optional[datetime] = None,
-        is_active: bool = True,
-        traite: bool = False,
-        alternance: Optional[bool] = False,
-        date_de_traitement: Optional[datetime] = None,
-    ):
-        self.job_id = job_id
-        self.intitule = intitule
-        self.description = description
-        self.date_creation = date_creation
-        self.date_actualisation = date_actualisation
-        self.lieu_travail = lieu_travail
-        self.entreprise = entreprise
-        self.agence = agence
-        self.type_contrat = type_contrat
-        self.qualification_code = qualification_code
-        self.qualification_libelle = qualification_libelle
-        self.code_NAF = code_NAF
-        self.nombre_postes = nombre_postes
-        self.type_contrat_libelle = type_contrat_libelle
-        self.nature_contrat = nature_contrat
-        self.experience_exigee = experience_exigee
-        self.experience_libelle = experience_libelle
-        self.niveau_formation = niveau_formation
-        self.salaire = salaire
-        self.alternance = alternance
-        self.competences = competences or []
-        self.langues = langues or []
-        self.permis = permis or []
-        self.avantages = avantages or []
-        self.secteurs = secteurs or []
-        self.contact = contact or {}
-        self.accessible_TH = accessible_TH
-        self.secteur_activite = secteur_activite
-        self.duree_travail_libelle = duree_travail_libelle
-        self.duree_travail_libelle_converti = duree_travail_libelle_converti
-        self.code_rome = code_rome
-        self.libelle_rome = libelle_rome
-        self.appellation_libelle = appellation_libelle
-        self.source = source
-        self.url_offre = url_offre
-        self.origine = origine
-        self.raw_data = raw_data or {}
+class Job(BaseModel):
+    source_id: str
+    intitule: str
+    description: str
+    date_creation: datetime
+    date_actualisation: Optional[datetime]
+    lieu_travail: Dict[str, Any]
+    entreprise: Dict[str, Any]
+    agence: Dict[str, Any]
+    type_contrat: str
+    nombre_postes: int
+    type_contrat_libelle: str
+    qualification_code: str
+    qualification_libelle: str
+    code_NAF: str
+    nature_contrat: str
+    source: Optional[str]
+    experience_exigee: Optional[str] = None
+    experience_libelle: Optional[str] = None
+    niveau_formation: Optional[str] = None
+    salaire: Optional[Dict[str, Any]] = None
+    competences: Optional[List[Dict[str, Any]]] = Field(default_factory=list)
+    langues: Optional[List[Dict[str, Any]]] = Field(default_factory=list)
+    permis: Optional[List[Dict[str, Any]]] = Field(default_factory=list)
+    avantages: Optional[List[str]] = Field(default_factory=list)
+    secteurs: Optional[List[str]] = Field(default_factory=list)
+    contact: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    secteur_activite: Optional[str] = None
+    accessible_TH: Optional[bool] = None
+    duree_travail_libelle: Optional[str] = None
+    duree_travail_libelle_converti: Optional[str] = None
+    code_rome: Optional[str] = None
+    libelle_rome: Optional[str] = None
+    appellation_libelle: Optional[str] = None
+    url_offre: Optional[str] = None
+    origine: Optional[str] = None
+    raw_data: Optional[Dict[str, Any]] = Field(default_factory=dict)
+    competences_extraites: Optional[List[str]] = Field(default_factory=list)
+    date_suppression: Optional[datetime] = None
+    is_active: bool = True
+    traite: bool = False
+    alternance: Optional[bool] = False
+    date_de_traitement: Optional[datetime] = None
 
-        self.competences_extraites = competences_extraites or []
-        self.date_suppression = date_suppression
-        self.is_active = is_active
-        self.traite = traite
-        self.date_de_traitement = date_de_traitement
-
-        self._validate()
-
-    def _validate(self):
-        if not self.job_id or not self.intitule or not self.description:
-            raise InvalidJobDataException(
-                message="Champs obligatoires manquants (job_id, intitule, description)",
-                job_data={
-                    "job_id": self.job_id,
-                    "intitule": self.intitule,
-                    "description": self.description,
-                },
-            )
+    @field_validator('source_id', 'intitule', 'description')
+    @classmethod
+    def champs_obligatoires(cls, v, info):
+        if not v:
+            raise ValueError(f"Le champ {info.field_name} est obligatoire")
+        return v
 
     @classmethod
     def from_api(cls, data: Dict[str, Any]) -> "Job":
         """Crée une entité Job à partir d'un dict brut de l'API France Travail"""
         try:
             return cls(
-                job_id=str(data.get("id") or data.get("idOffre")),
+                source_id=str(data.get("id") or data.get("idOffre")),
                 intitule=data.get("intitule", ""),
                 description=data.get("description", ""),
                 date_creation=datetime.fromisoformat(data["dateCreation"]),
@@ -174,7 +120,7 @@ class Job:
     def to_dict(self) -> Dict[str, Any]:
         """Sérialise l'entité Job en dict (pour DB, API, logs)"""
         return {
-            "job_id": self.job_id,
+            "source_id": self.source_id,
             "intitule": self.intitule,
             "description": self.description,
             "date_creation": self.date_creation.isoformat(),
@@ -219,10 +165,10 @@ class Job:
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Job):
             return False
-        return self.job_id == other.job_id
+        return self.source_id == other.source_id
 
     def __hash__(self) -> int:
-        return hash(self.job_id)
+        return hash(self.source_id)
 
     def __repr__(self) -> str:
-        return f"<Job {self.job_id} - {self.intitule}>"
+        return f"<Job {self.source_id} - {self.intitule}>"

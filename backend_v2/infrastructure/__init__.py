@@ -20,7 +20,6 @@ Principes :
 """
 
 from .database import *
-from .external_apis import *
 from .config import *
 
 __all__ = [

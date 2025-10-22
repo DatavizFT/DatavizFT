@@ -18,7 +18,7 @@ def mark_new_jobs_step(existing_ids: set):
         Fonction à utiliser dans le pipeline
     """
     def step(job: Dict[str, Any]) -> Dict[str, Any]:
-        job_id = job.get('id') or job.get('job_id')
+        job_id = job.get('id') or job.get('source_id')
         job['is_new'] = job_id not in existing_ids
         return job
     return step

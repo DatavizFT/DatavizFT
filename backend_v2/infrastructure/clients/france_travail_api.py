@@ -15,6 +15,8 @@ from backend_v2.config import (
 
 class FranceTravailAPIClient:
     """Client API France Travail (infrastructure)"""
+    SOURCE = "France_Travail"
+
     def __init__(self, user_agent: str = "DatavizFT-Collector/1.0", rate_limit_ms: int = 120):
         self.user_agent = user_agent
         self.rate_limit_ms = rate_limit_ms
