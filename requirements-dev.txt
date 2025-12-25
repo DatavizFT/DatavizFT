@@ -23,6 +23,7 @@ pytest>=7.4.0          # Testing framework
 pytest-cov>=4.1.0      # Coverage reports
 pre-commit>=3.4.0      # Git hooks for quality
 
-# Future MongoDB support
-pymongo>=4.5.0         # MongoDB driver
-motor>=3.3.0           # Async MongoDB driver
+# MongoDB support  
+pymongo==4.8.0         # MongoDB driver
+motor==3.5.1           # Async MongoDB driver
+dnspython==2.4.2       # DNS support for MongoDB SRV records

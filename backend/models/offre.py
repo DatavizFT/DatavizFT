@@ -16,6 +16,7 @@ class SalaireModel(BaseModel):
     commentaire: str | None = None
     complement1: str | None = None
     complement2: str | None = None
+    listeComplements: str | None = None
 
 
 class EntrepriseModel(BaseModel):
@@ -66,6 +67,7 @@ class FormationModel(BaseModel):
     codeFormation: str | None = None
     domaineLibelle: str
     niveauLibelle: str | None = None
+    commentaire: str | None = None
     exigence: str | None = None
 
 
@@ -83,10 +85,55 @@ class PermisModel(BaseModel):
     exigence: str | None = None
 
 
+class ContactModel(BaseModel):
+    """Modèle pour les informations de contact"""
+
+    nom: str | None = None
+    coordonnees1: str | None = None
+    coordonnees2: str | None = None
+    coordonnees3: str | None = None
+    telephone: str | None = None
+    courriel: str | None = None
+    commentaire: str | None = None
+    urlRecruteur: str | None = None
+    urlPostulation: str | None = None
+
+
+class AgenceModel(BaseModel):
+    """Modèle pour les informations de l'agence"""
+
+    telephone: str | None = None
+    courriel: str | None = None
+
+
+class PartenaireModel(BaseModel):
+    """Modèle pour un partenaire dans l'origine de l'offre"""
+
+    nom: str | None = None
+    url: str | None = None
+    logo: str | None = None
+
+
+class OrigineOffreModel(BaseModel):
+    """Modèle pour l'origine de l'offre"""
+
+    origine: str | None = None
+    urlOrigine: str | None = None
+    partenaires: list[PartenaireModel] = Field(default_factory=list)
+
+
+class ContexteTravailModel(BaseModel):
+    """Modèle pour le contexte de travail"""
+
+    horaires: str | None = None
+    conditionsExercice: str | None = None
+
+
 class OffreFranceTravail(BaseModel):
     """
     Modèle complet pour les offres d'emploi de l'API France Travail
     Mappe exactement la structure JSON retournée par l'API
+    Inclut TOUS les champs disponibles dans la réponse API
     """
 
     # Identifiants
@@ -96,18 +143,24 @@ class OffreFranceTravail(BaseModel):
     dateCreation: datetime
     dateActualisation: datetime
 
-    # Entreprise
-    entreprise: EntrepriseModel
-
     # Localisation
     lieuTravail: LocalisationModel
+
+    # Rome (métier)
+    romeCode: str | None = None
+    romeLibelle: str | None = None
+    appellationlibelle: str | None = None
+
+    # Entreprise
+    entreprise: EntrepriseModel
 
     # Informations contractuelles
     typeContrat: str | None = None
     typeContratLibelle: str | None = None
-    natureTravail: str | None = None
+    natureContrat: str | None = None
     experienceExige: str | None = None
     experienceLibelle: str | None = None
+    experienceCommentaire: str | None = None
 
     # Compétences et qualifications
     formations: list[FormationModel] = Field(default_factory=list)
@@ -118,30 +171,49 @@ class OffreFranceTravail(BaseModel):
     )
     permis: list[PermisModel] = Field(default_factory=list)
 
+    # Outils bureautiques
+    outilsBureautiques: str | None = None
+
     # Salaire
     salaire: SalaireModel | None = None
 
     # Conditions de travail
     dureeTravailLibelle: str | None = None
     dureeTravailLibelleConverti: str | None = None
+    complementExercice: str | None = None
+    conditionExercice: str | None = None
     alternance: bool | None = None
 
-    # Contact
-    contact: dict[str, Any] | None = None
+    # Contact et agence
+    contact: ContactModel | None = None
+    agence: AgenceModel | None = None
 
-    # Métadonnées
+    # Métadonnées de l'offre
     nombrePostes: int | None = 1
     accessibleTH: bool | None = None
     deplacementCode: str | None = None
     deplacementLibelle: str | None = None
 
     # Secteur d'activité
+    codeNAF: str | None = None
     secteurActivite: str | None = None
     secteurActiviteLibelle: str | None = None
 
     # Qualification
     qualificationCode: str | None = None
     qualificationLibelle: str | None = None
+
+    # Informations entreprise étendue
+    trancheEffectifEtab: str | None = None
+    entrepriseAdaptee: bool | None = None
+    employeurHandiEngage: bool | None = None
+
+    # Origine de l'offre
+    origineOffre: OrigineOffreModel | None = None
+    offresManqueCandidats: bool | None = None
+
+    # Contexte de travail
+    contexteTravail: ContexteTravailModel | None = None
 
     class Config:
         """Configuration Pydantic"""
