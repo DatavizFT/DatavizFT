@@ -84,3 +84,5 @@ docs/_build/
 
 # pyenv
 .python-versiontest_insert.py
+
+.PR_DESCRIPTION.md
