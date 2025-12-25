@@ -83,4 +83,4 @@ docs/_build/
 .ipynb_checkpoints
 
 # pyenv
-.python-version
+.python-versiontest_insert.py
