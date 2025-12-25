@@ -3,24 +3,24 @@ MongoDB Connection - Gestion centralisée de la connexion MongoDB pour l'infrast
 Utilise motor (async) et pymongo (sync) selon les besoins
 """
 
-import os
+
 from motor.motor_asyncio import AsyncIOMotorClient, AsyncIOMotorDatabase
 from pymongo import MongoClient
 from pymongo.database import Database
 from backend_v2.shared import logger
+from backend_v2.config import Config
 
 class MongoDBConnection:
     """Gestionnaire de connexion MongoDB pour backend_v2"""
-    def __init__(self, connection_string: str | None = None):
+    def __init__(self, connection_string: str | None = None, database_name: str | None = None):
         """
         Initialise la connexion MongoDB
         Args:
-            connection_string: URI MongoDB (défaut: variable d'env MONGODB_URL)
+            connection_string: URI MongoDB (défaut: Config.MONGODB_URL)
+            database_name: nom de la base (défaut: Config.MONGODB_DATABASE)
         """
-        self.connection_string = connection_string or os.getenv(
-            "MONGODB_URL", "mongodb://localhost:27017"
-        )
-        self.database_name = os.getenv("MONGODB_DATABASE", "dataviz_ft")
+        self.connection_string = connection_string or Config.MONGODB_URL
+        self.database_name = database_name or Config.MONGODB_DATABASE
         self._async_client: AsyncIOMotorClient | None = None
         self._sync_client: MongoClient | None = None
         self._async_db: AsyncIOMotorDatabase | None = None

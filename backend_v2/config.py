@@ -41,6 +41,12 @@ class Config:
     FRANCE_TRAVAIL_TIMEOUT: int = int(os.getenv("FRANCE_TRAVAIL_TIMEOUT", "30"))
 
     # -----------------------------------------------------------------------------
+    # API Adzuna Configuration
+    # -----------------------------------------------------------------------------
+    ADZUNA_APP_ID: str | None = os.getenv("ADZUNA_APP_ID")
+    ADZUNA_CLIENT_SECRET: str | None = os.getenv("ADZUNA_CLIENT_SECRET")
+
+    # -----------------------------------------------------------------------------
     # MongoDB
     # -----------------------------------------------------------------------------
     MONGODB_URL: str = os.getenv(

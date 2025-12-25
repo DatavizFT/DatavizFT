@@ -9,6 +9,27 @@ from backend_v2.domain.repositories.job_repository import JobRepository
 from backend_v2.shared import logger
 
 class JobRepositoryMongoDB(JobRepository):
+    async def get_all_active_source_id_by_source(self, source: str) -> List[Any]:
+        """
+        Retourne la liste de tous les source_id des offres actives en base pour une source donnée.
+        Une offre est considérée comme active si le champ 'is_active' est True ou absent.
+        Args:
+            source: nom de la source (ex: 'francetravail', 'adzuna', ...)
+        """
+        self.logger.info("[JobRepositoryMongoDB] Récupération des source_id actifs pour la source depuis MongoDB", source=source)
+        try:
+            cursor = self.collection.find({
+                "$and": [
+                    {"$or": [{"is_active": True}, {"is_active": {"$exists": False}}]},
+                    {"source": source}
+                ]
+            }, {"_id": 0, "source_id": 1})
+            active_source_ids = [doc.get("source_id") for doc in await cursor.to_list(length=None)]
+            self.logger.info("[JobRepositoryMongoDB] Récupération des source_id actives terminée pour la source", source=source, nb_active_source_ids=len(active_source_ids))
+            return active_source_ids
+        except Exception as e:
+            self.logger.error("[JobRepositoryMongoDB] Erreur lors de la récupération des source_id actives par source", error=str(e), source=source)
+            raise
     def __init__(self, db: AsyncIOMotorDatabase, collection_name: str = "offres"):
         self.db = db
         self.collection = db[collection_name]

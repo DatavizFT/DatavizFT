@@ -22,7 +22,6 @@ class Job(BaseModel):
     entreprise: Dict[str, Any]
     agence: Dict[str, Any]
     type_contrat: str
-    nombre_postes: int
     type_contrat_libelle: str
     qualification_code: str
     qualification_libelle: str
@@ -65,24 +64,35 @@ class Job(BaseModel):
 
     @classmethod
     def from_api(cls, data: Dict[str, Any]) -> "Job":
-        """Crée une entité Job à partir d'un dict brut de l'API France Travail"""
+        """Crée une entité Job à partir d'un dict brut de l'API France Travail ou Adzuna"""
         try:
+            # Gestion de la date de création multi-source
+            date_creation_str = data.get("dateCreation") or data.get("created")
+            if not date_creation_str:
+                raise ValueError("Champ dateCreation ou created manquant")
+            # Support des formats ISO 8601 avec ou sans Z
+            date_creation = datetime.fromisoformat(date_creation_str.replace("Z", "+00:00"))
+
+            # Gestion de la date d'actualisation
+            date_actualisation = None
+            if data.get("dateActualisation"):
+                date_actualisation = datetime.fromisoformat(data["dateActualisation"].replace("Z", "+00:00"))
+
             return cls(
                 source_id=str(data.get("id") or data.get("idOffre")),
-                intitule=data.get("intitule", ""),
+                intitule=data.get("intitule") or data.get("title", ""),
                 description=data.get("description", ""),
-                date_creation=datetime.fromisoformat(data["dateCreation"]),
-                date_actualisation=datetime.fromisoformat(data["dateActualisation"]) if data.get("dateActualisation") else None,
-                lieu_travail=data.get("lieuTravail", {}),
+                date_creation=date_creation,
+                date_actualisation=date_actualisation,
+                lieu_travail=data.get("lieuTravail") or data.get("location", {}),
                 code_rome=data.get("romeCode"),
                 libelle_rome=data.get("romeLibelle"),
                 appellation_libelle=data.get("appellationLibelle"),
-                nombre_postes=data.get("nombrePostes", 1),
-                entreprise=data.get("entreprise", {}),
+                entreprise=data.get("entreprise") or data.get("company", {}),
                 agence=data.get("agence", {}),
                 contact=data.get("contact", {}),
                 accessible_TH=data.get("accessibleTH", None),
-                type_contrat=data.get("typeContrat", ""),
+                type_contrat=data.get("typeContrat") or data.get("contract_time", ""),
                 type_contrat_libelle=data.get("typeContratLibelle", ""),
                 qualification_code=data.get("qualificationCode", ""),
                 qualification_libelle=data.get("qualificationLibelle", ""),
@@ -102,7 +112,7 @@ class Job(BaseModel):
                 duree_travail_libelle=data.get("dureeTravailLibelle"),
                 duree_travail_libelle_converti=data.get("dureeTravailLibelleConverti"),
                 source=data.get("source"),
-                url_offre=data.get("origineOffre", {}).get("urlOrigine") or data.get("urlOffre"),
+                url_offre=data.get("origineOffre", {}).get("urlOrigine") or data.get("urlOffre") or data.get("redirect_url"),
                 origine=data.get("origineOffre", {}).get("origine") or data.get("origine"),
                 raw_data=data,
                 competences_extraites=[],
@@ -123,8 +133,8 @@ class Job(BaseModel):
             "source_id": self.source_id,
             "intitule": self.intitule,
             "description": self.description,
-            "date_creation": self.date_creation.isoformat(),
-            "date_actualisation": self.date_actualisation.isoformat() if self.date_actualisation else None,
+            "date_creation": self.date_creation,  # Garder datetime pour MongoDB
+            "date_actualisation": self.date_actualisation,  # Garder datetime pour MongoDB
             "lieu_travail": self.lieu_travail,
             "code_rome": self.code_rome,
             "libelle_rome": self.libelle_rome,
@@ -138,7 +148,6 @@ class Job(BaseModel):
             "qualification_code": self.qualification_code,
             "qualification_libelle": self.qualification_libelle,
             "code_NAF": self.code_NAF,
-            "nombre_postes": self.nombre_postes,
             "nature_contrat": self.nature_contrat,
             "alternance": self.alternance,
             "experience_exigee": self.experience_exigee,
@@ -155,9 +164,9 @@ class Job(BaseModel):
             "url_offre": self.url_offre,
             "origine": self.origine,
             "competences_extraites": self.competences_extraites,
-            "date_suppression": self.date_suppression.isoformat() if self.date_suppression else None,
+            "date_suppression": self.date_suppression,  # Garder datetime pour MongoDB
             "traite": self.traite,
-            "date_de_traitement": self.date_de_traitement.isoformat() if self.date_de_traitement else None,
+            "date_de_traitement": self.date_de_traitement,  # Garder datetime pour MongoDB
             "is_active": self.is_active,
             "raw_data": self.raw_data,
         }

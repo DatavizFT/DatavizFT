@@ -65,7 +65,6 @@ class CollectJobsService:
         jobs = []
         for job_data in jobs_raw:
             # Ajout du champ source explicite si absent
-            print(self.job_client.SOURCE)
             if 'source' not in job_data or job_data['source'] is None:
                 job_data['source'] = getattr(self.job_client, 'SOURCE', 'unknown')
             try:
