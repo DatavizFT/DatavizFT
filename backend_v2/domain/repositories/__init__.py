@@ -9,17 +9,15 @@ dans la couche infrastructure.
 Repositories disponibles :
 - JobRepository : Interface pour l'accès aux offres d'emploi
 - CompetenceRepository : Interface pour l'accès aux compétences
-- StatisticsRepository : Interface pour l'accès aux statistiques
+- StatsRepository : Interface pour l'accès aux statistiques
 """
 
-# Les imports seront ajoutés quand les interfaces seront créées
 from .job_repository import JobRepository
-# from .competence_repository import CompetenceRepository
-# from .statistics_repository import StatisticsRepository
+from .competence_repository import CompetenceRepository
+from .stats_repository import StatsRepository
 
 __all__ = [
     "JobRepository",
-    "JobRepository",
-    # "CompetenceRepository", 
-    # "StatisticsRepository",
+    "CompetenceRepository",
+    "StatsRepository",
 ]

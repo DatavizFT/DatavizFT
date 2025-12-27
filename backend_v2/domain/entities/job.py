@@ -49,6 +49,8 @@ class Job(BaseModel):
     origine: Optional[str] = None
     raw_data: Optional[Dict[str, Any]] = Field(default_factory=dict)
     competences_extraites: Optional[List[str]] = Field(default_factory=list)
+    competences_scores: Optional[Dict[str, float]] = Field(default_factory=dict)  # Score de confiance par compétence
+    embedding: Optional[List[float]] = None  # Vecteur sémantique (512 dim)
     date_suppression: Optional[datetime] = None
     is_active: bool = True
     traite: bool = False
@@ -164,6 +166,8 @@ class Job(BaseModel):
             "url_offre": self.url_offre,
             "origine": self.origine,
             "competences_extraites": self.competences_extraites,
+            "competences_scores": self.competences_scores,
+            "embedding": self.embedding,
             "date_suppression": self.date_suppression,  # Garder datetime pour MongoDB
             "traite": self.traite,
             "date_de_traitement": self.date_de_traitement,  # Garder datetime pour MongoDB

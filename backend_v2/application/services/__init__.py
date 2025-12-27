@@ -10,15 +10,11 @@ Services disponibles :
 - JobService : Coordination des opérations sur les offres
 - CompetenceService : Coordination des opérations sur les compétences
 - DataVizService : Coordination pour la génération de visualisations
+- CollectionService : Collecte automatisée multi-sources
 """
 
-# Les imports seront ajoutés quand les services seront créés
-# from .job_service import JobService
-# from .competence_service import CompetenceService
-# from .dataviz_service import DataVizService
+from .collection_service import CollectionService
 
 __all__ = [
-    # "JobService",
-    # "CompetenceService",
-    # "DataVizService",
+    "CollectionService",
 ]
