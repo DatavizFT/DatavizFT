@@ -1,20 +1,25 @@
 {
     "langages": [
-        "Python", "JavaScript", "TypeScript", "Java", "C#", ".NET", "C++", "PHP", "Go", "Rust",
-        "Ruby", "Kotlin", "Swift", "R", "Scala", "Perl", "Bash", "SQL", "HTML", "CSS",
+        "Python", "JavaScript", "TypeScript", "Java", "C#", "C/C++", ".NET", "C++", "Langage C", "PHP", "Go", "Rust",
+        "Ruby", "Kotlin", "Swift", "Langage R", "Scala", "Perl", "Bash", "SQL", "HTML", "CSS",
         "SASS", "SCSS", "PowerShell", "VBA", "COBOL", "Delphi", "Lua", "Dart", "Groovy",
-        "WinDev", "WebDev"
+        "WinDev", "WebDev", "Objective-C", "F#", "Elixir", "Clojure", "Haskell", "OCaml",
+        "PL/SQL", "T-SQL", "RPG", "ABAP", "Assembleur"
     ],
     "frameworks_frontend": [
         "React", "Angular", "Vue.js", "Svelte", "Next.js", "Nuxt.js",
         "jQuery", "Bootstrap", "Ember.js", "Backbone.js", "Alpine.js",
         "Stimulus", "Lit", "Solid.js", "Preact", "Qwik"
     ],
+    "frameworks_desktop": [
+        "Qt", "Qt Framework", "Electron", "Tauri", "GTK", "wxWidgets", "WPF", "WinForms", "JavaFX", "Swing"
+    ],
     "frameworks_backend": [
         "Django", "Flask", "FastAPI", "Spring Boot", "Express.js", "NestJS",
         "Symfony", "Laravel", "Ruby on Rails", "ASP.NET", "Spring Framework",
         "Quarkus", "Micronaut", "Struts", "Play Framework", "Phoenix", "Gin", "Echo",
-        "Node.js", "Koa.js", "Hapi.js", "Meteor.js", "Sails.js"
+        "Node.js", "Koa.js", "Hapi.js", "Meteor.js", "Sails.js", "Fastify", "AdonisJS",
+        "Hibernate", "JPA", "MyBatis", "Entity Framework"
     ],
     "frameworks_mobile": [
         "React Native", "Flutter", "Ionic", "Xamarin"
@@ -23,7 +28,8 @@
         "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions",
         "Travis CI", "CircleCI", "Terraform", "Ansible", "Vagrant", "Helm",
         "Prometheus", "Grafana", "ELK Stack", "Nagios", "Zabbix", "SonarQube",
-        "Artifactory", "Nexus", "Puppet", "Consul", "Vault"
+        "Artifactory", "Nexus", "Puppet", "Consul", "Vault", "Podman", "OpenShift",
+        "Docker Compose", "ArgoCD", "FluxCD"
     ],
     "bases_de_donnees": [
         "PostgreSQL", "MySQL", "SQLite", "MongoDB", "Redis", "Cassandra",
@@ -52,7 +58,8 @@
     ],
     "tests_qualite": [
         "Jest", "Mocha", "Cypress", "Selenium", "Playwright",
-        "JUnit", "Pytest", "Postman", "Newman"
+        "JUnit", "Pytest", "Postman", "Newman", "TestNG", "Mockito",
+        "PHPUnit", "RSpec", "Jasmine", "Karma", "Vitest", "NUnit", "xUnit"
     ],
     "environnements_ide": [
         "VS Code", "IntelliJ IDEA", "PyCharm", "Eclipse", "NetBeans",
@@ -60,14 +67,15 @@
     ],
     "api_integration": [
         "REST", "GraphQL", "gRPC", "WebSockets", "OpenAPI", "Swagger",
-        "OAuth2", "JWT", "SOAP"
+        "OAuth2", "JWT", "SOAP", "API REST", "API Gateway", "Kong", "Apigee",
+        "Insomnia", "curl", "Axios", "Fetch API"
     ],
     "ux_ui_design": [
         "Figma", "Adobe XD", "Sketch", "InVision", "Zeplin",
         "Tailwind CSS", "Material UI", "Ant Design", "Chakra UI", "Bulma"
     ],
     "collaboration_gestion": [
-        "Jira", "Trello", "Notion", "Confluence", "Git", "GitHub",
+        "Jira", "Trello", "Notion", "Confluence", "Git", "SVN", "GitHub",
         "GitLab", "Bitbucket", "Slack", "Microsoft Teams", "Azure DevOps",
         "Monday", "Asana", "Linear", "Clickup", "Miro", "Figma"
     ],
@@ -92,7 +100,11 @@
     "outils_build_package": [
         "npm", "Yarn", "pnpm", "Webpack", "Vite", "Parcel", "Rollup", "esbuild",
         "Babel", "ESLint", "Prettier", "Grunt", "Gulp", "Bower", "Maven", "Gradle",
-        "pip", "Poetry", "Pipenv", "Composer", "Bundle", "NuGet", "Cargo"
+        "pip", "Poetry", "Pipenv", "Composer", "Bundle", "NuGet", "Cargo", "Make", "CMake", "Ant"
+    ],
+    "serveurs_web": [
+        "Nginx", "Apache", "Tomcat", "IIS", "Caddy", "HAProxy", "Traefik",
+        "Gunicorn", "uWSGI", "PM2", "Passenger", "WildFly", "JBoss", "WebSphere", "WebLogic"
     ],
     "cms_ecommerce": [
         "WordPress", "Drupal", "Joomla", "Magento", "Shopify", "WooCommerce", "PrestaShop",
@@ -121,8 +133,9 @@
     ],
     "reporting_etl": [
         "Talend", "Pentaho", "SSIS", "Informatica", "Apache Airflow", "dbt", "Apache Spark",
-        "Apache Kafka", "Apache NiFi", "Fivetran", "Stitch", "Matillion", "Alteryx", 
-        "DataStage", "Ab Initio", "Snaplogic", "Boomi", "Mulesoft", "Apache Beam", "Luigi"
+        "Apache Kafka", "Apache NiFi", "Fivetran", "Stitch", "Matillion", "Alteryx",
+        "DataStage", "Ab Initio", "Snaplogic", "Boomi", "Mulesoft", "Apache Beam", "Luigi",
+        "RabbitMQ", "ActiveMQ", "Amazon SQS", "Apache Flink"
     ],
     "design_multimedia": [
         "Adobe Creative Suite", "Photoshop", "Illustrator", "InDesign", "After Effects", "Premiere Pro",

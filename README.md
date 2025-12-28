@@ -264,10 +264,7 @@ python scripts/test_mongodb.py
 tail -f logs/dataviz_ft.log
 
 # Statistiques MongoDB
-python backend/main.py --stats
-
-# État des collections
-python -c "from backend.database import get_stats; print(get_stats())"
+python backend_v2/main.py --stats
 ```
 
 ## � Déploiement

@@ -144,22 +144,21 @@ jobs:
         python -c "
         import sys
         sys.path.append('.')
-        
-        # Test imports principaux
-        from backend import COMPETENCES_REFERENTIEL, FranceTravailAPIClient
-        from backend.tools import CompetenceAnalyzer
-        
+
+        # Test imports principaux (backend_v2)
+        from backend_v2.infrastructure.clients.france_travail_api import FranceTravailAPIClient
+        from backend_v2.domain.services.competence_analyzer import CompetenceAnalyzer
+
         print('✅ Imports OK')
-        print(f'✅ {len(COMPETENCES_REFERENTIEL)} catégories de compétences chargées')
-        
+
         # Test création client (sans appel API)
         client = FranceTravailAPIClient()
         print('✅ Client API créé')
-        
+
         # Test analyseur
-        analyzer = CompetenceAnalyzer(COMPETENCES_REFERENTIEL)
-        print('✅ Analyseur de compétences OK')
-        
+        analyzer = CompetenceAnalyzer()
+        print(f'✅ Analyseur de compétences OK ({len(analyzer.competences_par_categorie)} catégories)')
+
         print('🎉 Tests d\'intégration réussis!')
         "
 

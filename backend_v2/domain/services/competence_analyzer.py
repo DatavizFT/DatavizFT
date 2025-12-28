@@ -1,9 +1,9 @@
 """
-SemanticCompetenceAnalyzer - Analyseur de compétences par embeddings sémantiques
-================================================================================
+CompetenceAnalyzer - Analyseur de compétences par matching exact + synonymes
+=============================================================================
 
-Utilise les embeddings pour détecter les compétences dans les textes d'offres.
-Approche hybride : extraction de tokens + matching sémantique.
+Détecte les compétences dans les textes d'offres d'emploi.
+Approche : matching exact avec support des synonymes/variantes.
 """
 
 import json
@@ -11,9 +11,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Dict, Optional, Set
-import numpy as np
 
-from backend_v2.infrastructure.ml import EmbeddingService
 from backend_v2.shared import logger
 
 
@@ -21,71 +19,380 @@ from backend_v2.shared import logger
 class CompetenceMatch:
     """Représente une compétence détectée avec son score de confiance"""
     nom: str
-    score: float  # 0.0 - 1.0
+    score: float  # 1.0 pour match exact
     categorie: str
+    matched_variant: Optional[str] = None  # La variante qui a matché (si différente du nom)
 
     def to_dict(self) -> Dict:
-        return {
+        result = {
             "nom": self.nom,
             "score": round(self.score, 3),
             "categorie": self.categorie
         }
+        if self.matched_variant and self.matched_variant.lower() != self.nom.lower():
+            result["matched_variant"] = self.matched_variant
+        return result
 
 
-# Mots français/anglais courants à ignorer (stop words + faux positifs fréquents)
-STOP_WORDS: Set[str] = {
-    # Français
-    "le", "la", "les", "un", "une", "des", "du", "de", "et", "ou", "nous", "vous",
-    "il", "elle", "ils", "elles", "ce", "cette", "ces", "son", "sa", "ses",
-    "notre", "votre", "leur", "pour", "avec", "dans", "sur", "par", "en", "au",
-    "aux", "qui", "que", "quoi", "dont", "est", "sont", "sera", "seront",
-    "avoir", "être", "faire", "peut", "doit", "veut", "fait", "sont",
-    # Anglais
-    "the", "a", "an", "and", "or", "we", "you", "he", "she", "it", "they",
-    "is", "are", "was", "were", "be", "been", "being", "have", "has", "had",
-    "do", "does", "did", "will", "would", "could", "should", "may", "might",
-    "must", "can", "for", "with", "in", "on", "at", "to", "from", "by",
-    # Mots métier non-techniques
-    "cdi", "cdd", "stage", "alternance", "senior", "junior", "lead", "manager",
-    "chef", "responsable", "equipe", "équipe", "projet", "mission", "poste",
-    "experience", "expérience", "ans", "annees", "années", "mois",
-    "recherchons", "recherche", "recrute", "recrutons", "rejoindre", "rejoignez",
-    "candidat", "profil", "competences", "compétences", "techniques", "technique",
-    "environnement", "stack", "outils", "outil", "technologies", "technologie",
+# Dictionnaire de synonymes : variante -> nom canonique
+# Les clés sont en lowercase, les valeurs sont les noms officiels du référentiel
+SYNONYMES: Dict[str, str] = {
+    # JavaScript
+    "js": "JavaScript",
+    "ecmascript": "JavaScript",
+    "es6": "JavaScript",
+    "es2015": "JavaScript",
+    "es2020": "JavaScript",
+    "es2021": "JavaScript",
+    "es2022": "JavaScript",
+    "es2023": "JavaScript",
+
+    # TypeScript
+    "ts": "TypeScript",
+
+    # Python
+    "py": "Python",
+    "python3": "Python",
+    "python2": "Python",
+
+    # C#
+    "csharp": "C#",
+    "c sharp": "C#",
+
+    # C++
+    "cpp": "C++",
+    "cplusplus": "C++",
+    "c plus plus": "C++",
+
+    # Langage C
+    " c ": "Langage C",  # C entouré d'espaces = langage C
+    "langage c": "Langage C",
+    "programmation c": "Langage C",
+    "c programming": "Langage C",
+    "c language": "Langage C",
+    "ansi c": "Langage C",
+    "c99": "Langage C",
+    "c11": "Langage C",
+    "c17": "Langage C",
+    "c89": "Langage C",
+
+    # .NET
+    "dotnet": ".NET",
+    "dot net": ".NET",
+    ".net core": ".NET",
+    ".net framework": ".NET",
+    "net core": ".NET",
+    "net framework": ".NET",
+    "asp.net": "ASP.NET",
+    "asp .net": "ASP.NET",
+
+    # Node.js
+    "node": "Node.js",
+    "nodejs": "Node.js",
+
+    # Vue.js
+    "vue": "Vue.js",
+    "vuejs": "Vue.js",
+
+    # React
+    "reactjs": "React",
+    "react.js": "React",
+
+    # Angular
+    "angularjs": "Angular",
+    "angular.js": "Angular",
+
+    # Next.js
+    "next": "Next.js",
+    "nextjs": "Next.js",
+
+    # Nuxt.js
+    "nuxt": "Nuxt.js",
+    "nuxtjs": "Nuxt.js",
+
+    # Express.js
+    "express": "Express.js",
+    "expressjs": "Express.js",
+
+    # Kubernetes
+    "k8s": "Kubernetes",
+    "kube": "Kubernetes",
+
+    # PostgreSQL
+    "postgres": "PostgreSQL",
+    "psql": "PostgreSQL",
+    "pgsql": "PostgreSQL",
+
+    # MongoDB
+    "mongo": "MongoDB",
+
+    # Elasticsearch
+    "elastic": "Elasticsearch",
+    "es": "Elasticsearch",  # Attention: peut aussi être ES6
+
+    # Amazon Web Services
+    "amazon web services": "AWS",
+    "amazon aws": "AWS",
+
+    # Google Cloud Platform
+    "gcp": "Google Cloud Platform",
+    "google cloud": "Google Cloud Platform",
+
+    # Microsoft Azure
+    "ms azure": "Azure",
+    "microsoft azure": "Azure",
+
+    # CI/CD
+    "ci cd": "CI/CD",
+    "cicd": "CI/CD",
+    "continuous integration": "CI/CD",
+    "continuous deployment": "CI/CD",
+    "continuous delivery": "CI/CD",
+
+    # GitLab CI
+    "gitlab-ci": "GitLab CI",
+    "gitlabci": "GitLab CI",
+
+    # GitHub Actions
+    "github-actions": "GitHub Actions",
+    "gh actions": "GitHub Actions",
+
+    # Machine Learning / IA
+    "ml": "Machine Learning",
+    "ia": "Intelligence Artificielle",
+    "ai": "Intelligence Artificielle",
+    "deep learning": "Deep Learning",
+    "dl": "Deep Learning",
+
+    # SQL Server
+    "mssql": "SQL Server",
+    "ms sql": "SQL Server",
+    "microsoft sql server": "SQL Server",
+    "sqlserver": "SQL Server",
+
+    # Power BI
+    "powerbi": "Power BI",
+
+    # Visual Studio Code
+    "vscode": "VS Code",
+    "visual studio code": "VS Code",
+
+    # IntelliJ
+    "intellij": "IntelliJ IDEA",
+
+    # Ruby on Rails
+    "rails": "Ruby on Rails",
+    "ror": "Ruby on Rails",
+
+    # Spring
+    "spring": "Spring Framework",
+    "springboot": "Spring Boot",
+    "spring-boot": "Spring Boot",
+
+    # Hibernate / JPA
+    "jpa": "JPA",
+    "java persistence api": "JPA",
+    "orm": "Hibernate",
+
+    # React Native
+    "react-native": "React Native",
+    "reactnative": "React Native",
+    "rn": "React Native",
+
+    # Tailwind
+    "tailwind": "Tailwind CSS",
+    "tailwindcss": "Tailwind CSS",
+
+    # Material UI
+    "mui": "Material UI",
+    "material-ui": "Material UI",
+
+    # REST API
+    "restful": "REST",
+    "rest api": "REST",
+    "api rest": "REST",
+    "api restful": "REST",
+    "restful api": "REST",
+    "webservice": "REST",
+    "web service": "REST",
+    "web services": "REST",
+
+    # GraphQL
+    "gql": "GraphQL",
+
+    # WebSocket
+    "ws": "WebSockets",
+    "websocket": "WebSockets",
+
+    # DevOps
+    "dev ops": "DevOps",
+
+    # Terraform
+    "tf": "Terraform",
+
+    # Ansible
+    "ansible playbook": "Ansible",
+    "ansible-playbook": "Ansible",
+
+    # ELK Stack
+    "elk": "ELK Stack",
+    "elastic stack": "ELK Stack",
+
+    # Scikit-learn
+    "sklearn": "Scikit-learn",
+    "scikit learn": "Scikit-learn",
+
+    # TensorFlow
+    "tf": "TensorFlow",
+
+    # OpenCV
+    "opencv": "OpenCV",
+    "open cv": "OpenCV",
+
+    # Pandas
+    "pd": "Pandas",
+
+    # NumPy
+    "np": "NumPy",
+
+    # Langage R (statistiques)
+    " r ": "Langage R",  # R entouré d'espaces = langage R
+    "rstudio": "Langage R",
+    "r studio": "Langage R",
+    "r-studio": "Langage R",
+    "langage r": "Langage R",
+    "programmation r": "Langage R",
+    "r programming": "Langage R",
+    "r language": "Langage R",
+    "cran": "Langage R",
+    "ggplot2": "Langage R",
+    "ggplot": "Langage R",
+    "tidyverse": "Langage R",
+    "dplyr": "Langage R",
+    "shiny": "Langage R",
+
+    # Mainframe / AS400
+    "as/400": "AS400",
+    "iseries": "IBM i",
+    "i series": "IBM i",
+
+    # RPG (langage IBM)
+    "rpgle": "RPG",
+    "rpg iv": "RPG",
+    "rpg/400": "RPG",
+
+    # COBOL
+    "cobol/400": "COBOL",
+
+    # z/OS
+    "zos": "z/OS",
+    "mvs": "z/OS",
+
+    # JCL
+    "jcl": "JCL",
+
+    # WinDev / WebDev
+    "windev mobile": "WinDev",
+    "webdev": "WebDev",
+
+    # SAP
+    "sap erp": "SAP",
+    "sap hana": "SAP S/4HANA",
+    "s4hana": "SAP S/4HANA",
+    "s/4hana": "SAP S/4HANA",
+
+    # Agile / Scrum
+    "méthodologie agile": "Agile",
+    "méthode agile": "Agile",
+    "agilité": "Agile",
+    "scrum master": "Scrum",
+    "scrummaster": "Scrum",
+
+    # Tests
+    "unit test": "Tests unitaires",
+    "unit tests": "Tests unitaires",
+    "test unitaire": "Tests unitaires",
+    "tdd": "TDD",
+    "bdd": "BDD",
+
+    # Protocoles
+    "tcp ip": "TCP/IP",
+    "tcp/ip": "TCP/IP",
+    "ssl tls": "SSL/TLS",
+    "ssl/tls": "SSL/TLS",
+    "tls": "SSL/TLS",
+    "ssl": "SSL/TLS",
+
+    # Serveurs web
+    "apache httpd": "Apache",
+    "httpd": "Apache",
+    "apache2": "Apache",
+    "nginx-ingress": "Nginx",
+
+    # Message queues
+    "rabbitmq": "RabbitMQ",
+    "rabbit mq": "RabbitMQ",
+    "amqp": "RabbitMQ",
+    "sqs": "Amazon SQS",
+
+    # Assembleur
+    "assembly": "Assembleur",
+    "asm": "Assembleur",
+
+    # Objective-C
+    "objc": "Objective-C",
+    "obj-c": "Objective-C",
+
+    # Docker
+    "docker-compose": "Docker Compose",
+    "compose": "Docker Compose",
+
+    # Qt Framework
+    "qt5": "Qt",
+    "qt6": "Qt",
+    "qt4": "Qt",
+    "pyqt": "Qt",
+    "pyqt5": "Qt",
+    "pyqt6": "Qt",
+    "pyside": "Qt",
+    "pyside2": "Qt",
+    "pyside6": "Qt",
+    "qml": "Qt",
+    "qt creator": "Qt",
+    "qtcreator": "Qt",
+
+    # Electron
+    "electronjs": "Electron",
+    "electron.js": "Electron",
 }
 
 
-class SemanticCompetenceAnalyzer:
+class CompetenceAnalyzer:
     """
-    Analyseur de compétences par similarité sémantique.
+    Analyseur de compétences par matching exact + synonymes.
 
-    Approche hybride :
-    1. Extrait les tokens/n-grams du texte
-    2. Compare chaque token aux embeddings du référentiel
-    3. Filtre par seuil de similarité
+    Approche :
+    1. Matching exact des compétences du référentiel (case-insensitive)
+    2. Matching des synonymes/variantes définis explicitement
     """
 
     DEFAULT_REFERENTIEL_PATH = Path(__file__).parent.parent.parent / "data" / "competences.json"
 
     def __init__(
         self,
-        embedding_service: EmbeddingService,
         referentiel: Optional[Dict[str, List[str]]] = None,
         referentiel_path: Optional[Path] = None,
-        seuil_similarite: float = 0.85
+        synonymes: Optional[Dict[str, str]] = None,
     ):
         """
         Initialise l'analyseur avec le référentiel de compétences.
 
         Args:
-            embedding_service: Service d'embeddings
             referentiel: Dict {categorie: [competences]} (optionnel)
             referentiel_path: Chemin vers le JSON du référentiel (optionnel)
-            seuil_similarite: Score minimum pour considérer un match (0.0-1.0)
+            synonymes: Dict {variante: nom_canonique} (optionnel, utilise SYNONYMES par défaut)
         """
-        self.embedding_service = embedding_service
-        self.seuil = seuil_similarite
-        self._logger = logger.bind(service="SemanticCompetenceAnalyzer")
+        self._logger = logger.bind(service="CompetenceAnalyzer")
 
         # Charger le référentiel
         if referentiel is not None:
@@ -94,86 +401,68 @@ class SemanticCompetenceAnalyzer:
             path = referentiel_path or self.DEFAULT_REFERENTIEL_PATH
             self._referentiel = self._load_referentiel(path)
 
-        # Pré-calculer les embeddings du référentiel
-        self._competences_flat: List[str] = []
-        self._competences_lower: Set[str] = set()  # Pour matching exact rapide
-        self._categories: List[str] = []
-        self._competence_embeddings: Optional[np.ndarray] = None
+        # Synonymes
+        self._synonymes = synonymes if synonymes is not None else SYNONYMES
 
-        self._build_embeddings_index()
+        # Index pour recherche rapide
+        self._competences_flat: List[str] = []
+        self._competence_to_category: Dict[str, str] = {}
+        self._competences_lower_set: Set[str] = set()
+
+        self._build_index()
 
     def _load_referentiel(self, path: Path) -> Dict[str, List[str]]:
         """Charge le référentiel depuis un fichier JSON"""
         self._logger.info(
-            "[SemanticCompetenceAnalyzer] Chargement du référentiel",
+            "[CompetenceAnalyzer] Chargement du référentiel",
             path=str(path)
         )
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
 
-    def _build_embeddings_index(self) -> None:
-        """Construit l'index des embeddings pour toutes les compétences"""
-        self._logger.info(
-            "[SemanticCompetenceAnalyzer] Construction de l'index d'embeddings"
-        )
+    def _build_index(self) -> None:
+        """Construit l'index pour recherche rapide"""
+        self._logger.info("[CompetenceAnalyzer] Construction de l'index")
 
-        # Aplatir le référentiel
         for categorie, competences in self._referentiel.items():
             for comp in competences:
                 self._competences_flat.append(comp)
-                self._competences_lower.add(comp.lower())
-                self._categories.append(categorie)
+                self._competence_to_category[comp] = categorie
+                self._competences_lower_set.add(comp.lower())
 
         self._logger.info(
-            "[SemanticCompetenceAnalyzer] Encodage des compétences",
+            "[CompetenceAnalyzer] Index construit",
             nb_competences=len(self._competences_flat),
-            nb_categories=len(set(self._categories))
+            nb_categories=len(self._referentiel),
+            nb_synonymes=len(self._synonymes)
         )
 
-        # Encoder toutes les compétences en batch
-        self._competence_embeddings = self.embedding_service.encode(
-            self._competences_flat,
-            batch_size=64,
-            show_progress=False
-        )
-
-        self._logger.info(
-            "[SemanticCompetenceAnalyzer] Index construit",
-            embedding_shape=self._competence_embeddings.shape
-        )
-
-    def _extract_tokens(self, text: str) -> List[str]:
+    def _create_pattern(self, term: str) -> str:
         """
-        Extrait les tokens significatifs du texte.
-
-        Inclut les mots simples et les bi-grams pour capturer
-        des compétences comme "GitLab CI", "Machine Learning", etc.
+        Crée un pattern regex pour matcher un terme.
+        Gère les cas spéciaux comme C#, C++, .NET, " R ", etc.
         """
-        # Extraire les mots (lettres, chiffres, ., +, #)
-        words = re.findall(r'\b[A-Za-z][A-Za-z0-9\.\+\#]*\b', text)
+        # Cas spécial : terme avec espaces (ex: " r " pour le langage R)
+        # On cherche le terme tel quel, les espaces font partie du pattern
+        if term.startswith(' ') or term.endswith(' '):
+            return re.escape(term)
 
-        # Filtrer les stop words et mots trop courts
-        tokens = []
-        for word in words:
-            if len(word) >= 2 and word.lower() not in STOP_WORDS:
-                tokens.append(word)
+        term_escaped = re.escape(term)
 
-        # Ajouter les bi-grams (pour "GitLab CI", "Spring Boot", etc.)
-        bigrams = []
-        for i in range(len(words) - 1):
-            w1, w2 = words[i], words[i + 1]
-            if w1.lower() not in STOP_WORDS and w2.lower() not in STOP_WORDS:
-                bigrams.append(f"{w1} {w2}")
+        # Pour les termes commençant par un caractère spécial (.NET, #, etc.)
+        if term[0] in '.#':
+            return r'(?<![a-zA-Z0-9])' + term_escaped + r'(?![a-zA-Z0-9])'
 
-        return list(set(tokens + bigrams))
+        # Pour C#, C++, etc. - ne pas exiger de word boundary après les symboles
+        if term_escaped.endswith(r'\#') or term_escaped.endswith(r'\+\+'):
+            return r'\b' + term_escaped + r'(?![a-zA-Z0-9])'
+
+        # Cas standard avec word boundaries
+        return r'\b' + term_escaped + r'\b'
 
     def analyze_text(self, text: str, top_k: Optional[int] = None) -> List[CompetenceMatch]:
         """
         Détecte les compétences dans un texte.
-
-        Approche hybride :
-        1. Matching exact (case-insensitive) pour les compétences présentes textuellement
-        2. Matching sémantique pour les synonymes/variantes
 
         Args:
             text: Texte à analyser (description d'offre, etc.)
@@ -186,55 +475,41 @@ class SemanticCompetenceAnalyzer:
             return []
 
         matches: Dict[str, CompetenceMatch] = {}
-
-        # 1. Matching exact avec word boundaries (prioritaire, score = 1.0)
         text_lower = text.lower()
-        for i, comp in enumerate(self._competences_flat):
+
+        # 1. Matching exact des compétences du référentiel
+        for comp in self._competences_flat:
             comp_lower = comp.lower()
-            # Utiliser regex avec word boundaries pour éviter les sous-chaînes
-            # Échapper les caractères spéciaux regex dans le nom de compétence
-            pattern = r'\b' + re.escape(comp_lower) + r'\b'
-            if re.search(pattern, text_lower):
+            pattern = self._create_pattern(comp_lower)
+
+            if re.search(pattern, text_lower, re.IGNORECASE):
                 matches[comp] = CompetenceMatch(
                     nom=comp,
                     score=1.0,
-                    categorie=self._categories[i]
+                    categorie=self._competence_to_category[comp]
                 )
 
-        # 2. Matching sémantique sur les tokens
-        tokens = self._extract_tokens(text)
+        # 2. Matching des synonymes
+        for variante, nom_canonique in self._synonymes.items():
+            # Skip si la compétence canonique est déjà trouvée
+            if nom_canonique in matches:
+                continue
 
-        if tokens:
-            # Encoder tous les tokens en batch
-            token_embeddings = self.embedding_service.encode(tokens)
-
-            # Pour chaque token, trouver la meilleure compétence
-            for i, token in enumerate(tokens):
-                # Skip si le token est déjà une compétence exacte trouvée
-                if token in matches:
-                    continue
-
-                similarities = self.embedding_service.batch_similarity(
-                    token_embeddings[i],
-                    self._competence_embeddings
+            # Vérifier si la variante est dans le texte
+            pattern = self._create_pattern(variante)
+            if re.search(pattern, text_lower, re.IGNORECASE):
+                # Trouver la catégorie du nom canonique
+                categorie = self._competence_to_category.get(nom_canonique, "autres")
+                matches[nom_canonique] = CompetenceMatch(
+                    nom=nom_canonique,
+                    score=1.0,
+                    categorie=categorie,
+                    matched_variant=variante
                 )
 
-                best_idx = int(np.argmax(similarities))
-                best_score = float(similarities[best_idx])
-
-                if best_score >= self.seuil:
-                    comp_name = self._competences_flat[best_idx]
-                    # Ne pas écraser un match exact
-                    if comp_name not in matches:
-                        matches[comp_name] = CompetenceMatch(
-                            nom=comp_name,
-                            score=best_score,
-                            categorie=self._categories[best_idx]
-                        )
-
-        # Convertir en liste et trier par score
+        # Convertir en liste et trier par nom
         result = list(matches.values())
-        result.sort(key=lambda m: m.score, reverse=True)
+        result.sort(key=lambda m: m.nom.lower())
 
         # Limiter si demandé
         if top_k is not None:
@@ -261,21 +536,20 @@ class SemanticCompetenceAnalyzer:
         Returns:
             Liste des compétences détectées
         """
-        # Combiner intitulé et description
         full_text = f"{intitule}\n\n{description}"
         return self.analyze_text(full_text, top_k=top_k)
 
     def get_referentiel_stats(self) -> Dict:
         """Retourne des statistiques sur le référentiel chargé"""
         stats_by_category = {}
-        for cat in set(self._categories):
-            stats_by_category[cat] = self._categories.count(cat)
+        for cat, comps in self._referentiel.items():
+            stats_by_category[cat] = len(comps)
 
         return {
             "total_competences": len(self._competences_flat),
-            "nb_categories": len(stats_by_category),
+            "nb_categories": len(self._referentiel),
             "competences_par_categorie": stats_by_category,
-            "seuil_similarite": self.seuil
+            "nb_synonymes": len(self._synonymes)
         }
 
     @property
@@ -287,3 +561,12 @@ class SemanticCompetenceAnalyzer:
     def nb_competences(self) -> int:
         """Nombre total de compétences dans le référentiel"""
         return len(self._competences_flat)
+
+    @property
+    def synonymes(self) -> Dict[str, str]:
+        """Accès aux synonymes"""
+        return self._synonymes
+
+
+# Alias pour compatibilité avec l'ancien code
+SemanticCompetenceAnalyzer = CompetenceAnalyzer
