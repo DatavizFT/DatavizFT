@@ -46,9 +46,11 @@ class AdzunaAPIClient:
             headers = {"User-Agent": self.user_agent}
             response = httpx.get(url, params=query_params, headers=headers)
             if response.status_code != 200:
-                self.logger.error("Erreur HTTP lors de la collecte d'une page Adzuna", status_code=response.status_code, page=page)
+                self.logger.error("Erreur HTTP lors de la collecte d'une page Adzuna", status_code=response.status_code, page=page, response_text=response.text[:500])
                 break
             data = response.json()
+            if page == 1:
+                self.logger.info("Réponse Adzuna page 1", count=data.get("count", 0), nb_results=len(data.get("results", [])))
             offres_page = data.get("results", [])
             toutes_offres.extend(offres_page)
             total_collected += len(offres_page)

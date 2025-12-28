@@ -1,1 +1,0 @@
-"""Tests pour les outils."""
