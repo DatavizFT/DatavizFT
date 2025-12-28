@@ -1,370 +1,289 @@
-# � DatavizFT - Analytics Marché Emploi IT avec MongoDB
+# DatavizFT
 
-[![MongoDB](https://img.shields.io/badge/Database-MongoDB%207.0-green.svg)](https://mongodb.com)
-[![Python](https://img.shields.io/badge/Python-3.13-blue.svg)](https://python.org)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Pipeline](https://img.shields.io/badge/Pipeline-Async%20Ready-success.svg)]()
+> Plateforme d'analyse et de visualisation des tendances du marché de l'emploi IT en France
 
-> **Plateforme d'analyse avancée du marché de l'emploi IT avec architecture MongoDB haute performance**
+DatavizFT collecte automatiquement les offres d'emploi depuis plusieurs sources (France Travail, Adzuna), extrait les compétences demandées, et visualise leur évolution dans le temps via un dashboard interactif.
 
-**DatavizFT** est une solution complète d'analyse du marché de l'emploi spécialisée dans le secteur IT français (code ROME M1805). Après une migration réussie vers **MongoDB**, le système offre des performances exceptionnelles et des capacités d'analyse en temps réel.
+## Table des matières
 
-## ✨ Nouveautés MongoDB (Octobre 2025)
+- [Fonctionnalités](#fonctionnalités)
+- [Architecture](#architecture)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Utilisation](#utilisation)
+- [API Endpoints](#api-endpoints)
+- [Structure du projet](#structure-du-projet)
+- [Développement](#développement)
+- [Tests](#tests)
+- [Licence](#licence)
 
-🎯 **Migration Réussie** - 1,256 offres d'emploi migrées avec 0 erreur  
-⚡ **Performances ×580** plus rapides qu'avec les fichiers JSON  
-🔍 **Recherches Avancées** - Agrégations MongoDB natives  
-🔄 **Pipeline Asynchrone** - Architecture concurrent moderne  
-📊 **Analytics Temps Réel** - Statistiques instantanées  
+## Fonctionnalités
 
-### Métriques de Performance
-| Opération | Avant (JSON) | Après (MongoDB) | Amélioration |
-|-----------|--------------|-----------------|-------------|
-| **Recherche** | 2-5 sec | 5-15 ms | **×400** |
-| **Insertion 1K offres** | 45 sec | 4 sec | **×11** |
-| **Analytics** | 30 sec | 50 ms | **×600** |
-| **Concurrence** | ❌ | ✅ Illimitée | **Nouveau** |
+- **Collecte multi-sources** : France Travail API (codes ROME M1805, M1802, M1810) et Adzuna
+- **Extraction automatique des compétences** : Analyse NLP avec référentiel de 250+ technologies
+- **Déduplication intelligente** : Détection des doublons par source_id
+- **Visualisation interactive** : Dashboard React avec graphiques ECharts
+- **Filtrage avancé** : Par source, ville, période
+- **Scheduler automatique** : Collecte périodique des nouvelles offres
+- **API REST** : Endpoints FastAPI pour intégration externe
 
-## 🎯 Fonctionnalités Principales
+## Architecture
 
-### 📈 Pipeline de Données Intelligent
-- ✅ **Collecte automatisée** via API France Travail
-- ✅ **Détection de doublons** automatique 
-- ✅ **Extraction de compétences** par IA textuelle
-- ✅ **Vérification 24h** pour éviter la sur-collecte
-- ✅ **Pipeline asynchrone** avec gestion concurrente
+Le projet suit une **architecture hexagonale** (Ports & Adapters) avec séparation claire des responsabilités :
 
-### 🧠 Analyse des Compétences
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         INTERFACE LAYER                              │
+│  ┌──────────────┐    ┌──────────────┐                               │
+│  │  FastAPI     │    │  React       │                               │
+│  │  REST API    │    │  Dashboard   │                               │
+│  └──────┬───────┘    └──────┬───────┘                               │
+└─────────┼───────────────────┼───────────────────────────────────────┘
+          │                   │
+┌─────────┼───────────────────┼───────────────────────────────────────┐
+│         │     APPLICATION LAYER                                      │
+│  ┌──────▼───────────────────▼──────┐                                │
+│  │    CollectionService            │                                │
+│  │    (Orchestration)              │                                │
+│  └──────┬──────────────────────────┘                                │
+└─────────┼───────────────────────────────────────────────────────────┘
+          │
+┌─────────┼───────────────────────────────────────────────────────────┐
+│         │         DOMAIN LAYER                                       │
+│  ┌──────▼──────┐  ┌─────────────────┐  ┌────────────────┐           │
+│  │  Job Entity │  │ CompetenceAnalyzer │  │ DeduplicationService │    │
+│  └─────────────┘  └─────────────────┘  └────────────────┘           │
+└─────────────────────────────────────────────────────────────────────┘
+          │
+┌─────────┼───────────────────────────────────────────────────────────┐
+│         │      INFRASTRUCTURE LAYER                                  │
+│  ┌──────▼──────┐  ┌─────────────────┐  ┌────────────────┐           │
+│  │  MongoDB    │  │ France Travail   │  │  Adzuna API    │           │
+│  │  Repository │  │ API Client       │  │  Client        │           │
+│  └─────────────┘  └─────────────────┘  └────────────────┘           │
+└─────────────────────────────────────────────────────────────────────┘
+```
 
-- **19 catégories** de compétences techniques
-- **259+ technologies** référencées
-- **Scoring de pertinence** par contexte
-- **Tendances temporelles** automatisées
-- **Géolocalisation** par département / coordonnées gps
+## Prérequis
 
-### 🗄️ Base de Données MongoDB
-- **Collections optimisées** avec index performants
-- **Schéma flexible** validé par Pydantic
-- **Agrégations avancées** pour analytics
-- **Persistence Docker** garantie
-- **Backup automatique** des données
+- **Python** 3.11+
+- **Node.js** 18+
+- **Docker** & Docker Compose
+- **MongoDB** 7.0 (via Docker)
 
-## �️ Stack Technique
+## Installation
 
-### Backend
-- **Python 3.13** - Langage principal
-- **MongoDB 7.0** - Base NoSQL haute performance  
-- **Motor** - Driver MongoDB asynchrone
-- **Pydantic V2** - Validation des données
-- **AsyncIO** - Architecture concurrente
-- **Structlog** - Logging structuré JSON
+### 1. Cloner le repository
 
-### Infrastructure
-- **Docker Compose** - Orchestration MongoDB
-- **MongoDB Compass** - Interface graphique
-- **GitHub Actions** - CI/CD automatique
-
-## 🚀 Installation Rapide
-
-### Prérequis
-- **Python 3.11+** (testé avec 3.13)
-- **Docker Desktop** (pour MongoDB)
-- **Compte développeur** France Travail
-
-### 1. Configuration du Projet
 ```bash
-# Clone du repository
-git clone https://github.com/DatavizFT/DatavizFT.git
-cd DatavizFT
+git clone https://github.com/votre-org/datavizft.git
+cd datavizft
+```
 
-# Environnement virtuel
+### 2. Démarrer MongoDB
+
+```bash
+docker-compose up -d mongodb mongo-express
+```
+
+MongoDB sera accessible sur `localhost:27017`, Mongo Express sur `localhost:8081`.
+
+### 3. Installer le backend
+
+```bash
+# Créer un environnement virtuel
 python -m venv .venv
-.venv\Scripts\activate  # Windows
-# ou source .venv/bin/activate  # Linux/Mac
+source .venv/bin/activate  # Linux/macOS
+# ou .venv\Scripts\activate  # Windows
 
-# Installation des dépendances
+# Installer les dépendances
 pip install -r requirements.txt
 ```
 
-### 2. Lancement MongoDB
+### 4. Installer le frontend
+
 ```bash
-# Démarrage MongoDB avec Docker
-docker-compose up -d mongodb
-
-# Vérification de la connexion
-python scripts/test_mongodb.py
+cd frontend
+npm install
 ```
 
-### 3. Configuration API
-Créer un fichier `.env` :
-```env
-FRANCE_TRAVAIL_CLIENT_ID=votre_client_id
-FRANCE_TRAVAIL_CLIENT_SECRET=votre_client_secret
-MONGODB_URL=mongodb://admin:datavizft2025@localhost:27017/dataviz_ft_dev?authSource=admin
-```
+### 5. Configurer les variables d'environnement
 
-## � Utilisation
-
-### Commandes Principales
 ```bash
-# 📊 Affichage des statistiques MongoDB
-python backend/main.py --stats
-
-# 🔄 Collecte normale (respecte les 24h)
-python backend/main.py
-
-# 💪 Collecte forcée (ignore les 24h) 
-python backend/main.py --force
-
-# 🎯 Collecte limitée (test)
-python backend/main.py --limit 50
+cp .env.example .env
+# Éditer .env avec vos credentials API
 ```
 
-### Exemple de Sortie
-```
-📊 STATISTIQUES PIPELINE MONGODB M1805
-=======================================================
-Code ROME: M1805
-Offres en base: 1,256
-Compétences uniques: 5
-Détections: 0
-Stockage: MongoDB Local/Atlas
-Dernière collecte: 2025-10-15 06:41:47
-```
+## Configuration
 
-### Scripts Utilitaires
+### Variables d'environnement principales
+
+| Variable | Description | Défaut |
+|----------|-------------|--------|
+| `FRANCETRAVAIL_CLIENT_ID` | Client ID France Travail API | - |
+| `FRANCETRAVAIL_CLIENT_SECRET` | Client Secret France Travail API | - |
+| `ADZUNA_APP_ID` | App ID Adzuna API | - |
+| `ADZUNA_CLIENT_SECRET` | Client Secret Adzuna API | - |
+| `MONGODB_URL` | URL de connexion MongoDB | `mongodb://admin:datavizft2025@localhost:27017/dataviz_ft_dev?authSource=admin` |
+| `APP_ENV` | Environnement (`development`/`production`) | `development` |
+
+### Obtenir les credentials API
+
+1. **France Travail** : [Portail Emploi Store Dev](https://francetravail.io/data/api)
+2. **Adzuna** : [Adzuna API](https://developer.adzuna.com/)
+
+## Utilisation
+
+### Démarrer le backend
+
 ```bash
-# Migration des données JSON vers MongoDB
-python scripts/migrate_direct_mongodb.py
-
-# Test de pipeline simple
-python scripts/test_simple_pipeline.py
-
-# Nettoyage des index MongoDB
-python scripts/clean_mongodb_indexes.py
+# Depuis la racine du projet
+python -m uvicorn backend_v2.interface.api.main:app --reload --port 8000
 ```
 
-## 📊 Base de Données MongoDB
+L'API sera disponible sur `http://localhost:8000`. Documentation Swagger : `http://localhost:8000/docs`.
 
-### Collections Principales
+### Démarrer le frontend
 
-#### `offres` (1,256 documents)
-```javascript
-{
-  "source_id": "2679761",
-  "intitule": "Développeur Fullstack JS (H/F)",
-  "description": "Nous recherchons un développeur...",
-  "date_creation": ISODate("2025-09-20T14:42:58Z"),
-  "date_collecte": ISODate("2025-10-15T06:41:47Z"),
-  "entreprise": { "nom": "Nextep HR" },
-  "localisation": { 
-    "ville": "59 - Marcq-en-Barœul",
-    "departement": "59"
-  },
-  "contrat": { "type": "CDI" },
-  "competences_extraites": ["JavaScript", "React.js", "Node.js"],
-  "traite": false
-}
-```
-
-#### `competences` (5+ documents)
-```javascript
-{
-  "nom": "JavaScript",
-  "nom_normalise": "javascript",
-  "categorie": "langages_programmation", 
-  "frequence_detection": 245,
-  "derniere_detection": ISODate("2025-10-15T10:30:00Z")
-}
-```
-
-### Index Optimisés
-```javascript
-// Index pour performances maximales
-db.offres.createIndex({"source_id": 1}, {unique: true})
-db.offres.createIndex({"date_creation": -1})
-db.offres.createIndex({"competences_extraites": 1})
-db.offres.createIndex({"localisation.departement": 1})
-```
-
-## 📁 Architecture du Projet
-
-```
-DatavizFT/
-├── 🐍 backend/
-│   ├── main.py                    # � Point d'entrée principal
-│   ├── config.py                  # ⚙️ Configuration centralisée
-│   ├── 📡 clients/
-│   │   └── france_travail.py      # 🔌 Client API France Travail
-│   ├── 🗄️ database/
-│   │   ├── __init__.py            # � Connexion MongoDB Motor
-│   │   └── repositories/          # 📊 Pattern Repository
-│   ├── 📋 models/
-│   │   └── mongodb/               # 🏗️ Schémas Pydantic MongoDB
-│   ├── ⚡ pipelines/
-│   │   ├── france_travail_m1805.py     # 📁 Pipeline JSON (legacy)
-│   │   └── france_travail_mongodb.py   # 🚀 Pipeline MongoDB (actif)
-│   └── 🛠️ tools/
-│       ├── competence_analyzer.py # 🧠 Analyseur de compétences
-│       └── logging_config.py      # 📝 Configuration logs
-├── 📊 data/                       # 📂 Données historiques JSON
-├── 📜 scripts/                    # 🔧 Scripts maintenance/migration
-├── 🧪 tests/                      # ✅ Tests automatisés
-├── 📚 docs/                       # 📖 Documentation technique
-├── 🐳 docker-compose.yml          # 🏗️ Configuration MongoDB
-└── 📋 requirements.txt            # 📦 Dépendances Python
-```
-
-## � Migration Réussie
-
-### Résultats de Migration JSON → MongoDB
-```
-📊 RÉSULTATS MIGRATION DIRECTE JSON → MONGODB
-✅ Succès - Durée: 0:00:04.025214
-
-📄 OFFRES:
-   Fichiers traités: 3
-   Offres lues: 2,334
-   Offres converties: 1,256
-   Offres sauvegardées: 1,256
-   Offres ignorées (doublons): 1,078
-   Erreurs: 0
-
-🎯 MongoDB est prêt avec toutes vos données !
-```
-
-### Capacités Actuelles
-- ✅ **1,256 offres** migrées en < 4 secondes
-- ✅ **1,078 doublons** automatiquement détectés
-- ✅ **0 erreur** durant la migration
-- ✅ **5 compétences** uniques identifiées
-- ✅ **Collection récente** détectée (24h)
-
-## 🧪 Tests & Qualité
-
-### Lancer les Tests
 ```bash
-# Tests complets
-pytest tests/ -v
-
-# Tests avec couverture  
-pytest --cov=backend tests/
-
-# Test pipeline MongoDB simple
-python scripts/test_simple_pipeline.py
-
-# Test connexion MongoDB
-python scripts/test_mongodb.py
+cd frontend
+npm run dev
 ```
 
-### Monitoring
+Le dashboard sera accessible sur `http://localhost:5173`.
+
+### Lancer une collecte manuelle
+
 ```bash
-# Logs en temps réel
-tail -f logs/dataviz_ft.log
-
-# Statistiques MongoDB
-python backend_v2/main.py --stats
+# Via l'API (POST)
+curl -X POST http://localhost:8000/api/collection/collect
 ```
 
-## � Déploiement
+## API Endpoints
 
-### Production avec Docker
+### Skills (Compétences)
+
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| `GET` | `/api/skills/evolution` | Évolution des compétences dans le temps |
+
+Paramètres : `source`, `city`, `start_date`, `end_date`, `top_n`
+
+### Filtres
+
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| `GET` | `/api/filters/cities` | Top villes par nombre d'offres |
+| `GET` | `/api/filters/sources` | Sources de données disponibles |
+
+### Collection
+
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| `POST` | `/api/collection/collect` | Déclencher une collecte |
+| `GET` | `/api/collection/status` | Statut de la collecte |
+
+### Statistiques
+
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| `GET` | `/api/stats/latest` | Dernières statistiques générées |
+
+## Structure du projet
+
+```
+datavizft/
+├── backend_v2/                  # Backend (Architecture Hexagonale)
+│   ├── domain/                  # Logique métier pure
+│   │   ├── entities/           # Entités (Job)
+│   │   ├── repositories/       # Interfaces (Ports)
+│   │   └── services/           # Services domaine
+│   ├── application/            # Orchestration (Use Cases)
+│   │   └── services/          # CollectionService
+│   ├── infrastructure/         # Implémentations techniques
+│   │   ├── database/          # MongoDB
+│   │   ├── clients/           # APIs externes
+│   │   └── repositories/      # Implémentations MongoDB
+│   ├── interface/             # Points d'entrée
+│   │   └── api/               # FastAPI
+│   ├── data/                  # Référentiels (competences.json)
+│   └── tests/                 # Tests unitaires
+│
+├── frontend/                   # Dashboard React
+│   ├── src/
+│   │   ├── components/        # Composants React
+│   │   ├── hooks/             # Custom hooks
+│   │   ├── services/          # Client API
+│   │   └── types/             # Types TypeScript
+│   └── package.json
+│
+├── docker-compose.yml          # Services Docker
+├── pyproject.toml             # Configuration Python
+└── requirements.txt           # Dépendances Python
+```
+
+## Développement
+
+### Qualité de code
+
 ```bash
-# Lancement complet
-docker-compose up -d
+# Linting
+make lint
 
-# Monitoring MongoDB
-docker-compose logs -f mongodb
+# Formatage
+make format
 
-# Backup des données
-docker exec mongodb_container mongodump --out /backup
+# Type checking
+make typecheck
+
+# Tout en un
+make quality
 ```
 
-### Configuration Recommandée
-- **RAM** : 16GB+ pour gros volumes
-- **Stockage** : SSD pour MongoDB
-- **Réseau** : Connexion stable API France Travail  
-- **Monitoring** : Logs centralisés
+### Ajouter une nouvelle source de données
 
-## 🔮 Roadmap 2025-2026
+1. Créer un client API dans `backend_v2/infrastructure/clients/`
+2. Implémenter la méthode de collecte dans `CollectionService`
+3. Ajouter la conversion vers le format `Job`
 
-### Q4 2025 - API & Dashboard
-- [ ] 🌐 **API REST FastAPI** complète
-- [ ] 📊 **Dashboard React** interactif
-- [ ] 🔍 **Recherche fulltext** Elasticsearch
-- [ ] 📈 **Métriques Prometheus** + Grafana
+### Ajouter de nouvelles compétences
 
-### Q1 2026 - Intelligence & Scale
-- [ ] ☁️ **MongoDB Atlas** cloud
-- [ ] 🤖 **ML Pipeline** prédiction tendances
-- [ ] 📱 **App mobile** React Native
-- [ ] 🌍 **Multi-région** Europe
+Éditer `backend_v2/data/competences.json` pour ajouter des technologies au référentiel.
 
-## 🛡️ Sécurité & Bonnes Pratiques
+## Tests
 
-### Sécurité
-- 🔐 **Credentials** dans `.env` (hors Git)
-- 🔒 **MongoDB** avec authentification
-- 📝 **Logs** sans données sensibles
-- ✅ **Validation** Pydantic stricte
+```bash
+# Lancer tous les tests
+pytest
 
-### Architecture  
-- 🔄 **Pattern Repository** pour abstraction données
-- ⚡ **AsyncIO** pour concurrence
-- 🔁 **Retry logic** pour résilience réseau
-- 📊 **Logging structuré** avec métadonnées
+# Avec couverture
+pytest --cov=backend_v2 --cov-report=html
 
-## 🤝 Contribution
+# Tests spécifiques
+pytest backend_v2/tests/test_competence_analyzer.py -v
+```
 
-### Process de Développement
-1. **Fork** le repository
-2. **Créer branche** : `git checkout -b feature/mongodb-enhancement`
-3. **Développer** avec tests
-4. **Commit** : `git commit -m "feat: add MongoDB aggregation"`
-5. **Pull Request** avec description détaillée
+## Stack technique
 
-### Standards Code
-- **Python 3.11+** avec type hints
-- **Tests pytest** couverture >80%
-- **Logging structuré** pour toutes opérations
-- **Documentation** docstrings complètes
-- **MongoDB** bonnes pratiques (index, aggregation)
+### Backend
+- **FastAPI** - API REST async
+- **Motor/PyMongo** - Driver MongoDB async/sync
+- **Pydantic** - Validation des données
+- **Structlog** - Logging structuré
 
-## 📞 Support & Ressources
+### Frontend
+- **React 19** + TypeScript
+- **Vite** - Build tool
+- **TanStack Query** - Data fetching
+- **ECharts** - Visualisations
+- **Tailwind CSS** - Styling
 
-### Documentation Technique
-- 📖 [Architecture MongoDB](docs/mongodb_persistence.md)
-- 🏗️ [Backend refactorisé](docs/architecture_backend_refactorisee.md)  
-- 📊 [Guide migration](docs/migration_json_mongodb.md)
-- 📝 [Système de logs](docs/logging_system.md)
+### Infrastructure
+- **MongoDB 7.0** - Base de données
+- **Docker Compose** - Orchestration
+- **GitHub Actions** - CI/CD
 
-### Liens Utiles
-- 🐛 **Issues** : [GitHub Issues](https://github.com/DatavizFT/DatavizFT/issues)
-- 💬 **Discussions** : [GitHub Discussions](https://github.com/DatavizFT/DatavizFT/discussions)
-- 📚 **Documentation** : Dossier `docs/`
+## Licence
 
-## 🏆 Remerciements
-
-- 🏛️ **France Travail** - API officielle offres d'emploi
-- 🍃 **MongoDB Inc.** - Base NoSQL exceptionnelle
-- 🐍 **Python Community** - Écosystème async/await  
-- 🐳 **Docker** - Conteneurisation simplifiée
-- 🚀 **Open Source Community** - Inspiration continue
-
-## 📄 Licence
-
-Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
----
-
-<div align="center">
-
-**🚀 DatavizFT - Transformez les données emploi IT en insights stratégiques avec MongoDB ! 📊**
-
-*Pipeline moderne • Analytics temps réel • Architecture MongoDB haute performance*
-
-![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)
-![France](https://img.shields.io/badge/Made%20in-France-blue.svg)
-
-</div>
+MIT License - voir [LICENSE](LICENSE)

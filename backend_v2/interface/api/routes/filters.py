@@ -65,4 +65,5 @@ async def get_sources(
     return [
         SourceResponse(name=r["_id"] or "unknown", job_count=r["job_count"])
         for r in results
+        if r["_id"] is not None
     ]

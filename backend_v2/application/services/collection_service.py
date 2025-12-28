@@ -96,17 +96,19 @@ class CollectionService:
 
         client = FranceTravailAPIClient()
 
-        # Paramètres de recherche IT
-        params = {
-            "motsCles": "développeur OR python OR java OR javascript OR devops OR IT",
-        }
+        # Codes ROME pour les métiers du développement IT
+        codes_rome = ["M1805", "M1802", "M1810"]
 
-        # Récupérer les offres
-        self.logger.info(f"Appel API France Travail avec max_offres={max_offres}")
-        offres_brutes = client.collect_offres_paginated(
-            params=params,
-            max_offres=max_offres
-        )
+        toutes_offres_brutes = []
+        for code_rome in codes_rome:
+            self.logger.info(f"Collecte France Travail pour code ROME {code_rome}")
+            offres_rome = client.collect_offres_by_rome(
+                code_rome=code_rome,
+                max_offres=max_offres // len(codes_rome) if max_offres else 500
+            )
+            toutes_offres_brutes.extend(offres_rome)
+
+        offres_brutes = toutes_offres_brutes
 
         self.logger.info(f"France Travail: {len(offres_brutes)} offres brutes récupérées")
 
@@ -161,15 +163,15 @@ class CollectionService:
         client = AdzunaAPIClient()
 
         params = {
-            "what": "développeur OR developpeur OR developer OR IT OR informatique",
-            "where": "france",
-            "content-type": "application/json",
+            "category": "it-jobs",
+            "what": "developpeur",
+            "max_days_old": 7,  # Offres des 7 derniers jours seulement
         }
 
         offres_brutes = client.collect_offres_paginated(
             params=params,
             page_size=50,
-            max_offres=max_offres
+            max_offres=max_offres if max_offres else 1500
         )
 
         nouvelles = 0
@@ -221,8 +223,8 @@ class CollectionService:
             "type_contrat_libelle": adzuna_offre.get("contract_type", "Non spécifié"),
             "lieu_travail": {
                 "libelle": location_display,
-                "latitude": location.get("area", [None])[1] if location.get("area") else None,
-                "longitude": location.get("area", [None])[0] if location.get("area") else None,
+                "latitude": area[1] if (area := location.get("area")) and len(area) > 1 else None,
+                "longitude": area[0] if (area := location.get("area")) and len(area) > 0 else None,
                 "codePostal": None,
                 "commune": location_display.split(",")[0] if "," in location_display else location_display,
             },
@@ -242,9 +244,8 @@ class CollectionService:
         }
 
     async def _extract_competences_nouvelles_offres(self) -> Dict[str, Any]:
-        """Extraire les compétences des offres non traitées via SemanticCompetenceAnalyzer"""
-        from backend_v2.infrastructure.ml import EmbeddingService
-        from backend_v2.domain.services import SemanticCompetenceAnalyzer
+        """Extraire les compétences des offres non traitées via CompetenceAnalyzer"""
+        from backend_v2.domain.services import SemanticCompetenceAnalyzer as CompetenceAnalyzer
 
         self.logger.info("Extraction des compétences pour nouvelles offres")
 
@@ -264,15 +265,18 @@ class CollectionService:
             self.logger.info("Aucune offre à analyser")
             return {"offres_analysees": 0, "offres_avec_competences": 0}
 
-        # Créer l'analyzer sémantique (utilise competences.json de backend_v2/data)
-        embedding_service = EmbeddingService()
-        analyzer = SemanticCompetenceAnalyzer(embedding_service)
+        # Créer l'analyzer (utilise competences.json de backend_v2/data par défaut)
+        analyzer = CompetenceAnalyzer()
 
         # Analyser chaque offre
         nb_mises_a_jour = 0
         nb_avec_competences = 0
+        total_offres = len(offres_a_analyser)
+        self.logger.info(f"Début extraction compétences pour {total_offres} offres")
 
-        for offre in offres_a_analyser:
+        for i, offre in enumerate(offres_a_analyser):
+            if (i + 1) % 100 == 0:
+                self.logger.info(f"Extraction compétences: {i + 1}/{total_offres} offres traitées")
             # Construire le texte à analyser
             texte = f"{offre.get('intitule', '')}\n\n{offre.get('description', '')}"
 
